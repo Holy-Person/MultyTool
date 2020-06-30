@@ -9,7 +9,10 @@ An all-around tool for everything that you could ever need.
 * [License](#license)
 
 ## So, what's this?
-This project is simple Lorem ipsum dolor generator.
+This is an Electron app, I am working on this on my own right now as a student so development might be slower than what you're used to.<br>
+A module based Electron application, customizable depending on what module you need, the goal will be to make modules for whatever I might need with ease, or even create a module to create more modules, for now this will be a simple test for myself.<br>
+
+Want to download this app? Send me an E-Mail [here](#help)
 
 ## The stuff I use
 Currently I'm using:
