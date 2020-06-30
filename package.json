@@ -3,7 +3,7 @@
   "productName": "ToolByte",
   "version": "0.1.0",
   "description": "no_description_set",
-  "main": "src/NaN.js",
+  "main": "src/electronCore.js",
   "scripts": {
     "start": "electron .",
     "package": "electron-forge package",
