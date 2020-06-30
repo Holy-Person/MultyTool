@@ -1,13 +1,12 @@
 # ToolByte
 An all-around tool for everything that you could ever need.
 
----
-
 ## Table of contents
-* [Info](#so,-what's-this)
+* [Info](#so-whats-this)
 * [Tech](#the-stuff-i-use)
 * [Install](#install)
 * [Help](#help)
+* [License](#license)
 
 ## So, what's this?
 This project is simple Lorem ipsum dolor generator.
@@ -23,12 +22,12 @@ Not for now, this will stay a private project for the time being, until I get it
 
 ## Help
 Need help with the app? Have questions but can't find an answer?
-E-Mail:
+You can send me a mail here:
 >holyochi@gmail.com
 
 ---
 
 ## License
->You can check out the full license [here](https://github.com/Holy-Person/ToolByte/blob/master/LICENSE)
+>[Here's](https://github.com/Holy-Person/ToolByte/blob/master/LICENSE) the full license.
 
 This project is licensed under the terms of the **MIT** license.
