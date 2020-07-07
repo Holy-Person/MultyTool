@@ -9,13 +9,16 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 // This keeps a global reference of the window object
 let mainWindow;
 
+// Switch variables
+
+
 const createWindow = () => {
   // Creating the browser window
   mainWindow = new BrowserWindow({
     frame: true,
-    resizable: false,
-    width: 900,
-    height: 600,
+    resizable: true,
+    width: 1200,
+    height: 700,
     center: true,
     closable: true,
     webPreferences: {
@@ -23,7 +26,7 @@ const createWindow = () => {
         devTools: true,
         enableRemoteModule: false
     },
-    icon: __dirname + '/AppData/Icons/gpt-icon.ico'
+    icon: __dirname + '/AppData/Icons/NaN.ico'
   });
 
   // Loading the main menu.
@@ -35,6 +38,10 @@ const createWindow = () => {
   // Gets emitted when the window closes.
   mainWindow.on('closed', () => {
     mainWindow = null;
+  });
+  
+  globalShortcut.register('ctrl+shift+x', function () {
+    mainWindow.webContents.toggleDevTools();
   });
 };
 

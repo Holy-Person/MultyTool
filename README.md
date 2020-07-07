@@ -18,7 +18,7 @@ Want to download this app? Send me an E-Mail [here](#help)
 Currently I'm using:
 * Electron version: ?
 * Chromium version: ?
-* Node version: ?
+* Node version: v12.18.1
 
 ## Install
 Not for now, this will stay a private project for the time being, until I get it to a level of polish I myself, find acceptable.
