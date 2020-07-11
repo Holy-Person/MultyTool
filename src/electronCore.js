@@ -65,3 +65,12 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+//Transportation between windows
+ipcMain.on('changePage', (event, destination) => { //this is a placeholder, gonna change it once the module reader is finished
+  if(destination != "menu") {
+    mainWindow.loadURL(`file://${__dirname}/Modules/${destination}/index.html`);
+  } else {
+    mainWindow.loadURL(`file://${__dirname}/${destination}.html`);
+  }
+});

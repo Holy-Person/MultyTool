@@ -12,23 +12,45 @@ body {
 
 .moduleList {
   position: absolute;
-  background-color: #23272a;
   
   height: 100%;
-  width: 150px;
+  width: 220px;
   
   overflow-x: hidden;
   overflow-y: auto;
   
-  transform: skewY(30deg) translate(0px, 50px);
+  transform: translateX(-190px);
   transition: 0.5s;
+  
+  background-color: #23272a;
 }
 .moduleList::-webkit-scrollbar {
   display: none;
 }
 .moduleList:hover {
-  width: 200px;
-  transform: skewY(0deg) translate(0px, 0px);
+  transform: translateX(0px);
+}
+.moduleListFake {
+  float: left;
+  height: 1px;
+  width: 30px;
+}
+
+.menuHint {
+  margin-top: 200px;
+  float: right;
+  font-weight: bold;
+  transform: rotate(-90deg);
+}
+
+.moduleHeader {
+  height: 30px;
+  line-height: 40px;
+  
+  color: #AAAAAA;
+  font-size: 14px;
+  text-indent: 7px;
+  font-weight: bold;
 }
 
 .moduleButton {
@@ -36,11 +58,21 @@ body {
   line-height: 50px;
   text-indent: 10px;
   
-  transition: 0.2s;
+  transition: 0.3s;
   
+  background-color: #23272A;
   cursor: pointer;
 }
-.moduleButton:hover {
-  text-indent: 13px;
-  background-color: #33373a;
+
+.moduleInstalled:hover {
+  text-indent: 15px;
+  box-shadow: inset 5px 0px 0px 0px #40BF7A;
+}
+.moduleDefault:hover {
+  text-indent: 15px;
+  box-shadow: inset 5px 0px 0px 0px #7A40BF;
+}
+.moduleDownload:hover {
+  text-indent: 15px;
+  box-shadow: inset 5px 0px 0px 0px #BF7A40;
 }
