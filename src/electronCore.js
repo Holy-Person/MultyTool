@@ -9,22 +9,18 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 // This keeps a global reference of the window object
 let mainWindow;
 
-// Switch variables
-
-
 const createWindow = () => {
   // Creating the browser window
   mainWindow = new BrowserWindow({
+    width: 1200, height: 700,
+    minWidth: 700, minHeight: 500,
     frame: true,
-    resizable: true,
-    width: 1200,
-    height: 700,
+    resizable: true, closable: true,
     center: true,
-    closable: true,
     webPreferences: {
         nodeIntegration: true,
         devTools: true,
-        enableRemoteModule: false
+        enableRemoteModule: false //Going to deprecate in later versions of electron anyway.
     },
     icon: __dirname + '/AppData/Icons/NaN.ico'
   });

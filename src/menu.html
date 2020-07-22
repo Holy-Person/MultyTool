@@ -8,21 +8,29 @@
   </head>
   
   <body>
-    <div class="moduleList">
-      <!--<div class="menuHint">𝌆Modules</div>-->
-      <div class="moduleHeader">Installed Modules</div>
-      <div class="moduleButton moduleInstalled" onclick="test()">Example Module</div>
-      <div class="moduleButton moduleInstalled">Placeholder 0</div>
-      
-      <div class="moduleHeader">Default Modules</div>
-      <div class="moduleButton moduleDefault">Settings (placeholder)</div>
-      <div class="moduleButton moduleDefault">Credits (placeholder)</div>
-      
-      <div class="moduleHeader">Downloadable Modules</div>
-      <div class="moduleButton moduleDownload">Placeholder 1</div>
-      <div class="moduleButton moduleDownload">Placeholder 2</div>
+    <div class="sideMenuLeft">
+      <div class="moduleListToggle"><div class="Text">𝌆Modules</div></div>
+      <div class="moduleList">
+        <div class="moduleHeader">Installed Modules</div>
+        <div class="moduleButton moduleInstalled" id="ExampleModule" onclick="test()">Example Module</div>
+        
+        <div class="moduleHeader">Default Modules</div>
+        <div class="moduleButton moduleDefault" id="Settings" onclick="test()">Settings</div>
+        <div class="moduleButton moduleDefault">Credits (placeholder)</div>
+        
+        <div class="moduleHeader">Downloadable Modules</div>
+        <div class="moduleButton moduleDownload">Placeholder 1</div>
+        <div class="moduleButton moduleDownload">Placeholder 2</div>
+      </div>
     </div>
+    
     <div class="moduleListFake"></div>
-    Main page content will go here
+    
+    <div class="changelog">
+      <div class="changelogHeader">Changelog</div>
+      <div class="changelogContent">
+        Content Placeholder
+      </div>
+    </div>
   </body>
 </html>

@@ -10,8 +10,3 @@ body {
   margin: 0; /*Removes Default margin*/
   overflow: hidden; /*In case you want users to be able to scroll on this page, remove this line*/
 }
-
-.PlaceholderContainer {
-  margin-top: 70px;
-  margin-left: 70px;
-}

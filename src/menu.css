@@ -1,45 +1,59 @@
+/*START MAIN*/
 body {
   background-color: #2c2f33;
   color: #EEEEEE;
   
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
   user-select: none;
   
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
+/*END MAIN*/
 
-.moduleList {
+
+/*BEGIN SIDEMENU*/
+.sideMenuLeft {
   position: absolute;
   
-  height: 100%;
-  width: 220px;
-  
-  overflow-x: hidden;
-  overflow-y: auto;
-  
-  transform: translateX(-190px);
+  transform: translateX(-215px);
   transition: 0.5s;
   
   background-color: #23272a;
+  
+  height: 100%;
+  width: 240px;
+}
+.sideMenuLeft:hover {
+  transform: translateX(0px);
+}
+.moduleList {
+  height: 100%;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .moduleList::-webkit-scrollbar {
   display: none;
 }
-.moduleList:hover {
-  transform: translateX(0px);
-}
+
 .moduleListFake {
   float: left;
   height: 1px;
-  width: 30px;
+  width: 40px;
 }
 
-.menuHint {
-  margin-top: 200px;
+.moduleListToggle {
+  height: 100%;
+  width: 25px;
   float: right;
-  font-weight: bold;
+  
+  background-color: #13171a;
+}
+.Text {
+  line-height: 400px;
   transform: rotate(-90deg);
 }
 
@@ -63,16 +77,43 @@ body {
   background-color: #23272A;
   cursor: pointer;
 }
-
-.moduleInstalled:hover {
+.moduleButton:hover {
+  background-color: #25292C;
   text-indent: 15px;
+}
+.moduleInstalled:hover {
   box-shadow: inset 5px 0px 0px 0px #40BF7A;
 }
 .moduleDefault:hover {
-  text-indent: 15px;
   box-shadow: inset 5px 0px 0px 0px #7A40BF;
 }
 .moduleDownload:hover {
-  text-indent: 15px;
   box-shadow: inset 5px 0px 0px 0px #BF7A40;
+}
+/*END SIDEMENU*/
+
+
+/*BEGIN CHANGELOG*/
+.changelog {
+  margin-top: 1%;
+  float: left;
+  height: 400px;
+  width: 30%;
+  
+  background-color: #23272a;
+  
+  user-select: text;
+}
+.changelogHeader {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  
+  background-color: #13171a;
+}
+.changelogContent {
+}
+.changelogContent::-webkit-scrollbar {
+  display: none;
 }

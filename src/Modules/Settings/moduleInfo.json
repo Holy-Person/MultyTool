@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "ExampleModule",
+    "version": "1.0.0"
+  },
+  "dev": {
+    "name": "Holy",
+    "contact": "holyochi@gmail.com"
+  }
+}

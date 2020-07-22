@@ -10,5 +10,7 @@ Mousetrap.bind('esc', () => {
 })
 
 function test() {
-	ipcRenderer.send('changePage', 'ExampleModule');
+	var element  		= event.target;
+	var destination = element.id;
+	ipcRenderer.send('changePage', `${destination}`);
 }
