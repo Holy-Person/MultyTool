@@ -1,0 +1,104 @@
+{
+  "info": {
+    "version": "2.3.9",
+    "type": "os",
+    "date": 7021009,
+    "character": "miku"
+  },
+  "contents": [
+    {
+      "type": "audio",
+      "link": "placeholder",
+      "msg": "Audience Cheer"
+    },
+    {
+      "type": "audio",
+      "link": "placeholder",
+      "msg": "Lights off"
+    },
+    {
+      "type": "text",
+      "char": "Audience",
+      "msg": "......?"
+    },
+    {
+      "type": "image",
+      "link": "placeholder",
+      "msg": "placeholder"
+    },
+    {
+      "type": "text",
+      "char": "Miku",
+      "msg": "*Put on a mask and don a false identity<br>I'm broken down into my core...*"
+    },
+    {
+      "type": "audio",
+      "link": "placeholder",
+      "msg": "Audience Cheer"
+    },
+    {
+      "type": "audio",
+      "link": "placeholder",
+      "msg": "Lights on"
+    },
+    {
+      "type": "text18",
+      "char": "Miku",
+      "msg": "Everyone, lend me your hands!"
+    },
+    {
+      "type": "audio",
+      "link": "placeholder",
+      "msg": "Audience Cheer"
+    },
+    {
+      "type": "text",
+      "char": "Miku",
+      "msg": "*Come on, Come and be free<br>Come on, Come and see*"
+    },
+    {
+      "type": "text18",
+      "char": "Audience",
+      "msg": "Hey! Hey! Hey! Hey!"
+    },
+    {
+      "type": "audio",
+      "link": "placeholder",
+      "msg": "Audience Cheer"
+    },
+    {
+      "type": "text",
+      "char": "Miku",
+      "msg": "Everyone~! What is my name!?"
+    },
+    {
+      "type": "text",
+      "char": "Audience",
+      "msg": "Miku!"
+    },
+    {
+      "type": "text",
+      "char": "Miku",
+      "msg": "Hoho~ I can't hear you!"
+    },
+    {
+      "type": "text18",
+      "char": "Audience",
+      "msg": "Miku!!"
+    },
+    {
+      "type": "text20",
+      "char": "Miku",
+      "msg": "L~O~U~D~E~R!!"
+    },
+    {
+      "type": "text20",
+      "char": "Audience",
+      "msg": "Miku! Miku! Miku! ......"
+    },
+    {
+      "type": "end",
+      "msg": "[Signal Lost]"
+    }
+  ]
+}

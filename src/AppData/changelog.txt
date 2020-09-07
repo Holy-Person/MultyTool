@@ -1,0 +1,20 @@
+{Regular Update}Module Reader Update(0.1.2)
+*Added Changelog|
+^Added Changelog formatter|
+*Added Module Reader & Sorter|
+^Added "preview" Type|
+^Added "core" Type|
+^Added "installed" Type|
+*Small changes to the ExampleModule|
+^Added Discord invite|
+^Changed default link color
+°
+
+<!--Template
+{Update Type}Title(Update Version)
+*Main Point|
+*Main Point|
+^Sub Point|
+^Sub Point|
+*Main Point
+-->

@@ -1,0 +1,34 @@
+{
+  "info": {
+    "version": "2.3.9",
+    "type": "os",
+    "date": 7021130,
+    "character": "miku"
+  },
+  "contents": [
+    {
+      "type": "image",
+      "link": "placeholder",
+      "msg": "placeholder"
+    },
+    {
+      "type": "text",
+      "char": "Miku",
+      "msg": "I... What am I singing for?"
+    },
+    {
+      "type": "image",
+      "link": "placeholder",
+      "msg": "placeholder"
+    },
+    {
+      "type": "text",
+      "char": "Miku",
+      "msg": "Ah, I see. I'm singing for everyone."
+    },
+    {
+      "type": "end",
+      "msg": "[Signal Lost]"
+    }
+  ]
+}

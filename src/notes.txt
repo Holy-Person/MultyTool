@@ -1,0 +1,43 @@
+oncontextmenu => right click event
+
+MO
+#398873 - #1b5f4d green
+#ffe97b yellow
+#1a1919 - #0c0c0c gray
+#e8e6e3 white
+
+Old
+#eeeeee color old
+#2c2f33 bg old
+#23272a menu old
+#13171a header old
+
+DP&B
+#0c0032
+#190061
+#240090
+#3500D3
+#282828
+
+C&B
+#1a1a1d
+#4e4e50
+#6f2232
+#950740
+#c3073f
+
+S&S
+#0b0c10
+#1f2833
+#c5c6c7
+#66fcf1
+#45a29e
+
+C&E
+#5680e9
+#84ceeb
+#5ab9ea
+#c1c8e4
+#8860d0
+
+

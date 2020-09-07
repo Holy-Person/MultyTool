@@ -1,8 +1,8 @@
 {
   "module": {
-    "name": "ExampleModule",
+    "name": "ThemeCreator",
     "version": "1.0.0",
-    "type": "installed"
+    "type": "preview"
   },
   "dev": {
     "name": "Holy",

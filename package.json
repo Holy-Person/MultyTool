@@ -2,7 +2,7 @@
   "name": "ToolByte",
   "productName": "ToolByte",
   "version": "0.1.1",
-  "description": "A module-based Tool",
+  "description": "A module-based Electron App",
   "main": "src/electronCore.js",
   "scripts": {
     "start": "electron .",
