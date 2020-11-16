@@ -9,7 +9,7 @@ A module based Electron app to create and share website-like "modules" with upgr
 * [License](#license)
 
 ## So, what's this?
-This is an Electron app, I am working on this on my own right now as a student, so development might be a bit slower than what you're used to.
+This is an Electron app, I am working on this on my own right now as a student, so development might be a bit slower than what you're used to.<br>
 A module based Electron application, customizable depending on what module you need, the goal will be to make modules for whatever I might need with ease, or even create a module to create more modules, for now this will be a simple test for myself.
 
 Any problems or suggestions? Send me an E-Mail [here](#help) or ask in the Discord.
@@ -18,7 +18,7 @@ Any problems or suggestions? Send me an E-Mail [here](#help) or ask in the Disco
 Currently I'm using:
 * Electron version: ?
 * Chromium version: ?
-* Node version: v12.18.1
+* Node version: v12.18.1<br>
 (Will be filled out once the menu update comes out)
 
 ## Install
