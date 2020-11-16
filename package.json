@@ -1,7 +1,7 @@
 {
   "name": "ToolByte",
   "productName": "ToolByte",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A module-based Electron App",
   "main": "src/electronCore.js",
   "scripts": {
@@ -45,19 +45,20 @@
     }
   },
   "dependencies": {
-    "drag-drop": "^6.0.0",
+    "drag-drop": "^6.1.0",
+    "electron-forge": "^5.2.4",
     "electron-squirrel-startup": "^1.0.0",
     "electron-store": "^5.2.0",
     "mousetrap": "^1.6.5",
-    "node-abi": "^2.18.0",
+    "node-abi": "^2.19.1",
     "shell": "^0.5.0"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.52",
-    "@electron-forge/maker-deb": "^6.0.0-beta.50",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.50",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
-    "@electron-forge/maker-zip": "^6.0.0-beta.50",
-    "electron": "^8.4.0"
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^8.5.3"
   }
 }

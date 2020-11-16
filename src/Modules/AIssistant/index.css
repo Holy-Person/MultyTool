@@ -1,3 +1,4 @@
+/*Default Style*/
 body {
   background-color: #2c2f33;
   color: #EEEEEE;
@@ -10,37 +11,11 @@ body {
   overflow: hidden; /*In case you want users to be able to scroll on this page, remove this line*/
 }
 
-.MenuHeader {
-  text-align: center;
-  font-size: 34px;
-  text-decoration: underline;
+.PlaceholderContainer {
+  margin-top: 70px;
+  margin-left: 70px;
 }
 
-.CurrencyDisplay {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  font-size: 22px;
-}
-
-.ModeContainer {
-  padding: 20px;
-}
-
-.ModeButton {
-  text-align: center;
-  height: 350px;
-  width: 45%;
-  line-height: 350px;
-  font-size: 28px;
-  background-color: #1c1f23;
-  cursor: pointer;
-}
-
-.BJ {
-  float: left;
-}
-
-.RPS {
-  float: right;
+a {
+  color: #738adb;
 }

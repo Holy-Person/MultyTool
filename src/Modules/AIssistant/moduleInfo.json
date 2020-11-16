@@ -1,8 +1,8 @@
 {
   "module": {
-    "name": "Casino",
+    "name": "AIssistant",
     "version": "1.0.0",
-    "type": "installed"
+    "type": "preview"
   },
   "dev": {
     "name": "Holy",

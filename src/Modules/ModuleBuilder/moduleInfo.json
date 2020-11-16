@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "ModuleBuilder",
+    "version": "1.0.0",
+    "type": "installed"
+  },
+  "dev": {
+    "name": "Holy",
+    "contact": "holyochi@gmail.com"
+  }
+}

@@ -1,10 +1,11 @@
 /*START MAIN*/
 :root {
-  --background: #132f47;
+  --background: #282828;
   --text: #e8e6e3;
-  --menu: #344d61;
-  --highlight: #425d70;
-  --header: #1d2631;
+  --menu: #1c1c1c;
+  --highlightPri: #202020;
+  --highlightSec: #3fb9c4;
+  --header: #161616;
 }
 
 body {
@@ -61,7 +62,7 @@ body {
   
   background-color: var(--header);
 }
-.Text {
+.toggleText {
   margin-top: 250px;
   transform: rotate(-90deg);
 }
@@ -88,7 +89,7 @@ body {
   cursor: pointer;
 }
 .moduleButton:hover {
-  background-color: var(--highlight);
+  background-color: var(--highlightPri);
   text-indent: 15px;
 }
 .installedStyle:hover {
@@ -112,6 +113,11 @@ body {
   
   background-color: var(--menu);
 }
+.changelog + .changelog {
+  margin-left: 2%;
+  
+  background-color: var(--menu);
+}
 .changelogHeader {
   height: 32px;
   line-height: 32px;
@@ -126,9 +132,12 @@ body {
   padding-left: 15px;
   padding-top: 10px;
   padding-right: 15px;
+  height: 350px;
   
   user-select: text;
-  cursor: default;
+  cursor: auto;
+  overflow-x: scroll;
+  overflow-x: hidden;
 }
 #changelogContent::-webkit-scrollbar {
   display: none;
@@ -151,13 +160,35 @@ body {
 }
 
 
+#upcomingContent {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-right: 15px;
+  height: 350px;
+  
+  user-select: text;
+  cursor: auto;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+#upcomingContent::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .AlphaWarning {
   position: absolute;
-  top: 420px;
+  bottom: 30px;
   left: 50px;
   
   font-size: 24px;
   
   z-index: -1;
+}
+.VersionNum {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
 }

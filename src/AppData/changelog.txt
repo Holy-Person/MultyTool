@@ -1,4 +1,16 @@
-{Regular Update}Module Reader Update(0.1.1)
+{Regular Update}Moldule Builder Update(0.2.0)
+*Added Module Builder|
+*Updated Main Menu a bit|
+^Added Upcoming Section|
+^Added Version Number|
+*Added External URL Handler|
+^Basically just makes external links easier|
+*Updated literally every single node_module|
+^This may have broken some things but fixes are on the way|
+*Removed unused files for the release version
+°
+
+{Regular Update}Module Reader Update(0.1.0)
 *Added Changelog|
 ^Added Changelog formatter|
 *Added Module Reader & Sorter|
@@ -6,7 +18,7 @@
 ^Added "core" Type|
 ^Added "installed" Type|
 *Small changes to the ExampleModule|
-^Added Discord invite|
+^Added Discord Invite|
 ^Changed default link color
 °
 

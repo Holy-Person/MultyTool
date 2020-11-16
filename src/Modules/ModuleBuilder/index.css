@@ -1,0 +1,131 @@
+:root {
+  --background: #282828;
+  --text: #e8e6e3;
+  --menu: #1c1c1c;
+  --highlightPri: #202020;
+  --highlightSec: #3fb9c4;
+  --header: #161616;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
+  
+  padding: 15px;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+
+a {
+  color: #738adb;
+}
+
+.returnButton {
+  font-weight: bold;
+  font-size: 24px;
+  position: fixed;
+  height: 45px;
+  top: 20px;
+  width: 31%;
+  background-color: var(--menu);
+  border-radius: 15px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.returnButton:hover {
+  transform: translate(-1px, -3px);
+  box-shadow: 4px 12px 16px 0 rgba(0,0,0,1);
+}
+.mainTitle {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  height: 10%;
+  line-height: 100%;
+  background-color: var(--background);
+}
+
+.optionCard {
+  height: 85%;
+  width: 32%;
+  cursor: pointer;
+  background-color: var(--menu);
+  float: left;
+  border-radius: 15px;
+  transition: 0.5s ease;
+}
+.optionCard + .optionCard {
+  margin-left: 2%;
+}
+.optionCard:hover {
+  transform: translate(-2px, -6px);
+  box-shadow: 4px 12px 16px 0 rgba(0,0,0,1);
+}
+.opCaTitle {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.opCaDesc {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 7px;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.optionContainer {
+  display: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 87%;
+}
+.optionContainer::-webkit-scrollbar {
+  display: none;
+}
+.opCoTitle {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.opCoContent {
+  width: 98%;
+  margin: 0 auto;
+  background-color: var(--menu);
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 18px;
+  
+}
+.opCoContent + .opCoContent {
+  margin-top: 1%;
+}
+.opCoHeader {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-bottom: 9px;
+}
+
+
+
+.red {
+  color: #FF4444;
+  text-shadow: 1px 1px #000000;
+}

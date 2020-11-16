@@ -36,6 +36,11 @@ const createWindow = () => {
     mainWindow = null;
   });
   
+  mainWindow.webContents.on('new-window', function(e, url) {
+    e.preventDefault();
+    require('electron').shell.openExternal(url);
+  });
+  
   globalShortcut.register('ctrl+shift+x', function () {
     mainWindow.webContents.toggleDevTools();
   });
