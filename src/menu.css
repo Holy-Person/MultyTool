@@ -28,10 +28,12 @@ html {
 }
 /*END MAIN*/
 
+/*START MODULELIST*/
 .moduleListContainer {
   float: left;
+  position: relative;
   
-  height: 98%;
+  height: 100%;
   width: 34%;
   
   background-color: var(--menu);
@@ -40,6 +42,44 @@ html {
   overflow-y: auto;
 }
 
+.moduleListCategoryHeader {
+  height: 30px;
+  
+  line-height: 30px;
+  padding-left: 10px;
+  
+  font-size: 18px;
+  
+  background-color: var(--header);
+  
+  cursor: pointer;
+}
+
+.moduleListSublist {
+  padding: 2%;
+}
+
+.moduleFolderButton {
+  text-align: center;
+  
+  width: 100%;
+  height: 30px;
+  
+  line-height: 30px;
+  
+  font-size: 20px;
+  font-weight: bold;
+  
+  position: absolute;
+  bottom:0px;
+  
+  background-color: var(--header);
+  
+  cursor: pointer;
+}
+/*END MODULELIST*/
+
+/*START MAINMENU*/
 .mainMenuContainer {
   float: left;
   
@@ -50,27 +90,6 @@ html {
   overflow-y: auto;
   
   padding: 1%;
-}
-
-.detailContainer {
-  float: left;
-  
-  height: 98%;
-  width: 38%;
-  
-  background-color: var(--menu);
-  
-  overflow-x: hidden;
-  overflow-y: auto;
-  
-  padding: 1%;
-}
-
-
-
-.moduleListCategoryHeader {
-  background-color: var(--header);
-  cursor: pointer;
 }
 
 .mainMenuButton {
@@ -94,6 +113,45 @@ html {
 .mainMenuButton + .mainMenuButton {
   margin-top: 12px;
 }
+/*END MAINMENU*/
+
+/*START DETAIL*/
+.detailContainer {
+  float: left;
+  
+  height: 98%;
+  width: 38%;
+  
+  background-color: var(--menu);
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  padding: 1%;
+  
+  display: none;
+}
+#homeDC {
+  display: block;
+}
+
+.titleHeader {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.versionNum {
+  position: absolute;
+  
+  top: 10px;
+  right: 15px;
+  
+  font-size: 15px;
+}
+/*END DETAIL*/
+
+
+
 /*
 .sideMenuLeft {
   position: absolute;

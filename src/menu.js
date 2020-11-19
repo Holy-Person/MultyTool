@@ -6,6 +6,22 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 	window.location.reload();
 });
 
+function switchDetailContainer() {
+	var destination = event.target.innerHTML.toLowerCase().split(' ').join('');
+	
+	var x = document.getElementsByClassName("detailContainer");
+	for (var i = 0; i < x.length; i++) {
+	  x[i].style.display = `none`;
+	}
+	console.log(destination);
+	document.getElementById(`${destination}DC`).style.display = "block";
+}
+
+function openModuleFolder() {
+	require('child_process').exec(`start "" "${__dirname}/Modules"`);
+}
+
+/*
 Mousetrap.bind('esc', () => {
 	//Open confirmation window
 	//window.close();
@@ -14,8 +30,8 @@ Mousetrap.bind('esc', () => {
 
 window.onload = startUp;
 function startUp() {
-	//getModules();
-	//fillChangelog();
+	getModules();
+	fillChangelog();
 }
 
 function openModule() {
@@ -78,3 +94,4 @@ async function fillChangelog() {
 
   document.getElementById("changelogContent").innerHTML = changelog;
 }
+*/

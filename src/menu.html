@@ -11,33 +11,59 @@
     <div class="moduleListContainer">
       <div class="moduleListCategory">
         <div class="moduleListCategoryHeader">
-          category head title
+          Category head title1◄
         </div>
         <div class="moduleListSublist">
           modules here
         </div>
       </div>
+      
+      <div class="moduleListCategory">
+        <div class="moduleListCategoryHeader">
+          Category head title2▼
+        </div>
+        <div class="moduleListSublist">
+          modules here
+        </div>
+      </div>
+      
+      <div class="moduleFolderButton" onclick="openModuleFolder()">📂 Open Folder</div>
     </div>
+    
     
     
     <div class="mainMenuContainer">
-      <div class="mainMenuButton">
-        Home
-      </div>
-      <div class="mainMenuButton">
-        Changelog
-      </div>
-      <div class="mainMenuButton">
-        Settings
-      </div>
-      <div class="mainMenuButton">
-        Credits
-      </div>
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Home</div>
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div>
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Settings</div>
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Credits</div>
     </div>
     
     
-    <div class="detailContainer">
-      home screen and stuff here
+    
+    <div class="detailContainer" id="homeDC">
+      <span class="titleHeader">ToolByte</span>
+      <hr>
+      Latest Changes
+      <hr>
+      Upcoming Changes
+      <hr>
+      github & discord
+      <hr>
+      basic credits
+      <div class="versionNum">v0.2.0-alpha</div>
+    </div>
+    
+    <div class="detailContainer" id="changelogDC">
+      changelog detailContainer
+    </div>
+    
+    <div class="detailContainer" id="settingsDC">
+      settings detailContainer
+    </div>
+    
+    <div class="detailContainer" id="creditsDC">
+      credits detailContainer
     </div>
     
     <!--<div class="changelog">
