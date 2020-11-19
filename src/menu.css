@@ -4,7 +4,7 @@
   --text: #e8e6e3;
   --menu: #1c1c1c;
   --highlightPri: #202020;
-  --highlightSec: #3fb9c4;
+  --highlightSec: #353535;
   --header: #161616;
 }
 
@@ -19,11 +19,82 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 /*END MAIN*/
 
+.moduleListContainer {
+  float: left;
+  
+  height: 98%;
+  width: 34%;
+  
+  background-color: var(--menu);
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
-/*BEGIN SIDEMENU*/
+.mainMenuContainer {
+  float: left;
+  
+  height: 98%;
+  width: 24%;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  padding: 1%;
+}
+
+.detailContainer {
+  float: left;
+  
+  height: 98%;
+  width: 38%;
+  
+  background-color: var(--menu);
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  padding: 1%;
+}
+
+
+
+.moduleListCategoryHeader {
+  background-color: var(--header);
+  cursor: pointer;
+}
+
+.mainMenuButton {
+  background-color: var(--highlightPri);
+  
+  height: 50px;
+  width: 100%;
+  
+  text-align: center;
+  line-height: 50px;
+  
+  font-size: 22px;
+  
+  border-radius: 10px;
+  
+  cursor: pointer;
+}
+.mainMenuButton:hover {
+  background-color: var(--highlightSec);
+}
+.mainMenuButton + .mainMenuButton {
+  margin-top: 10px;
+}
+/*
 .sideMenuLeft {
   position: absolute;
   
@@ -101,10 +172,10 @@ body {
 .previewStyle:hover {
   box-shadow: inset 5px 0px 0px 0px #BF7A40;
 }
-/*END SIDEMENU*/
 
 
-/*BEGIN CHANGELOG*/
+
+
 .changelog {
   margin-top: 1%;
   float: left;
@@ -192,3 +263,4 @@ body {
   right: 15px;
   font-size: 18px;
 }
+*/

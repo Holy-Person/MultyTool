@@ -9,12 +9,13 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 Mousetrap.bind('esc', () => {
 	//Open confirmation window
 	//window.close();
+	//console.log('%c Loaded', 'color:green; font-size: 1.5em');
 })
 
 window.onload = startUp;
 function startUp() {
-	getModules();
-	fillChangelog();
+	//getModules();
+	//fillChangelog();
 }
 
 function openModule() {
