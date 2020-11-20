@@ -86,7 +86,7 @@ a {
 .moduleButton:hover {
   background-color: var(--highlightSec);
 }
-.moduleButton + .moduleButton {
+.smallModuleButton + .smallModuleButton {
   margin-left: 4%;
 }
 .smallModuleButton {

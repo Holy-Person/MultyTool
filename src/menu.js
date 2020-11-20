@@ -6,6 +6,14 @@ const Fs = require('fs');
 Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 	window.location.reload();
 });
+
+Mousetrap.bind('esc', () => {
+	quitApp();
+})
+
+function quitApp() {
+	window.close();
+}
 /*END MAIN*/
 
 /*START LOAD*/
