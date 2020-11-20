@@ -1,9 +1,9 @@
 /*START MAIN*/
 :root {
-  --background: #282828;
+  --background: #303030;
   --text: #e8e6e3;
   --menu: #1c1c1c;
-  --highlightPri: #202020;
+  --highlightPri: #252525;
   --highlightSec: #353535;
   --header: #161616;
 }
@@ -45,6 +45,9 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.moduleListContainer::-webkit-scrollbar {
+  display: none;
+}
 
 .moduleListCategoryHeader {
   height: 30px;
@@ -62,7 +65,35 @@ a {
   float: right;
 }
 .moduleListSublist {
-  padding: 2%;
+  padding: 3%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.moduleButton {
+  float: left;
+  text-align: center;
+  
+  height: 70px;
+  border-radius: 10px;
+  
+  line-height: 70px;
+  
+  background-color: var(--highlightPri);
+  
+  cursor: pointer;
+}
+.moduleButton:hover {
+  background-color: var(--highlightSec);
+}
+.moduleButton + .moduleButton {
+  margin-left: 4%;
+}
+.smallModuleButton {
+  width: 48%;
+}
+.largeModuleButton {
+  width: 100%;
 }
 
 

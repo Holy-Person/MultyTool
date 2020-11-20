@@ -8,6 +8,49 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 });
 /*END MAIN*/
 
+/*START LOAD*/
+window.onload = startUp;
+function startUp() {
+	loadModules();
+}
+
+var ModuleButton = function (moduleName) {
+  this.smallModule =
+  `<div class="smallModuleButton moduleButton onclick="openModule()">`+
+	`${moduleName}`+
+  `</div>`;
+}
+
+function loadModules() {
+	var filePath = `${__dirname}/Modules/`;
+
+  Fs.readdir(filePath, function(err, modules) {
+    modules.forEach(function (module) {
+      if(!module.startsWith(`off_`)) {
+
+        Fs.readFile((`${__dirname}/Modules/${module}/moduleinfo.json`), 'utf8', (err, moduleJsonString) => {
+					console.log(err); //make nice looking error handler, might even make notif in-app
+          var infoObject = JSON.parse(moduleJsonString);
+          var moduleType = infoObject.module.type;
+					var moduleName = infoObject.module.name;
+					
+					var listModule = new ModuleButton(moduleName);
+					
+					switch (moduleType) {
+						case "installed": console.log('a');
+						break;
+						case "core": console.log('b');
+						break;
+						case "preview": console.log('c');
+						break;
+					}
+        });
+      }
+    });
+  });
+}
+/*END LOAD*/
+
 /*START MODULELIST*/
 function toggleCategoryVisibility() {
 	var siblings = event.target.parentElement.children;
