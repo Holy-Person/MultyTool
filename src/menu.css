@@ -26,6 +26,10 @@ body {
 html {
   height: 100%;
 }
+a {
+  text-decoration: none;
+  color: #738adb;
+}
 /*END MAIN*/
 
 /*START MODULELIST*/
@@ -54,10 +58,13 @@ html {
   
   cursor: pointer;
 }
-
+#categoryHeaderArrow {
+  float: right;
+}
 .moduleListSublist {
   padding: 2%;
 }
+
 
 .moduleFolderButton {
   text-align: center;
@@ -98,6 +105,7 @@ html {
   height: 50px;
   width: 100%;
   
+  /*text-indent: 20%;*/
   text-align: center;
   line-height: 50px;
   
@@ -135,11 +143,6 @@ html {
   display: block;
 }
 
-.titleHeader {
-  font-size: 32px;
-  letter-spacing: 1px;
-}
-
 .versionNum {
   position: absolute;
   
@@ -147,6 +150,41 @@ html {
   right: 15px;
   
   font-size: 15px;
+}
+
+.titleHeader {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-left: 5%;
+}
+
+.externalCreditLink {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  
+  float: left;
+  margin-bottom: 7px;
+  
+  color: var(--text);
+  background-color: var(--highlightPri);
+  border-radius: 10px;
+  
+  width: 45%;
+  height: 45px;
+  line-height: 45px;
+}
+.externalCreditLink:hover {
+  background-color: var(--highlightSec);
+}
+.externalCreditLink + .externalCreditLink {
+  margin-left: 10%;
+}
+
+.finalHomeCredits {
+  text-align: center;
 }
 /*END DETAIL*/
 

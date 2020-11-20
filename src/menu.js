@@ -1,3 +1,4 @@
+/*START MAIN*/
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
 const Fs = require('fs');
@@ -5,7 +6,27 @@ const Fs = require('fs');
 Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 	window.location.reload();
 });
+/*END MAIN*/
 
+/*START MODULELIST*/
+function toggleCategoryVisibility() {
+	var siblings = event.target.parentElement.children;
+	if(siblings[1].style.display == "none") {
+		siblings[1].style.display = "block";
+		siblings[0].children[0].innerHTML = "▽&nbsp;";
+	} else {
+		siblings[1].style.display = "none";
+		siblings[0].children[0].innerHTML = "◁&nbsp;";
+	}
+}
+
+function openModuleFolder() {
+	require('child_process').exec(`start "" "${__dirname}/Modules"`);
+}
+/*END MODULELIST*/
+
+
+/*START MAINMENU*/
 function switchDetailContainer() {
 	var destination = event.target.innerHTML.toLowerCase().split(' ').join('');
 	
@@ -16,10 +37,9 @@ function switchDetailContainer() {
 	console.log(destination);
 	document.getElementById(`${destination}DC`).style.display = "block";
 }
+/*END MAINMENU*/
 
-function openModuleFolder() {
-	require('child_process').exec(`start "" "${__dirname}/Modules"`);
-}
+
 
 /*
 Mousetrap.bind('esc', () => {
