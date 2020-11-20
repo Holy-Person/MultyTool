@@ -108,7 +108,7 @@ a {
   font-size: 20px;
   font-weight: bold;
   
-  position: absolute;
+  position: sticky;
   bottom:0px;
   
   background-color: var(--header);
