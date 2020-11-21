@@ -86,14 +86,23 @@ a {
 .moduleButton:hover {
   background-color: var(--highlightSec);
 }
-.smallModuleButton + .smallModuleButton {
-  margin-left: 4%;
-}
 .smallModuleButton {
   width: 48%;
 }
 .largeModuleButton {
   width: 100%;
+}
+#firstSmallButton + #secondSmallButton {
+  margin-left: 4%;
+}
+#secondSmallButton + #firstSmallButton {
+  margin-top: 4%;
+}
+.moduleButton + #firstSmallButton + #secondSmallButton {
+  margin-top: 4%;
+}
+.moduleButton + .largeModuleButton {
+  margin-top: 4%;
 }
 
 
@@ -108,7 +117,7 @@ a {
   font-size: 20px;
   font-weight: bold;
   
-  position: sticky;
+  position: absolute;
   bottom:0px;
   
   background-color: var(--header);
