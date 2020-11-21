@@ -95,7 +95,7 @@ a {
 #firstSmallButton + #secondSmallButton {
   margin-left: 4%;
 }
-#secondSmallButton + #firstSmallButton {
+.moduleButton + #firstSmallButton {
   margin-top: 4%;
 }
 .moduleButton + #firstSmallButton + #secondSmallButton {

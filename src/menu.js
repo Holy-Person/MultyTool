@@ -34,8 +34,12 @@ function startUp() {
 
 var ModuleButton = function (moduleName) {
   this.smallModule =
-  `<div class="smallModuleButton moduleButton onclick="openModule()">`+
-	`${moduleName}`+
+  `<div class="smallModuleButton moduleButton id="${sortNum}SmallButton" onclick="openModule()">`+
+		`${moduleName}`+
+  `</div>`;
+	this.largeModule =
+  `<div class="largeModuleButton moduleButton onclick="openModule()">`+
+		`${moduleName}`+
   `</div>`;
 }
 
