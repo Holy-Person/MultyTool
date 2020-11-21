@@ -77,7 +77,7 @@
       <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div>
       <div class="mainMenuButton" onclick="switchDetailContainer()">Settings</div>
       <div class="mainMenuButton" onclick="switchDetailContainer()">Credits</div>
-      <div class="mainMenuButton" onclick="quitApp()">Quit ToolByte</div>
+      <div class="mainMenuButton" onclick="quitApp('toggle')">Quit ToolByte</div>
     </div>
     
     
@@ -113,6 +113,20 @@
     
     <div class="detailContainer" id="creditsDC">
       credits detailContainer
+    </div>
+    
+    <div id="screenBlocker"></div>
+    
+    <div id="quitConfirmContainer">
+      <div class="quitConfirmContent">
+        Do you really want to quit?
+      </div>
+      <div class="quitConfirmButton" onclick="quitApp('confirm')">
+        <div class="quitConfirmButtonInner">Yes</div>
+      </div>
+      <div class="quitConfirmButton" onclick="quitApp('toggle')">
+        <div class="quitConfirmButtonInner">No</div>
+      </div>
     </div>
     
     <!--<div class="changelog">

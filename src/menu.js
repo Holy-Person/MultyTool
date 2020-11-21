@@ -8,11 +8,21 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 });
 
 Mousetrap.bind('esc', () => {
-	quitApp();
+	quitApp('toggle');
 })
 
-function quitApp() {
-	window.close();
+function quitApp(type) {
+	if(type == 'toggle') {
+		if(document.getElementById(`quitConfirmContainer`).style.display == "block") {
+			document.getElementById(`quitConfirmContainer`).style.display = "none";
+			document.getElementById(`screenBlocker`).style.display = "none";
+		} else {
+			document.getElementById(`quitConfirmContainer`).style.display = "block";
+			document.getElementById(`screenBlocker`).style.display = "block";
+		}
+	} else if(type == 'confirm') {
+		window.close();
+	}
 }
 /*END MAIN*/
 

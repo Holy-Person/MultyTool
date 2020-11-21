@@ -228,6 +228,66 @@ a {
 }
 /*END DETAIL*/
 
+/*START ADDITIONS*/
+#screenBlocker {
+  position: absolute;
+  z-index: 50;
+  
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgba(0,0,0,0.3);
+  
+  display: none;
+}
+
+#quitConfirmContainer {
+  position: fixed;
+  z-index: 100;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skewX(-20deg);
+  
+  width: 33%;
+  height: 120px;
+  padding: 1%;
+  
+  background-color: var(--menu);
+  
+  display: none;
+}
+.quitConfirmContent {
+  transform: skewX(20deg);
+  text-align: center;
+  font-size: 24px;
+  text-decoration: underline;
+}
+.quitConfirmButton {
+  float: left;
+  
+  width: 48%;
+  height: 30px;
+  
+  margin-top: 10%;
+  
+  text-align: center;
+  line-height: 30px;
+  font-size: 24px;
+  
+  background-color: var(--highlightPri);
+  
+  cursor: pointer;
+}.quitConfirmButton + .quitConfirmButton {
+  margin-left: 3%;
+}
+.quitConfirmButton:hover {
+  background-color: var(--highlightSec);
+}
+.quitConfirmButtonInner {
+  transform: skewX(20deg);
+}
+/*END ADDITIONS*/
+
 
 
 /*
