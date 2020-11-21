@@ -2,6 +2,9 @@
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
 const Fs = require('fs');
+var moduleNum = [0, 0, 0, 0, 0, 0];
+
+
 
 Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 	window.location.reload();
@@ -10,6 +13,8 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 Mousetrap.bind('esc', () => {
 	quitApp('toggle');
 })
+
+
 
 function quitApp(type) {
 	if(type == 'toggle') {
@@ -32,17 +37,6 @@ function startUp() {
 	loadModules();
 }
 
-var ModuleButton = function (moduleName) {
-  this.smallModule =
-  `<div class="smallModuleButton moduleButton id="${sortNum}SmallButton" onclick="openModule()">`+
-		`${moduleName}`+
-  `</div>`;
-	this.largeModule =
-  `<div class="largeModuleButton moduleButton onclick="openModule()">`+
-		`${moduleName}`+
-  `</div>`;
-}
-
 function loadModules() {
 	var filePath = `${__dirname}/Modules/`;
 
@@ -51,25 +45,64 @@ function loadModules() {
       if(!module.startsWith(`off_`)) {
 
         Fs.readFile((`${__dirname}/Modules/${module}/moduleinfo.json`), 'utf8', (err, moduleJsonString) => {
-					console.log(err); //make nice looking error handler, might even make notif in-app
+					//console.log(err); //make nice looking error handler, might even make notif in-app
           var infoObject = JSON.parse(moduleJsonString);
           var moduleType = infoObject.module.type;
 					var moduleName = infoObject.module.name;
 					
-					var listModule = new ModuleButton(moduleName);
+					var targetModuleNum = 0;
 					
 					switch (moduleType) {
-						case "installed": console.log('a');
-						break;
-						case "core": console.log('b');
-						break;
-						case "preview": console.log('c');
-						break;
+						case 'tool':
+							targetModuleNum = 0;
+							break;
+						case 'minigame':
+							targetModuleNum = 1;
+							break;
+						case 'workshop':
+							targetModuleNum = 2;
+							break;
+						case 'other':
+							targetModuleNum = 3;
+							break;
+						case 'installed':
+							targetModuleNum = 4;
+							break;
+						case 'preview':
+							targetModuleNum = 5;
+							break;
 					}
+					
+					createModuleButton(moduleName, moduleType, targetModuleNum);
         });
       }
     });
+		console.log(`%cFinished loading modules.`, `color:green; font-size: 1.5em`);
   });
+}
+
+var ModuleButton = function (moduleName, sortPos) {
+  this.smallModule =
+  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton" onclick="openModule()">`+
+		`${moduleName}`+
+  `</div>`;
+	this.largeModule =
+  `<div class="largeModuleButton moduleButton onclick="openModule()">`+
+		`${moduleName}`+
+  `</div>`;
+}
+
+function createModuleButton(moduleName, moduleType, x) {
+	var modulePos;
+	if(moduleNum[x] % 2 == 0 && moduleType != 'large') {
+		modulePos = 'first';
+	} else if(moduleNum[x] % 2 == 1 && moduleType != 'large') {
+		modulePos = 'second';
+	}
+	moduleNum[x]++;
+	var moduleButton = new ModuleButton(moduleName, modulePos);
+	console.log(modulePos);
+	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + moduleButton.smallModule;
 }
 /*END LOAD*/
 

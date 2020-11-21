@@ -13,7 +13,7 @@
         <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
           Tools<span id="categoryHeaderArrow">▽&nbsp;</span>
         </div>
-        <div class="moduleListSublist">
+        <div class="moduleListSublist" id="toolSubList">
           <div class="smallModuleButton moduleButton" id="firstSmallButton" onclick="openModule()">Title</div>
           <div class="smallModuleButton moduleButton" id="secondSmallButton" onclick="openModule()">Title</div>
           <div class="smallModuleButton moduleButton" id="firstSmallButton" onclick="openModule()">Title</div>
@@ -27,7 +27,7 @@
         <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
           Minigames<span id="categoryHeaderArrow">▽&nbsp;</span>
         </div>
-        <div class="moduleListSublist">
+        <div class="moduleListSublist" id="minigameSubList">
           <div class="largeModuleButton moduleButton" onclick="openModule()">Title</div>
         </div>
       </div>
@@ -36,8 +36,7 @@
         <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
           Workshops<span id="categoryHeaderArrow">▽&nbsp;</span>
         </div>
-        <div class="moduleListSublist">
-          modules here
+        <div class="moduleListSublist" id="workshopSubList">
         </div>
       </div>
       
@@ -45,8 +44,7 @@
         <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
           Other<span id="categoryHeaderArrow">▽&nbsp;</span>
         </div>
-        <div class="moduleListSublist">
-          modules here
+        <div class="moduleListSublist" id="otherSubList">
         </div>
       </div>
       
@@ -54,8 +52,7 @@
         <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
           Deprecated<span id="categoryHeaderArrow">▽&nbsp;</span>
         </div>
-        <div class="moduleListSublist">
-          modules here
+        <div class="moduleListSublist" id="installedSubList">
         </div>
       </div>
       
@@ -63,8 +60,7 @@
         <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
           Previews<span id="categoryHeaderArrow">▽&nbsp;</span>
         </div>
-        <div class="moduleListSublist">
-          modules here
+        <div class="moduleListSublist" id="previewSubList">
         </div>
       </div>
       
@@ -84,7 +80,7 @@
     
     
     <div class="detailContainer" id="homeDC">
-      <span class="titleHeader">ToolByte</span>
+      <span class="titleHeader">Roglozor's Loli Hole</span>
       <hr>
       Latest Changes
       <hr>
@@ -122,11 +118,11 @@
       <div class="quitConfirmContent">
         Do you really want to quit?
       </div>
-      <div class="quitConfirmButton" onclick="quitApp('confirm')">
-        <div class="quitConfirmButtonInner">Yes</div>
-      </div>
       <div class="quitConfirmButton" onclick="quitApp('toggle')">
         <div class="quitConfirmButtonInner">No</div>
+      </div>
+      <div class="quitConfirmButton" onclick="quitApp('confirm')">
+        <div class="quitConfirmButtonInner">Yes</div>
       </div>
     </div>
     
