@@ -37,7 +37,7 @@ a {
   float: left;
   position: relative;
   
-  height: 96%;
+  height: 100%;
   width: 34%;
   
   background-color: var(--menu);
@@ -68,6 +68,9 @@ a {
   padding: 3%;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+#previewSubList {
+  padding-bottom: 10%;
 }
 
 .moduleButton {
@@ -110,7 +113,7 @@ a {
   text-align: center;
   
   width: 34%;
-  height: 4%;
+  height: 30px;
   
   line-height: 30px;
   

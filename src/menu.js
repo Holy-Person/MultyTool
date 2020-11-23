@@ -39,7 +39,8 @@ function startUp() {
 
 function loadModules() {
 	var filePath = `${__dirname}/Modules/`;
-
+	var modulesLoaded = 0;
+	
   Fs.readdir(filePath, function(err, modules) {
     modules.forEach(function (module) {
       if(!module.startsWith(`off_`)) {
@@ -72,12 +73,15 @@ function loadModules() {
 							targetModuleNum = 5;
 							break;
 					}
-					
 					createModuleButton(moduleName, moduleType, targetModuleNum);
+					modulesLoaded++;
+					
+					if(modulesLoaded == modules.length) {
+						console.log(`%cFinished loading modules.`, `color:green; font-size: 1.5em`);
+    			}
         });
       }
     });
-		console.log(`%cFinished loading modules.`, `color:green; font-size: 1.5em`);
   });
 }
 
