@@ -2,7 +2,7 @@
   "module": {
     "name": "ExampleModule",
     "version": "1.0.0",
-    "type": "installed"
+    "type": "workshop"
   },
   "dev": {
     "name": "Holy",
