@@ -139,6 +139,11 @@ function toggleCategoryVisibility() {
 	}
 }
 
+function openModule() {
+	var destination  		= event.target.innerHTML.split(' ').join('');
+	ipcRenderer.send('changePage', `${destination}`);
+}
+
 function openModuleFolder() {
 	require('child_process').exec(`start "" "${__dirname}/Modules"`);
 }
@@ -156,13 +161,3 @@ function switchDetailContainer() {
 	document.getElementById(`${destination}DC`).style.display = "block";
 }
 /*END MAINMENU*/
-
-
-
-/*
-function openModule() {
-	var element  		= event.target;
-	var destination = element.id;
-	ipcRenderer.send('changePage', `${destination}`);
-}
-*/
