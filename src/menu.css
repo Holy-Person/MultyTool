@@ -220,7 +220,7 @@ a {
   padding-left: 3%;
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 30%;
+  height: 25%;
 }
 .changelogPreviewContent::-webkit-scrollbar {
   display: none;
@@ -252,6 +252,7 @@ a {
 
 .finalHomeCredits {
   text-align: center;
+  padding-bottom: 10px;
 }
 /*END DETAIL*/
 

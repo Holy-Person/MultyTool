@@ -35,6 +35,7 @@ function quitApp(type) {
 window.onload = startUp;
 function startUp() {
 	loadModules();
+	fillChangelog();
 }
 
 function loadModules() {
@@ -108,6 +109,22 @@ function createModuleButton(moduleName, moduleType, x) {
 	console.log(modulePos);
 	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + moduleButton.smallModule;
 }
+
+async function fillChangelog() {
+	var rawChangelog = await fetch((`${__dirname}/AppData/changelog.txt`)).then(response => response.text());
+
+	var changelog = rawChangelog
+    .split('|').join('<br>')
+    .split('{').join('<div class="updateHeader"><span class="updateType">')
+    .split('}').join('</span><br><span class="updateTitle">')
+		.split('(').join('</span>&nbsp;&nbsp;<span class="updateVersion">(')
+		.split(')').join(')</span></div>')
+    .split('*').join('⦿&nbsp;')
+		.split('^').join('&nbsp;&nbsp;•&nbsp;')
+		.split('°').join('<hr>');
+
+  document.getElementById("changelogContent").innerHTML = changelog;
+}
 /*END LOAD*/
 
 /*START MODULELIST*/
@@ -147,21 +164,5 @@ function openModule() {
 	var element  		= event.target;
 	var destination = element.id;
 	ipcRenderer.send('changePage', `${destination}`);
-}
-
-async function fillChangelog() {
-	var rawChangelog = await fetch((`${__dirname}/AppData/changelog.txt`)).then(response => response.text());
-
-	var changelog = rawChangelog
-    .split('|').join('<br>')
-    .split('{').join('<div class="updateHeader"><span class="updateType">')
-    .split('}').join('</span><br><span class="updateTitle">')
-		.split('(').join('</span>&nbsp;&nbsp;<span class="updateVersion">(')
-		.split(')').join(')</span></div>')
-    .split('*').join('⦿&nbsp;')
-		.split('^').join('&nbsp;&nbsp;•&nbsp;')
-		.split('°').join('<hr>');
-
-  document.getElementById("changelogContent").innerHTML = changelog;
 }
 */
