@@ -60,6 +60,7 @@ a {
   background-color: var(--header);
   
   cursor: pointer;
+  border-bottom: solid rgba(232, 230, 227, 0.5);
 }
 #categoryHeaderArrow {
   float: right;
