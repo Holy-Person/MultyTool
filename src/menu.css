@@ -182,6 +182,8 @@ a {
   padding: 1%;
   
   display: none;
+}.detailContainer::-webkit-scrollbar {
+  display: none;
 }
 #homeDC {
   display: block;
@@ -201,6 +203,27 @@ a {
   font-weight: bold;
   letter-spacing: 1px;
   padding-left: 5%;
+}
+
+.changelogPreviewHeader {
+  background-color: var(--header);
+  font-size: 20px;
+  text-decoration: underline;
+  padding-left: 2%;
+  padding: 1%;
+  height: 30px;
+}
+.changelogPreviewContent {
+  background-color: var(--highlightPri);
+  user-select: text;
+  padding: 2%;
+  padding-left: 3%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 30%;
+}
+.changelogPreviewContent::-webkit-scrollbar {
+  display: none;
 }
 
 .externalCreditLink {
@@ -291,176 +314,3 @@ a {
   transform: skewX(20deg);
 }
 /*END ADDITIONS*/
-
-
-
-/*
-.sideMenuLeft {
-  position: absolute;
-  
-  transform: translateX(-215px);
-  transition: 0.5s;
-  
-  background-color: var(--menu);
-  
-  height: 100%;
-  width: 240px;
-}
-.sideMenuLeft:hover {
-  transform: translateX(0px);
-  transition: 0.6s;
-}
-.moduleList {
-  height: 100%;
-  
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.moduleList::-webkit-scrollbar {
-  display: none;
-}
-
-.moduleListFake {
-  float: left;
-  height: 1px;
-  width: 40px;
-}
-
-.moduleListToggle {
-  height: 100%;
-  width: 25px;
-  float: right;
-  
-  background-color: var(--header);
-}
-.toggleText {
-  margin-top: 250px;
-  transform: rotate(-90deg);
-}
-
-.moduleHeader {
-  height: 30px;
-  line-height: 40px;
-  
-  color: #888888;
-  font-size: 14px;
-  text-indent: 7px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.moduleButton {
-  height: 50px;
-  line-height: 50px;
-  text-indent: 10px;
-  
-  transition: 0.3s;
-  
-  background-color: var(--menu);
-  cursor: pointer;
-}
-.moduleButton:hover {
-  background-color: var(--highlightPri);
-  text-indent: 15px;
-}
-.installedStyle:hover {
-  box-shadow: inset 5px 0px 0px 0px #40BF7A;
-}
-.coreStyle:hover {
-  box-shadow: inset 5px 0px 0px 0px #7A40BF;
-}
-.previewStyle:hover {
-  box-shadow: inset 5px 0px 0px 0px #BF7A40;
-}
-
-
-
-
-.changelog {
-  margin-top: 1%;
-  float: left;
-  height: 400px;
-  width: 40%;
-  
-  background-color: var(--menu);
-}
-.changelog + .changelog {
-  margin-left: 2%;
-  
-  background-color: var(--menu);
-}
-.changelogHeader {
-  height: 32px;
-  line-height: 32px;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: underline;
-  text-align: center;
-  
-  background-color: var(--header);
-}
-#changelogContent {
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 15px;
-  height: 350px;
-  
-  user-select: text;
-  cursor: auto;
-  overflow-x: scroll;
-  overflow-x: hidden;
-}
-#changelogContent::-webkit-scrollbar {
-  display: none;
-}
-
-.updateHeader {
-  font-size: 22px;
-}
-.updateType {
-  vertical-align: sub;
-  font-size: 14px;
-}
-.updateTitle {
-  text-decoration: underline;
-  font-weight: bold;
-}
-.updateVersion {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-
-#upcomingContent {
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 15px;
-  height: 350px;
-  
-  user-select: text;
-  cursor: auto;
-  overflow-x: scroll;
-  overflow-x: hidden;
-}
-#upcomingContent::-webkit-scrollbar {
-  display: none;
-}
-
-
-
-.AlphaWarning {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  
-  font-size: 24px;
-  
-  z-index: -1;
-}
-.VersionNum {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 18px;
-}
-*/
