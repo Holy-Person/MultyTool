@@ -2,7 +2,8 @@
   "module": {
     "name": "AIssistant",
     "version": "1.0.0",
-    "type": "preview"
+    "type": "preview",
+    "size": "small"
   },
   "dev": {
     "name": "Holy",

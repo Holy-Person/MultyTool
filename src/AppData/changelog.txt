@@ -20,7 +20,6 @@
 *Small changes to the ExampleModule|
 ^Added Discord Invite|
 ^Changed default link color
-°
 
 <!--Template
 {Update Type}Title(Update Version)

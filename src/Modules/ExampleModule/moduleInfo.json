@@ -2,7 +2,8 @@
   "module": {
     "name": "ExampleModule",
     "version": "1.0.0",
-    "type": "workshop"
+    "type": "workshop",
+    "size": "small"
   },
   "dev": {
     "name": "Holy",

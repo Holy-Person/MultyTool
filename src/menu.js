@@ -35,7 +35,7 @@ function quitApp(type) {
 window.onload = startUp;
 function startUp() {
 	loadModules();
-	fillChangelog();
+	fillPreviewChangelog();
 }
 
 function loadModules() {
@@ -51,6 +51,7 @@ function loadModules() {
           var infoObject = JSON.parse(moduleJsonString);
           var moduleType = infoObject.module.type;
 					var moduleName = infoObject.module.name;
+					var moduleSize = infoObject.module.size;
 					
 					var targetModuleNum = 0;
 					
@@ -74,11 +75,11 @@ function loadModules() {
 							targetModuleNum = 5;
 							break;
 					}
-					createModuleButton(moduleName, moduleType, targetModuleNum);
+					createModuleButton(moduleName, moduleType, moduleSize, targetModuleNum);
 					modulesLoaded++;
 					
 					if(modulesLoaded == modules.length) {
-						console.log(`%cFinished loading modules.`, `color:green; font-size: 1.5em`);
+						console.log(`%cFinished loading modules.\n`, `color:green; font-size: 1.5em`);
     			}
         });
       }
@@ -91,29 +92,45 @@ var ModuleButton = function (moduleName, sortPos) {
   `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton" onclick="openModule()">`+
 		`${moduleName}`+
   `</div>`;
+	this.previewModule =
+  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton">`+
+		`${moduleName}`+
+  `</div>`;
 	this.largeModule =
   `<div class="largeModuleButton moduleButton onclick="openModule()">`+
 		`${moduleName}`+
   `</div>`;
 }
 
-function createModuleButton(moduleName, moduleType, x) {
+function createModuleButton(moduleName, moduleType, moduleSize, x) {
 	var modulePos;
-	if(moduleNum[x] % 2 == 0 && moduleType != 'large') {
+	var createdModule;
+	if(moduleNum[x] % 2 == 0 && moduleSize != 'large') {
+		moduleNum[x]++;
 		modulePos = 'first';
-	} else if(moduleNum[x] % 2 == 1 && moduleType != 'large') {
+	} else if(moduleNum[x] % 2 == 1 && moduleSize != 'large') {
 		modulePos = 'second';
+		moduleNum[x]++;
 	}
-	moduleNum[x]++;
 	var moduleButton = new ModuleButton(moduleName, modulePos);
-	console.log(modulePos);
-	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + moduleButton.smallModule;
+	if(moduleSize == 'large') {
+		createdModule = moduleButton.largeModule;
+	} else if(moduleType == 'preview') {
+		createdModule = moduleButton.previewModule;
+	} else {
+		createdModule = moduleButton.smallModule;
+	}
+	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + createdModule;
 }
 
-async function fillChangelog() {
+async function fillPreviewChangelog() {
 	var rawChangelog = await fetch((`${__dirname}/AppData/changelog.txt`)).then(response => response.text());
+	
+	var startOfFirst = rawChangelog.indexOf(')');
+	var endOfFirst = rawChangelog.indexOf('°');
+	var cutRawChangelog = rawChangelog.substr(0, endOfFirst).substr(startOfFirst+1, rawChangelog.length);
 
-	var changelog = rawChangelog
+	var cutChangelog = cutRawChangelog
     .split('|').join('<br>')
     .split('{').join('<div class="updateHeader"><span class="updateType">')
     .split('}').join('</span><br><span class="updateTitle">')
@@ -123,7 +140,7 @@ async function fillChangelog() {
 		.split('^').join('&nbsp;&nbsp;•&nbsp;')
 		.split('°').join('<hr>');
 
-  document.getElementById("changelogContent").innerHTML = changelog;
+  document.getElementById("changelogPreview").innerHTML = cutChangelog;
 }
 /*END LOAD*/
 
