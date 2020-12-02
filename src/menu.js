@@ -35,7 +35,7 @@ function quitApp(type) {
 window.onload = startUp;
 function startUp() {
 	loadModules();
-	fillPreviewChangelog();
+	fillChangelogs();
 }
 
 function loadModules() {
@@ -123,24 +123,32 @@ function createModuleButton(moduleName, moduleType, moduleSize, x) {
 	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + createdModule;
 }
 
-async function fillPreviewChangelog() {
+async function fillChangelogs() {
 	var rawChangelog = await fetch((`${__dirname}/AppData/changelog.txt`)).then(response => response.text());
 	
 	var startOfFirst = rawChangelog.indexOf(')');
 	var endOfFirst = rawChangelog.indexOf('°');
-	var cutRawChangelog = rawChangelog.substr(0, endOfFirst).substr(startOfFirst+1, rawChangelog.length);
+	var cutRawChangelog = rawChangelog.substr(startOfFirst+1, endOfFirst - startOfFirst-1);
 
 	var cutChangelog = cutRawChangelog
     .split('|').join('<br>')
-    .split('{').join('<div class="updateHeader"><span class="updateType">')
-    .split('}').join('</span><br><span class="updateTitle">')
+    .split('*').join('⦿&nbsp;')
+		.split('^').join('&nbsp;&nbsp;•&nbsp;')
+		.split('°').join('<hr>');
+	
+	var fullChangelog = rawChangelog
+	  .split('|').join('<br>')
+	  .split('{').join('<div class="updateHeader"><span class="updateType">')
+	  .split('}').join('</span><br><span class="updateTitle">')
 		.split('(').join('</span>&nbsp;&nbsp;<span class="updateVersion">(')
 		.split(')').join(')</span></div>')
-    .split('*').join('⦿&nbsp;')
+	 	.split('*').join('⦿&nbsp;')
 		.split('^').join('&nbsp;&nbsp;•&nbsp;')
 		.split('°').join('<hr>');
 
   document.getElementById("changelogPreview").innerHTML = cutChangelog;
+	
+	document.getElementById("changelogFull").innerHTML = fullChangelog;
 }
 /*END LOAD*/
 

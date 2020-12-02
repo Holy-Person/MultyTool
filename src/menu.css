@@ -6,6 +6,7 @@
   --highlightPri: #252525;
   --highlightSec: #353535;
   --header: #161616;
+  --decoration: #e8e6e3;
 }
 
 body {
@@ -188,7 +189,9 @@ a {
 #homeDC {
   display: block;
 }
+/*END DETAIL*/
 
+/*START HOME*/
 .versionNum {
   position: absolute;
   
@@ -254,7 +257,28 @@ a {
   text-align: center;
   padding-bottom: 10px;
 }
-/*END DETAIL*/
+/*END HOME*/
+
+/*START CHANGELOG*/
+/*END CHANGELOG*/
+
+/*START SETTINGS*/
+/*END SETTINGS*/
+
+/*START CREDITS*/
+#changelogFull {
+  background-color: var(--highlightPri);
+  user-select: text;
+  padding: 2%;
+  padding-left: 3%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 70%;
+}
+#changelogFull::-webkit-scrollbar {
+  display: none;
+}
+/*END CREDITS*/
 
 /*START ADDITIONS*/
 #screenBlocker {

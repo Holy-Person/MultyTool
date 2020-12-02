@@ -67,13 +67,9 @@
     
     
     <div class="detailContainer" id="homeDC">
-      <span class="titleHeader">ToolByte</span>
-      <hr>
+      <span class="titleHeader">ToolByte</span><hr>
       <div class="changelogPreviewHeader">Latest Changes</div>
-      <div class="changelogPreviewContent" id="changelogPreview">
-        Test
-      </div>
-      <hr>
+      <div class="changelogPreviewContent" id="changelogPreview">Loading changelog...</div><hr>
       <div class="changelogPreviewHeader">Upcoming Changes</div>
       <div class="changelogPreviewContent">
         • More additions to the ExampleModule<br>
@@ -87,8 +83,7 @@
         • Notification system<br>
         • Help menu (F1/CTRL+Shift+H)<br>
         • Support for Linux (No Mac support for now)
-      </div>
-      <hr>
+      </div><hr>
       <a class="externalCreditLink" href="https://github.com/Holy-Person/ToolByte" target="_blank">
         GitHub
       </a>
@@ -100,20 +95,32 @@
         <b>ToolByte</b> by <a href="https://github.com/Holy-Person" target="_blank">Holy-Person</a><br>
         Contact us at holyochi@gmail.com
       </div>
-      <div class="versionNum">v0.3.0-alpha</div>
     </div>
     
     <div class="detailContainer" id="changelogDC">
-      changelog detailContainer
+      <span class="titleHeader">ToolByte</span><hr>
+      <div class="changelogPreviewHeader">Full Changelog</div>
+      <div id="changelogFull">Loading changelog...</div>
     </div>
     
     <div class="detailContainer" id="settingsDC">
+      <span class="titleHeader">ToolByte</span><hr>
       settings detailContainer
     </div>
     
     <div class="detailContainer" id="creditsDC">
-      credits detailContainer
+      <span class="titleHeader">ToolByte</span><hr>
+      <div class="changelogPreviewHeader">This app was made using:</div>
+      <div class="changelogPreviewContent">
+        Electron v<script>document.write(process.versions.electron)</script>
+        <br>
+        Chromium v<script>document.write(process.versions.chrome)</script>
+        <br>
+        Node v<script>document.write(process.versions.node)</script>
+      </div><hr>
     </div>
+    
+    <div class="versionNum">v0.3.0-alpha</div>
     
     <div id="screenBlocker"></div>
     
