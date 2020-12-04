@@ -1,11 +1,12 @@
 /*START MAIN*/
 :root {
-  --background: #282828;
+  --background: #303030;
   --text: #e8e6e3;
   --menu: #1c1c1c;
-  --highlightPri: #202020;
-  --highlightSec: #3fb9c4;
+  --highlightPri: #252525;
+  --highlightSec: #353535;
   --header: #161616;
+  --decoration: #e8e6e3;
 }
 
 body {
@@ -19,176 +20,399 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #738adb;
 }
 /*END MAIN*/
 
-
-/*BEGIN SIDEMENU*/
-.sideMenuLeft {
-  position: absolute;
+/*START MODULELIST*/
+.moduleListContainer {
+  float: left;
+  position: relative;
   
-  transform: translateX(-215px);
-  transition: 0.5s;
+  height: 100%;
+  width: 34%;
   
   background-color: var(--menu);
-  
-  height: 100%;
-  width: 240px;
-}
-.sideMenuLeft:hover {
-  transform: translateX(0px);
-  transition: 0.6s;
-}
-.moduleList {
-  height: 100%;
   
   overflow-x: hidden;
   overflow-y: auto;
 }
-.moduleList::-webkit-scrollbar {
+.moduleListContainer::-webkit-scrollbar {
   display: none;
 }
 
-.moduleListFake {
-  float: left;
-  height: 1px;
-  width: 40px;
-}
-
-.moduleListToggle {
-  height: 100%;
-  width: 25px;
-  float: right;
+.moduleListCategoryHeader {
+  height: 30px;
+  
+  line-height: 30px;
+  padding-left: 10px;
+  
+  font-size: 18px;
   
   background-color: var(--header);
-}
-.toggleText {
-  margin-top: 250px;
-  transform: rotate(-90deg);
-}
-
-.moduleHeader {
-  height: 30px;
-  line-height: 40px;
   
-  color: #888888;
-  font-size: 14px;
-  text-indent: 7px;
-  font-weight: bold;
-  text-decoration: underline;
+  cursor: pointer;
+  border-bottom: solid rgba(232, 230, 227, 0.5);
+}
+#categoryHeaderArrow {
+  float: right;
+}
+.moduleListSublist {
+  padding: 3%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#previewSubList {
+  padding-bottom: 10%;
 }
 
 .moduleButton {
-  height: 50px;
-  line-height: 50px;
-  text-indent: 10px;
+  float: left;
+  text-align: center;
   
-  transition: 0.3s;
+  height: 70px;
+  border-radius: 10px;
   
-  background-color: var(--menu);
+  line-height: 70px;
+  
+  background-color: var(--highlightPri);
+  
   cursor: pointer;
 }
 .moduleButton:hover {
-  background-color: var(--highlightPri);
-  text-indent: 15px;
+  background-color: var(--highlightSec);
 }
-.installedStyle:hover {
-  box-shadow: inset 5px 0px 0px 0px #40BF7A;
+.smallModuleButton {
+  width: 48%;
 }
-.coreStyle:hover {
-  box-shadow: inset 5px 0px 0px 0px #7A40BF;
+.largeModuleButton {
+  width: 100%;
 }
-.previewStyle:hover {
-  box-shadow: inset 5px 0px 0px 0px #BF7A40;
+#firstSmallButton + #secondSmallButton {
+  margin-left: 4%;
 }
-/*END SIDEMENU*/
+.moduleButton + #firstSmallButton {
+  margin-top: 4%;
+}
+.moduleButton + #firstSmallButton + #secondSmallButton {
+  margin-top: 4%;
+}
+.moduleButton + .largeModuleButton {
+  margin-top: 4%;
+}
 
 
-/*BEGIN CHANGELOG*/
-.changelog {
-  margin-top: 1%;
-  float: left;
-  height: 400px;
-  width: 40%;
-  
-  background-color: var(--menu);
-}
-.changelog + .changelog {
-  margin-left: 2%;
-  
-  background-color: var(--menu);
-}
-.changelogHeader {
-  height: 32px;
-  line-height: 32px;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: underline;
+.moduleFolderButton {
   text-align: center;
   
-  background-color: var(--header);
-}
-#changelogContent {
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 15px;
-  height: 350px;
+  width: 34%;
+  height: 30px;
   
-  user-select: text;
-  cursor: auto;
-  overflow-x: scroll;
-  overflow-x: hidden;
+  line-height: 30px;
+  
+  font-size: 20px;
+  font-weight: bold;
+  
+  position: fixed;
+  bottom:0px;
+  
+  background-color: var(--header);
+  
+  cursor: pointer;
 }
-#changelogContent::-webkit-scrollbar {
+/*END MODULELIST*/
+
+/*START MAINMENU*/
+.mainMenuContainer {
+  float: left;
+  
+  height: 98%;
+  width: 24%;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  padding: 1%;
+}
+
+.mainMenuButton {
+  background-color: var(--highlightPri);
+  
+  height: 50px;
+  width: 100%;
+  
+  /*text-indent: 20%;*/
+  text-align: center;
+  line-height: 50px;
+  
+  font-size: 22px;
+  
+  border-radius: 10px;
+  
+  cursor: pointer;
+}
+.mainMenuButton:hover {
+  background-color: var(--highlightSec);
+}
+.mainMenuButton + .mainMenuButton {
+  margin-top: 12px;
+}
+/*END MAINMENU*/
+
+/*START DETAIL*/
+.detailContainer {
+  float: left;
+  
+  height: 98%;
+  width: 38%;
+  
+  background-color: var(--menu);
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  padding: 1%;
+  
+  display: none;
+}.detailContainer::-webkit-scrollbar {
+  display: none;
+}
+#homeDC {
+  display: block;
+}
+/*END DETAIL*/
+
+/*START HOME*/
+.versionNum {
+  position: absolute;
+  
+  top: 10px;
+  right: 15px;
+  
+  font-size: 15px;
+}
+
+.titleHeader {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-left: 5%;
+}
+
+.changelogPreviewHeader {
+  background-color: var(--header);
+  font-size: 20px;
+  text-decoration: underline;
+  padding-left: 2%;
+  padding: 1%;
+  height: 30px;
+}
+.changelogPreviewContent {
+  background-color: var(--highlightPri);
+  user-select: text;
+  padding: 2%;
+  padding-left: 3%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 25%;
+}
+.changelogPreviewContent::-webkit-scrollbar {
+  display: none;
+}
+
+.externalCreditLink {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  
+  float: left;
+  margin-bottom: 6px;
+  
+  color: var(--text);
+  background-color: var(--highlightPri);
+  border-radius: 10px;
+  
+  width: 45%;
+  height: 45px;
+  line-height: 45px;
+}
+.externalCreditLink:hover {
+  background-color: var(--highlightSec);
+}
+.externalCreditLink + .externalCreditLink {
+  margin-left: 10%;
+}
+
+.finalHomeCredits {
+  text-align: center;
+  padding-bottom: 10px;
+}
+/*END HOME*/
+
+/*START CHANGELOG*/
+#changelogFull {
+  background-color: var(--highlightPri);
+  user-select: text;
+  padding: 2%;
+  padding-left: 3%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 70%;
+}
+#changelogFull::-webkit-scrollbar {
   display: none;
 }
 
 .updateHeader {
-  font-size: 22px;
+  margin-bottom: 10px;
 }
 .updateType {
-  vertical-align: sub;
-  font-size: 14px;
+  font-size: 12px;
 }
 .updateTitle {
+  font-size: 22px;
+  text-decoration: underline;
+}
+.updateVersion {
+  font-size: 14px;
+  float: right;
+}
+/*END CHANGELOG*/
+
+/*START SETTINGS*/
+/*nothing here yet*/
+/*END SETTINGS*/
+
+/*START CREDITS*/
+.versionFloater {
+  float: right;
+}
+.abtMeHeader {
+  font-size: 20px;
   text-decoration: underline;
   font-weight: bold;
 }
-.updateVersion {
-  font-size: 16px;
+.abtMeSubHeader {
+  font-size: 18px;
   font-weight: bold;
 }
-
-
-#upcomingContent {
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 15px;
-  height: 350px;
-  
-  user-select: text;
-  cursor: auto;
-  overflow-x: scroll;
-  overflow-x: hidden;
+.abtMeImage {
+  height: 160px;
+  width: 130px;
 }
-#upcomingContent::-webkit-scrollbar {
+.langFloater {
+  float: right;
+  margin-right: 20%;
+}
+
+.abtMeLink {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  
+  float: left;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  
+  color: var(--text);
+  background-color: var(--highlightPri);
+  border-radius: 10px;
+  
+  width: 32%;
+  height: 40px;
+  line-height: 40px;
+}
+.abtMeLink + .abtMeLink {
+  margin-left: 2%;
+}
+
+.abtMeContactLink {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  
+  float: left;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  
+  color: var(--text);
+  background-color: var(--highlightPri);
+  border-radius: 10px;
+  
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+/*END CREDITS*/
+
+/*START ADDITIONS*/
+#screenBlocker {
+  position: absolute;
+  z-index: 50;
+  
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgba(0,0,0,0.3);
+  
   display: none;
 }
 
-
-
-.AlphaWarning {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
+#quitConfirmContainer {
+  position: fixed;
+  z-index: 100;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skewX(-20deg);
   
+  width: 33%;
+  height: 120px;
+  padding: 1%;
+  
+  background-color: var(--menu);
+  
+  display: none;
+}
+.quitConfirmContent {
+  transform: skewX(20deg);
+  text-align: center;
+  font-size: 24px;
+  text-decoration: underline;
+}
+.quitConfirmButton {
+  float: left;
+  
+  width: 48%;
+  height: 30px;
+  
+  margin-top: 10%;
+  
+  text-align: center;
+  line-height: 30px;
   font-size: 24px;
   
-  z-index: -1;
+  background-color: var(--highlightPri);
+  
+  cursor: pointer;
+}.quitConfirmButton + .quitConfirmButton {
+  margin-left: 3%;
 }
-.VersionNum {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 18px;
+.quitConfirmButton:hover {
+  background-color: var(--highlightSec);
 }
+.quitConfirmButtonInner {
+  transform: skewX(20deg);
+}
+/*END ADDITIONS*/

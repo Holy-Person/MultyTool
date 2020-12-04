@@ -1,9 +1,9 @@
 {
   "module": {
-    "name": "ExampleModule",
+    "name": "LanguageModule",
     "description": "unused field",
     "version": "1.0.0",
-    "type": "workshop",
+    "type": "preview",
     "size": "small",
     "icon": "unused field",
     "color": "unused field"
