@@ -1,12 +1,15 @@
 {
   "module": {
     "name": "CytusManager",
+    "description": "unused field",
     "version": "1.0.0",
     "type": "preview",
-    "size": "small"
+    "size": "small",
+    "icon": "unused field",
+    "color": "unused field"
   },
   "dev": {
     "name": "Holy",
-    "contact": "holyochi@gmail.com"
+    "contact": "聖なる人#0663"
   }
 }
