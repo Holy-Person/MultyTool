@@ -8,23 +8,158 @@
   </head>
   
   <body>
-    <div class="sideMenuLeft">
-      <div class="moduleListToggle"><div class="toggleText">𝌆Modules</div></div>
-      <div class="moduleList">
-        <div class="moduleHeader">Installed Modules</div>
-        <div id="InstalledList"></div>
-        
-        <div class="moduleHeader">Default Modules</div>
-        <div id="DefaultList"></div>
-        
-        <div class="moduleHeader">Upcoming Modules</div>
-        <div id="DownloadList"></div>
+    <div class="moduleListContainer">
+      <div class="moduleListCategory">
+        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+          Tools<span id="categoryHeaderArrow">▽&nbsp;</span>
+        </div>
+        <div class="moduleListSublist" id="toolSubList"></div>
+      </div>
+      
+      <div class="moduleListCategory">
+        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+          Minigames<span id="categoryHeaderArrow">▽&nbsp;</span>
+        </div>
+        <div class="moduleListSublist" id="minigameSubList"></div>
+      </div>
+      
+      <div class="moduleListCategory">
+        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+          Workshops<span id="categoryHeaderArrow">▽&nbsp;</span>
+        </div>
+        <div class="moduleListSublist" id="workshopSubList"></div>
+      </div>
+      
+      <div class="moduleListCategory">
+        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+          Other<span id="categoryHeaderArrow">▽&nbsp;</span>
+        </div>
+        <div class="moduleListSublist" id="otherSubList"></div>
+      </div>
+      
+      <div class="moduleListCategory">
+        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+          Deprecated<span id="categoryHeaderArrow">▽&nbsp;</span>
+        </div>
+        <div class="moduleListSublist" id="installedSubList"></div>
+      </div>
+      
+      <div class="moduleListCategory">
+        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+          Previews<span id="categoryHeaderArrow">▽&nbsp;</span>
+        </div>
+        <div class="moduleListSublist" id="previewSubList"></div>
+      </div>
+      
+      <div class="moduleFolderButton" onclick="openModuleFolder()">📂 Open Folder</div>
+    </div>
+    
+    
+    
+    <div class="mainMenuContainer">
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Home</div>
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div>
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Settings</div>
+      <div class="mainMenuButton" onclick="switchDetailContainer()">Credits</div><hr>
+      <div class="mainMenuButton" onclick="quitApp('toggle')">Quit ToolByte</div>
+    </div>
+    
+    
+    
+    <div class="detailContainer" id="homeDC">
+      <span class="titleHeader">ToolByte</span><hr>
+      <div class="changelogPreviewHeader">Latest Changes</div>
+      <div class="changelogPreviewContent" id="changelogPreview">Loading changelog...</div><hr>
+      <div class="changelogPreviewHeader">Upcoming Changes</div>
+      <div class="changelogPreviewContent">
+        • More additions to the ExampleModule<br>
+        • More additions to the ModuleBuidler<br>
+        • More appearance options for your modules<br>
+        • Additional improvements to the main menu<br>
+        • Better Devtools<br>
+        • Changelog directly from Github<br>
+        • Account system with multiple accounts & saves<br>
+        • Update button or auto update system<br>
+        • Notification system<br>
+        • Help menu (F1/CTRL+Shift+H)<br>
+        • Support for Linux (No Mac support for now)
+      </div><hr>
+      <a class="externalCreditLink" href="https://github.com/Holy-Person/ToolByte" target="_blank">
+        GitHub
+      </a>
+      <a class="externalCreditLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">
+        Discord
+      </a>
+      <hr>
+      <div class="finalHomeCredits">
+        <b>ToolByte</b> by <a href="https://github.com/Holy-Person" target="_blank">Holy-Person</a><br>
+        Contact us on Discord
       </div>
     </div>
     
-    <div class="moduleListFake"></div>
+    <div class="detailContainer" id="changelogDC">
+      <span class="titleHeader">ToolByte</span><hr>
+      <div class="changelogPreviewHeader">Full Changelog</div>
+      <div id="changelogFull">Loading changelog...</div>
+    </div>
     
-    <div class="changelog">
+    <div class="detailContainer" id="settingsDC">
+      <span class="titleHeader">ToolByte</span><hr>
+      Please come back at a later time, this feature isn't finished yet.
+    </div>
+    
+    <div class="detailContainer" id="creditsDC">
+      <span class="titleHeader">ToolByte</span><hr>
+      <u><b>This app was made using:</b></u><br>
+      <div class="versionFloater">
+        <script>document.write(process.versions.electron)</script><br>
+        <script>document.write(process.versions.chrome)</script><br>
+        <script>document.write(process.versions.node)</script>
+      </div>
+      Electron:<br>
+      Chromium:<br>
+      Node:
+      <hr>
+      <div class="abtMeHeader">About me:</div>
+      <!--<img class="abtMeImage" href="./a.png"/>-->
+      Hi, my name's Holy, or at least that's what my online handle is, I'm a student and making this app in my free time so expect some updates to take a bit longer.
+      <hr>
+      
+      <div class="abtMeSubHeader">Age: 18</div>
+      <hr>
+      
+      <div class="abtMeSubHeader">Languages:</div>
+      <div class="langFloater">• C<br>• C#<br>• Assembler<br>• Arduino<br>• Processing</div>
+      &nbsp;&nbsp;• HTML<br>&nbsp;&nbsp;• CSS<br>&nbsp;&nbsp;• JavaScript<br>&nbsp;&nbsp;• nodeJS<br>&nbsp;&nbsp;• Java
+      <hr>
+      
+      <div class="abtMeSubHeader">Links:</div>
+      <a class="abtMeLink" href="https://github.com/Holy-Person/ToolByte" target="_blank">GitHub</a>
+      <a class="abtMeLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">Discord</a>
+      <a class="abtMeLink" href="https://twitter.com/HolyDev1" target="_blank">Twitter</a>
+      <hr>
+      
+      <div class="abtMeSubHeader">Contact me:</div>
+      <a class="abtMeContactLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">Discord</a>
+    </div>
+    
+    <div class="versionNum">v0.3.0-alpha</div>
+    
+    <div id="screenBlocker"></div>
+    
+    <div id="quitConfirmContainer">
+      <div class="quitConfirmContent">
+        Do you really want to quit?
+      </div>
+      <div class="quitConfirmButton" onclick="quitApp('toggle')">
+        <div class="quitConfirmButtonInner">No</div>
+      </div>
+      <div class="quitConfirmButton" onclick="quitApp('confirm')">
+        <div class="quitConfirmButtonInner">Yes</div>
+      </div>
+    </div>
+    
+    <!--<div class="changelog">
       <div class="changelogHeader">Changelog</div>
       <div id="changelogContent">
         Loading Changelog...
@@ -35,37 +170,30 @@
       <div class="changelogHeader">Upcoming Changes</div>
       <div id="upcomingContent">
         ⦿ <b><u>Next Update: Menu Update</b></u><br>
-        &nbsp;&nbsp;• Complete main-menu rework<br>
-        &nbsp;&nbsp;• More additions to the ExampleModule<br>
-        &nbsp;&nbsp;• More additions to the ModuleBuidler<br>
-        &nbsp;&nbsp;• More appearance options for your modules<br>
-        &nbsp;&nbsp;• Better Devtools<br>
-        &nbsp;&nbsp;• Changelog directly from Github<br>
-        &nbsp;&nbsp;• Account system with multiple accounts & saves<br>
-        &nbsp;&nbsp;• Update button or auto update system<br>
-        &nbsp;&nbsp;• Notification System<br>
-        &nbsp;&nbsp;• Help menu (F1/CTRL+Shift+H)<br>
-        &nbsp;&nbsp;• Support for Linux (No mac support for now)<hr>
+        • Complete main-menu rework<br>
+        • More additions to the ExampleModule<br>
+        • More additions to the ModuleBuidler<br>
+        • More appearance options for your modules<br>
+        • Better Devtools<br>
+        • Changelog directly from Github<br>
+        • Account system with multiple accounts & saves<br>
+        • Update button or auto update system<br>
+        • Notification System<br>
+        • Help menu (F1/CTRL+Shift+H)<br>
+        • Support for Linux (No mac support for now)<hr>
         ⦿ <b><u>Upcoming official modules</b></u><br>
-        &nbsp;&nbsp;• Cytus2 Manager<br>
-        &nbsp;&nbsp;• Theme Creator<br>
-        &nbsp;&nbsp;• AI Assistant<br>
-        &nbsp;&nbsp;• Minigame Collection<br>
-        &nbsp;&nbsp;• Chat System<br>
-        &nbsp;&nbsp;• Language-Learn Ressources<br>
-        &nbsp;&nbsp;• Example and Ressource Collection<hr>
+        • Cytus2 Manager<br>
+        • Theme Creator<br>
+        • AI Assistant<br>
+        • Minigame Collection<br>
+        • Chat System<br>
+        • Language-Learn Ressources<br>
+        • Example and Ressource Collection<hr>
         ⦿ <b><u>What can break during updates?</b></u><br>
-        &nbsp;&nbsp;• Account Update: Accounts may get changed quite a few times before they're complete, I will try to keep them working even with old information<br>
-        &nbsp;&nbsp;• Menu Update: Rework will break categories<hr>
+        • Account Update: Accounts may get changed quite a few times before they're complete, I will try to keep them working even with old information<br>
+        • Menu Update: Rework will break categories<hr>
       </div>
     </div>
-    
-    <div class="AlphaWarning">
-      Notice: This is an early access build,<br>things may be unfinished or broken.
-    </div>
-    
-    <div class="VersionNum">
-      Alpha Version 0.2.0
-    </div>
+  -->
   </body>
 </html>

@@ -1,9 +1,20 @@
+{Regular Update}Menu Rework Update(0.3.0)
+*Reworked entire menu layout|
+^Divided menu into different sections|
+^Added button to quit app|
+*Added version numbers|
+*Added developer links|
+*Reworked module list|
+^Added working categories|
+^Added more module button customizations
+°
+
 {Regular Update}Moldule Builder Update(0.2.0)
 *Added Module Builder|
-*Updated Main Menu a bit|
-^Added Upcoming Section|
-^Added Version Number|
-*Added External URL Handler|
+*Updated main menu a bit|
+^Added upcoming section|
+^Added version number|
+*Added external URL handler|
 ^Basically just makes external links easier|
 *Updated literally every single node_module|
 ^This may have broken some things but fixes are on the way|
@@ -11,16 +22,15 @@
 °
 
 {Regular Update}Module Reader Update(0.1.0)
-*Added Changelog|
-^Added Changelog formatter|
-*Added Module Reader & Sorter|
-^Added "preview" Type|
-^Added "core" Type|
-^Added "installed" Type|
+*Added changelog|
+^Added changelog formatter|
+*Added module reader & sorter|
+^Added "preview" type|
+^Added "core" type|
+^Added "installed" type|
 *Small changes to the ExampleModule|
-^Added Discord Invite|
+^Added Discord invite|
 ^Changed default link color
-°
 
 <!--Template
 {Update Type}Title(Update Version)

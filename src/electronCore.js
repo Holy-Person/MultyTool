@@ -41,7 +41,7 @@ const createWindow = () => {
     require('electron').shell.openExternal(url);
   });
   
-  globalShortcut.register('ctrl+shift+x', function () {
+  globalShortcut.register('ctrl+shift+i', function () {
     mainWindow.webContents.toggleDevTools();
   });
 };
