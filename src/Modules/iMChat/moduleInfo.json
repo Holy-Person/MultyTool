@@ -1,0 +1,15 @@
+{
+  "module": {
+    "name": "iMChat",
+    "description": "unused field",
+    "version": "1.0.0",
+    "type": "preview",
+    "size": "small",
+    "icon": "unused field",
+    "color": "unused field"
+  },
+  "dev": {
+    "name": "Holy",
+    "contact": "聖なる人#0663"
+  }
+}
