@@ -56,23 +56,17 @@ function loadModules() {
 					var targetModuleNum = 0;
 					
 					switch (moduleType) {
-						case 'tool':
-							targetModuleNum = 0;
+						case 'tool': targetModuleNum = 0;
 							break;
-						case 'minigame':
-							targetModuleNum = 1;
+						case 'minigame': targetModuleNum = 1;
 							break;
-						case 'workshop':
-							targetModuleNum = 2;
+						case 'workshop': targetModuleNum = 2;
 							break;
-						case 'other':
-							targetModuleNum = 3;
+						case 'other': targetModuleNum = 3;
 							break;
-						case 'installed':
-							targetModuleNum = 4;
+						case 'installed': targetModuleNum = 4;
 							break;
-						case 'preview':
-							targetModuleNum = 5;
+						case 'preview': targetModuleNum = 5;
 							break;
 					}
 					createModuleButton(moduleName, moduleType, moduleSize, targetModuleNum);

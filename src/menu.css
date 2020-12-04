@@ -260,12 +260,6 @@ a {
 /*END HOME*/
 
 /*START CHANGELOG*/
-/*END CHANGELOG*/
-
-/*START SETTINGS*/
-/*END SETTINGS*/
-
-/*START CREDITS*/
 #changelogFull {
   background-color: var(--highlightPri);
   user-select: text;
@@ -277,6 +271,89 @@ a {
 }
 #changelogFull::-webkit-scrollbar {
   display: none;
+}
+
+.updateHeader {
+  margin-bottom: 10px;
+}
+.updateType {
+  font-size: 12px;
+}
+.updateTitle {
+  font-size: 22px;
+  text-decoration: underline;
+}
+.updateVersion {
+  font-size: 14px;
+  float: right;
+}
+/*END CHANGELOG*/
+
+/*START SETTINGS*/
+/*nothing here yet*/
+/*END SETTINGS*/
+
+/*START CREDITS*/
+.versionFloater {
+  float: right;
+}
+.abtMeHeader {
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.abtMeSubHeader {
+  font-size: 18px;
+  font-weight: bold;
+}
+.abtMeImage {
+  height: 160px;
+  width: 130px;
+}
+.langFloater {
+  float: right;
+  margin-right: 20%;
+}
+
+.abtMeLink {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  
+  float: left;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  
+  color: var(--text);
+  background-color: var(--highlightPri);
+  border-radius: 10px;
+  
+  width: 32%;
+  height: 40px;
+  line-height: 40px;
+}
+.abtMeLink + .abtMeLink {
+  margin-left: 2%;
+}
+
+.abtMeContactLink {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  
+  float: left;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  
+  color: var(--text);
+  background-color: var(--highlightPri);
+  border-radius: 10px;
+  
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
 }
 /*END CREDITS*/
 
