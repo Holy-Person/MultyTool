@@ -3,13 +3,13 @@
     "name": "ExampleModule",
     "description": "unused field",
     "version": "1.0.0",
-    "type": "workshop",
+    "type": "other",
     "size": "small",
     "icon": "unused field",
     "color": "unused field"
   },
   "dev": {
-    "name": "Holy",
-    "contact": "聖なる人#0663"
+    "name": "Template",
+    "contact": "Template"
   }
 }
