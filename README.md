@@ -21,7 +21,9 @@ Currently I'm using:
 * Node version: 12.13.0
 
 ## Install
-I was thinking of keeping this project private for a little longer until I at least get the menu update out there, but the sooner people test the actual features the better.
+1. Download the ToolByte zip from the latest update.
+2. Unzip the zip file.
+3. Use "ToolByte.exe" to open the app.
 
 ## Help
 Need help with the app? Have questions but can't find an answer?
