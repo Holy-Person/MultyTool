@@ -2,21 +2,25 @@
 *Reworked entire menu layout|
 ^Divided menu into different sections|
 ^Added button to quit app|
+^Added button to open the module folder|
 *Added version numbers|
 *Added developer links|
 *Reworked module list|
 ^Added working categories|
-^Added more module button customizations
+^Added more module button customizations|
+*Small update to Module Builder|
+^New section about categories|
+^Some rephrasing and more explanations
 °
 
-{Regular Update}Moldule Builder Update(0.2.0)
+{Regular Update}Module Builder Update(0.2.0)
 *Added Module Builder|
 *Updated main menu a bit|
 ^Added upcoming section|
 ^Added version number|
 *Added external URL handler|
 ^Basically just makes external links easier|
-*Updated literally every single node_module|
+*Updated literally every single node module|
 ^This may have broken some things but fixes are on the way|
 *Removed unused files for the release version
 °
@@ -28,7 +32,7 @@
 ^Added "preview" type|
 ^Added "core" type|
 ^Added "installed" type|
-*Small changes to the ExampleModule|
+*Small changes to the Example Module|
 ^Added Discord invite|
 ^Changed default link color
 
