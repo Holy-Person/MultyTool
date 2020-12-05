@@ -87,11 +87,11 @@ var ModuleButton = function (moduleName, sortPos) {
 		`${moduleName}`+
   `</div>`;
 	this.previewModule =
-  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton" onclick="openModule()">`+
+  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton">`+
 		`${moduleName}`+
   `</div>`;
 	this.largeModule =
-  `<div class="largeModuleButton moduleButton onclick="openModule()">`+
+  `<div class="largeModuleButton moduleButton" onclick="openModule()">`+
 		`${moduleName}`+
   `</div>`;
 }
