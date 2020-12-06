@@ -1,12 +1,12 @@
 /*START MAIN*/
 :root {
-  --background: #303030;
-  --text: #e8e6e3;
-  --menu: #1c1c1c;
-  --highlightPri: #252525;
-  --highlightSec: #353535;
-  --header: #161616;
-  --decoration: #e8e6e3;
+  --background: rgba(224,224,244,1.0);
+  --text: rgba(18,18,18,1.0);
+  --menu: rgba(192,192,212,1.0);
+  --highlightPri: rgba(180,180,200,1.0);
+  --highlightSec: rgba(208,208,228,1.0);
+  --header: rgba(115,138,219,1.0);
+  --decoration: rgba(85,108,189,1.0);
 }
 
 body {
@@ -27,9 +27,12 @@ body {
 html {
   height: 100%;
 }
+hr {
+border-top: 2px solid var(--decoration);
+}
 a {
   text-decoration: none;
-  color: #738adb;
+  color: var(--decoration);
 }
 /*END MAIN*/
 
@@ -61,7 +64,7 @@ a {
   background-color: var(--header);
   
   cursor: pointer;
-  border-bottom: solid rgba(232, 230, 227, 0.5);
+  border-bottom: solid var(--decoration);
 }
 #categoryHeaderArrow {
   float: right;

@@ -1,3 +1,7 @@
+{Minor Update}UpdateTitle(0.3.1)
+*Changed Color Scheme
+°
+
 {Regular Update}Menu Rework Update(0.3.0)
 *Reworked entire menu layout|
 ^Divided menu into different sections|

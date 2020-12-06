@@ -118,7 +118,7 @@ function createModuleButton(moduleName, moduleType, moduleSize, x) {
 }
 
 async function fillChangelogs() {
-	var rawChangelog = await fetch((`${__dirname}/AppData/changelog.txt`)).then(response => response.text());
+	var rawChangelog = await fetch((`${__dirname}/Data/changelog.txt`)).then(response => response.text());
 	
 	var startOfFirst = rawChangelog.indexOf(')');
 	var endOfFirst = rawChangelog.indexOf('°');
