@@ -1,7 +1,7 @@
 {
   "module": {
-    "name": "CytusManager",
-    "description": "An easy way to read and enjoy the Cytus2 Story.",
+    "name": "PianoPlayer",
+    "description": "Play and test your piano sheets. Supports VP and MIDI.",
     "version": "1.0.0",
     "type": "preview",
     "size": "small",

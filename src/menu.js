@@ -51,6 +51,7 @@ function loadModules() {
           var infoObject = JSON.parse(moduleJsonString);
           var moduleType = infoObject.module.type;
 					var moduleName = infoObject.module.name;
+					var moduleDescription = infoObject.module.description;
 					var moduleSize = infoObject.module.size;
 					
 					var targetModuleNum = 0;
@@ -69,7 +70,7 @@ function loadModules() {
 						case 'preview': targetModuleNum = 5;
 							break;
 					}
-					createModuleButton(moduleName, moduleType, moduleSize, targetModuleNum);
+					createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, targetModuleNum);
 					modulesLoaded++;
 					
 					if(modulesLoaded == modules.length) {
@@ -81,22 +82,25 @@ function loadModules() {
   });
 }
 
-var ModuleButton = function (moduleName, sortPos) {
+var ModuleButton = function (moduleName, moduleDescription, sortPos) {
   this.smallModule =
   `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton" onclick="openModule()">`+
-		`${moduleName}`+
+		`<div class="moduleButtonHeader">${moduleName}</div>`+
+		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
   `</div>`;
 	this.previewModule =
   `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton">`+
-		`${moduleName}`+
+		`<div class="moduleButtonHeader">${moduleName}</div>`+
+		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
   `</div>`;
 	this.largeModule =
   `<div class="largeModuleButton moduleButton" onclick="openModule()">`+
-		`${moduleName}`+
+		`<div class="moduleButtonHeader">${moduleName}</div>`+
+		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
   `</div>`;
 }
 
-function createModuleButton(moduleName, moduleType, moduleSize, x) {
+function createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, x) {
 	var modulePos;
 	var createdModule;
 	if(moduleNum[x] % 2 == 0 && moduleSize != 'large') {
@@ -106,7 +110,7 @@ function createModuleButton(moduleName, moduleType, moduleSize, x) {
 		modulePos = 'second';
 		moduleNum[x]++;
 	}
-	var moduleButton = new ModuleButton(moduleName, modulePos);
+	var moduleButton = new ModuleButton(moduleName, moduleDescription, modulePos);
 	if(moduleSize == 'large') {
 		createdModule = moduleButton.largeModule;
 	} else if(moduleType == 'preview') {
@@ -159,7 +163,8 @@ function toggleCategoryVisibility() {
 }
 
 function openModule() {
-	var destination  		= event.target.innerHTML.split(' ').join('');
+	var targetChildren = event.target.parentElement.children;
+	var destination = targetChildren[0].innerHTML.split(' ').join('');
 	ipcRenderer.send('changePage', `${destination}`);
 }
 

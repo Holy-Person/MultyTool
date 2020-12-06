@@ -1,5 +1,7 @@
 {Minor Update}UpdateTitle(0.3.1)
-*Changed Color Scheme
+*Changed Color Scheme|
+*Added descriptions to module buttons|
+*Added more preview modules
 °
 
 {Regular Update}Menu Rework Update(0.3.0)

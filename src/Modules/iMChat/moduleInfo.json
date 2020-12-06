@@ -1,7 +1,7 @@
 {
   "module": {
     "name": "iMChat",
-    "description": "unused field",
+    "description": "A chat module styled after the iM system from Cytus2.",
     "version": "1.0.0",
     "type": "preview",
     "size": "small",

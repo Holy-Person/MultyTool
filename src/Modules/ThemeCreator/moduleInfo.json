@@ -1,7 +1,7 @@
 {
   "module": {
     "name": "ThemeCreator",
-    "description": "unused field",
+    "description": "Create and share your own ToolByte themes.",
     "version": "1.0.0",
     "type": "preview",
     "size": "small",

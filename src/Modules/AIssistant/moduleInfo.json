@@ -1,7 +1,7 @@
 {
   "module": {
     "name": "AIssistant",
-    "description": "unused field",
+    "description": "An attempt to make a chat-bot.",
     "version": "1.0.0",
     "type": "preview",
     "size": "small",

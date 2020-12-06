@@ -82,14 +82,18 @@ a {
   float: left;
   text-align: center;
   
-  height: 70px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  min-height: 10vw;
   border-radius: 10px;
   
-  line-height: 70px;
+  /*line-height: 70px;*/
   
   background-color: var(--highlightPri);
   
   cursor: pointer;
+  
+  overflow: hidden;
 }
 .moduleButton:hover {
   background-color: var(--highlightSec);
@@ -111,6 +115,20 @@ a {
 }
 .moduleButton + .largeModuleButton {
   margin-top: 4%;
+}
+
+.moduleButtonHeader {
+  font-weight: bold;
+  font-size: 1.9vw;
+  
+  border-bottom: 2px solid var(--decoration);
+}
+.moduleButtonDesc {
+  font-size: 1.6vw;
+  overflow-y: scroll;
+}
+.moduleButtonDesc::-webkit-scrollbar {
+  display: none;
 }
 
 

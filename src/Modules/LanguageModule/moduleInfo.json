@@ -1,7 +1,7 @@
 {
   "module": {
     "name": "LanguageModule",
-    "description": "unused field",
+    "description": "A tool to help you learn other Languages.",
     "version": "1.0.0",
     "type": "preview",
     "size": "small",

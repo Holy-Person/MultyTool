@@ -1,7 +1,7 @@
 {
   "module": {
     "name": "ExampleModule",
-    "description": "unused field",
+    "description": "The default module to copy-paste from.",
     "version": "1.0.0",
     "type": "other",
     "size": "small",

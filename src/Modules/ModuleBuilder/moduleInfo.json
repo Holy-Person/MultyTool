@@ -1,7 +1,7 @@
 {
   "module": {
     "name": "ModuleBuilder",
-    "description": "unused field",
+    "description": "Want to create your own module? Check here for a how-to on our features.",
     "version": "1.0.0",
     "type": "workshop",
     "size": "large",
