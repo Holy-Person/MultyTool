@@ -65,9 +65,9 @@ function loadModules() {
 							break;
 						case 'other': targetModuleNum = 3;
 							break;
-						case 'installed': targetModuleNum = 4;
-							break;
 						case 'preview': targetModuleNum = 5;
+							break;
+						default: targetModuleNum = 4;
 							break;
 					}
 					createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, targetModuleNum);
@@ -163,7 +163,7 @@ function toggleCategoryVisibility() {
 }
 
 function openModule() {
-	var targetChildren = event.target.parentElement.children;
+	var targetChildren = event.target.children;
 	var destination = targetChildren[0].innerHTML.split(' ').join('');
 	ipcRenderer.send('changePage', `${destination}`);
 }
