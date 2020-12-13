@@ -85,8 +85,9 @@ typings/
 # Webpack
 .webpack/
 
-# Electron-Forge
-out/
-
 # Customs
-npmRunScript.bat
+.idea/
+thumbs.db
+dist/
+yarnRunScript.bat
+notes.txt
