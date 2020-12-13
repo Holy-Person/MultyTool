@@ -166,6 +166,7 @@ function openModule() {
 	var targetChildren = event.target.children;
 	var destination = targetChildren[0].innerHTML.split(' ').join('');
 	ipcRenderer.send('changePage', `${destination}`);
+	//// TODO: fix weird bug with click between text/box
 }
 
 function openModuleFolder() {

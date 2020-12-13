@@ -1,27 +1,46 @@
 {
-  "name": "ToolByte",
-  "productName": "ToolByte",
+  "name": "MultyTool",
   "version": "0.3.1",
-  "description": "A module-based Electron App",
-  "main": "src/electronCore.js",
+  "description": "MultyTool but now on electron-builder with yarn.",
+  "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "keywords": [],
   "author": {
     "name": "Holy-Person",
     "email": "holyochi@gmail.com"
   },
-  "license": "MIT",
+  "build": {
+    "appId": "com.electron.toolbyte2",
+    "files": [
+      "dist/electron/**/*",
+      "node_modules/",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/icons/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
   "dependencies": {
-    "drag-drop": "^6.1.0",
-    "electron-builder": "^22.9.1",
+    "source-map-support": "^0.5.16",
     "mousetrap": "^1.6.5",
-    "node-abi": "^2.19.1",
-    "shell": "^0.8.4",
     "tone": "^14.7.58"
   },
   "devDependencies": {
-    "electron": "^8.5.3"
+    "electron": "^8.2.0",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "webpack": "~4.42.1"
   }
 }

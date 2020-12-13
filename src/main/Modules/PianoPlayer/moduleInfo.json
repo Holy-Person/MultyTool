@@ -3,8 +3,8 @@
     "name": "PianoPlayer",
     "description": "Play and test your piano sheets. Supports VP and MIDI.",
     "version": "1.0.0",
-    "type": "preview",
-    "size": "small",
+    "type": "tool",
+    "size": "large",
     "icon": "unused field",
     "color": "unused field"
   },

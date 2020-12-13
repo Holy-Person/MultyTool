@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>PianoPlayer</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="noteContainer" id="noteContainer"></div>
+  
+  <div class="pianoContainer">
+    Piano here
+    <div class="pianoBody">
+      <div class="pianoKey lightKey" id="pKey_a" onclick="handleNote('a')">a</div>
+      <div class="pianoKey lightKey" id="pKey_b" onclick="handleNote('b')">b</div>
+      <div class="pianoKey lightKey" id="pKey_c" onclick="handleNote('c')">c</div>
+      <div class="pianoKey lightKey" id="pKey_d" onclick="handleNote('d')">d</div>
+      <div class="pianoKey lightKey" id="pKey_e" onclick="handleNote('e')">e</div>
+      <div class="pianoKey lightKey" id="pKey_f" onclick="handleNote('f')">f</div>
+      <div class="pianoKey lightKey" id="pKey_g" onclick="handleNote('g')">g</div>
+      <div class="pianoKey lightKey" id="pKey_h" onclick="handleNote('h')">h</div>
+      <div class="pianoKey lightKey" id="pKey_i" onclick="handleNote('i')">i</div>
+      <div class="pianoKey lightKey" id="pKey_j" onclick="handleNote('j')">j</div>
+      <div class="pianoKey lightKey" id="pKey_k" onclick="handleNote('k')">k</div>
+      <div class="pianoKey lightKey" id="pKey_l" onclick="handleNote('l')">l</div>
+      <div class="pianoKey lightKey" id="pKey_m" onclick="handleNote('m')">m</div>
+      <div class="pianoKey lightKey" id="pKey_n" onclick="handleNote('n')">n</div>
+      <div class="pianoKey lightKey" id="pKey_o" onclick="handleNote('o')">o</div>
+      <div class="pianoKey lightKey" id="pKey_p" onclick="handleNote('p')">p</div>
+      <div class="pianoKey lightKey" id="pKey_q" onclick="handleNote('q')">q</div>
+      <div class="pianoKey lightKey" id="pKey_r" onclick="handleNote('r')">r</div>
+      <div class="pianoKey lightKey" id="pKey_s" onclick="handleNote('s')">s</div>
+      <div class="pianoKey lightKey" id="pKey_t" onclick="handleNote('t')">t</div>
+      <div class="pianoKey lightKey" id="pKey_u" onclick="handleNote('u')">u</div>
+      <div class="pianoKey lightKey" id="pKey_v" onclick="handleNote('v')">v</div>
+      <div class="pianoKey lightKey" id="pKey_w" onclick="handleNote('w')">w</div>
+      <div class="pianoKey lightKey" id="pKey_x" onclick="handleNote('x')">x</div>
+      <div class="pianoKey lightKey" id="pKey_y" onclick="handleNote('y')">y</div>
+      <div class="pianoKey lightKey" id="pKey_z" onclick="handleNote('z')">z</div>
+      
+      <div class="pianoKey darkKey" id="pKey_A" onclick="handleNote('A')">A</div>
+      <div class="pianoKey darkKey" id="pKey_B" onclick="handleNote('B')">B</div>
+      <div class="pianoKey darkKey" id="pKey_C" onclick="handleNote('C')">C</div>
+      <div class="pianoKey darkKey" id="pKey_D" onclick="handleNote('D')">D</div>
+      <div class="pianoKey darkKey" id="pKey_E" onclick="handleNote('E')">E</div>
+      <div class="pianoKey darkKey" id="pKey_F" onclick="handleNote('F')">F</div>
+      <div class="pianoKey darkKey" id="pKey_G" onclick="handleNote('G')">G</div>
+      <div class="pianoKey darkKey" id="pKey_H" onclick="handleNote('H')">H</div>
+      <div class="pianoKey darkKey" id="pKey_I" onclick="handleNote('I')">I</div>
+      <div class="pianoKey darkKey" id="pKey_J" onclick="handleNote('J')">J</div>
+      <div class="pianoKey darkKey" id="pKey_K" onclick="handleNote('K')">K</div>
+      <div class="pianoKey darkKey" id="pKey_L" onclick="handleNote('L')">L</div>
+      <div class="pianoKey darkKey" id="pKey_M" onclick="handleNote('M')">M</div>
+      <div class="pianoKey darkKey" id="pKey_N" onclick="handleNote('N')">N</div>
+      <div class="pianoKey darkKey" id="pKey_O" onclick="handleNote('O')">O</div>
+      <div class="pianoKey darkKey" id="pKey_P" onclick="handleNote('P')">P</div>
+      <div class="pianoKey darkKey" id="pKey_Q" onclick="handleNote('Q')">Q</div>
+      <div class="pianoKey darkKey" id="pKey_R" onclick="handleNote('R')">R</div>
+      <div class="pianoKey darkKey" id="pKey_S" onclick="handleNote('S')">S</div>
+      <div class="pianoKey darkKey" id="pKey_T" onclick="handleNote('T')">T</div>
+      <div class="pianoKey darkKey" id="pKey_U" onclick="handleNote('U')">U</div>
+      <div class="pianoKey darkKey" id="pKey_V" onclick="handleNote('V')">V</div>
+      <div class="pianoKey darkKey" id="pKey_W" onclick="handleNote('W')">W</div>
+      <div class="pianoKey darkKey" id="pKey_X" onclick="handleNote('X')">X</div>
+      <div class="pianoKey darkKey" id="pKey_Y" onclick="handleNote('Y')">Y</div>
+      <div class="pianoKey darkKey" id="pKey_Z" onclick="handleNote('Z')">Z</div>
+      
+      <div class="pianoKey lightKey" id="pKey_1" onclick="handleNote('1')">1</div>
+      <div class="pianoKey lightKey" id="pKey_2" onclick="handleNote('2')">2</div>
+      <div class="pianoKey lightKey" id="pKey_3" onclick="handleNote('3')">3</div>
+      <div class="pianoKey lightKey" id="pKey_4" onclick="handleNote('4')">4</div>
+      <div class="pianoKey lightKey" id="pKey_5" onclick="handleNote('5')">5</div>
+      <div class="pianoKey lightKey" id="pKey_6" onclick="handleNote('6')">6</div>
+      <div class="pianoKey lightKey" id="pKey_7" onclick="handleNote('7')">7</div>
+      <div class="pianoKey lightKey" id="pKey_8" onclick="handleNote('8')">8</div>
+      <div class="pianoKey lightKey" id="pKey_9" onclick="handleNote('9')">9</div>
+      <div class="pianoKey lightKey" id="pKey_0" onclick="handleNote('0')">0</div>
+      
+      <div class="pianoKey darkKey" id="pKey_!" onclick="handleNote('!')">!</div>
+      <div class="pianoKey darkKey" id="pKey_@" onclick="handleNote('@')">@</div>
+      <div class="pianoKey darkKey" id="pKey_#" onclick="handleNote('#')">#</div>
+      <div class="pianoKey darkKey" id="pKey_$" onclick="handleNote('$')">$</div>
+      <div class="pianoKey darkKey" id="pKey_%" onclick="handleNote('%')">%</div>
+      <div class="pianoKey darkKey" id="pKey_^" onclick="handleNote('^')">^</div>
+      <div class="pianoKey darkKey" id="pKey_&" onclick="handleNote('&')">&</div>
+      <div class="pianoKey darkKey" id="pKey_*" onclick="handleNote('*')">*</div>
+      <div class="pianoKey darkKey" id="pKey_(" onclick="handleNote('(')">(</div>
+      <div class="pianoKey darkKey" id="pKey_)" onclick="handleNote(')')">)</div>
+    </div>
+  </div>
+  
+  <div class="sheetContainer">
+    a b c d e f g
+  </div>
+</body>
+
+</html>
