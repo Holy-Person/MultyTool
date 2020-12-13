@@ -5,11 +5,7 @@
   "description": "A module-based Electron App",
   "main": "src/electronCore.js",
   "scripts": {
-    "start": "electron .",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "start": "electron ."
   },
   "keywords": [],
   "author": {
@@ -17,48 +13,15 @@
     "email": "holyochi@gmail.com"
   },
   "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "ToolByte"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
-  },
   "dependencies": {
     "drag-drop": "^6.1.0",
-    "electron-forge": "^5.2.4",
-    "electron-squirrel-startup": "^1.0.0",
-    "electron-store": "^5.2.0",
+    "electron-builder": "^22.9.1",
     "mousetrap": "^1.6.5",
     "node-abi": "^2.19.1",
-    "shell": "^0.5.0"
+    "shell": "^0.8.4",
+    "tone": "^14.7.58"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "electron": "^8.5.3"
   }
 }
