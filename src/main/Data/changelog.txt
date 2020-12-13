@@ -1,5 +1,7 @@
-{Minor Update}UpdateTitle(0.3.1)
-*Changed Color Scheme|
+{Regular Update}Electron Builder Update(0.4.0)
+*Switched to Electron-Builder|
+^This may have broken some things, fixes are on the way|
+*Changed color scheme|
 *Added descriptions to module buttons|
 *Added more preview modules
 °
@@ -27,7 +29,7 @@
 *Added external URL handler|
 ^Basically just makes external links easier|
 *Updated literally every single node module|
-^This may have broken some things but fixes are on the way|
+^This may have broken some things, fixes are on the way|
 *Removed unused files for the release version
 °
 

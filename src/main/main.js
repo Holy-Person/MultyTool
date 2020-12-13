@@ -68,7 +68,6 @@ app.on('activate', () => {
 app.on('ready', () => {
   app.allowRendererProcessReuse = false;
   mainWindow = createMainWindow();
-  console.log(`${__dirname}`);
 })
 
 //Transportation between windows
