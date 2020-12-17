@@ -121,10 +121,14 @@ a {
   font-size: 1.9vw;
   
   border-bottom: 2px solid var(--decoration);
+  
+  pointer-events: none;
 }
 .moduleButtonDesc {
   font-size: 1.6vw;
   overflow-y: scroll;
+  
+  pointer-events: none;
 }
 .moduleButtonDesc::-webkit-scrollbar {
   display: none;

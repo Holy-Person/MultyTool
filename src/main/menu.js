@@ -57,18 +57,12 @@ function loadModules() {
 					var targetModuleNum = 0;
 					
 					switch (moduleType) {
-						case 'tool': targetModuleNum = 0;
-							break;
-						case 'minigame': targetModuleNum = 1;
-							break;
-						case 'workshop': targetModuleNum = 2;
-							break;
-						case 'other': targetModuleNum = 3;
-							break;
-						case 'preview': targetModuleNum = 5;
-							break;
-						default: targetModuleNum = 4;
-							break;
+						case 'tool': 			targetModuleNum = 0; break;
+						case 'minigame': 	targetModuleNum = 1; break;
+						case 'workshop': 	targetModuleNum = 2; break;
+						case 'other': 		targetModuleNum = 3; break;
+						case 'preview': 	targetModuleNum = 5; break;
+						default: 					targetModuleNum = 4; break;
 					}
 					createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, targetModuleNum);
 					modulesLoaded++;
@@ -169,7 +163,6 @@ function openModule() {
 	var targetChildren = event.target.children;
 	var destination = targetChildren[0].innerHTML.split(' ').join('');
 	ipcRenderer.send('changePage', `${destination}`);
-	//// TODO: fix weird bug with click between text/box
 }
 
 function openModuleFolder() {
