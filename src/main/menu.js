@@ -121,7 +121,7 @@ function createModuleButton(moduleName, moduleType, moduleDescription, moduleSiz
 	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + createdModule;
 }
 
-async function fillChangelogs() {
+function fillChangelogs() {
 	Fs.readFile(`${__dirname}/Data/changelog.txt`, 'utf8', function(err, data) {
   	if (err) throw err;
   	var rawChangelog = data;

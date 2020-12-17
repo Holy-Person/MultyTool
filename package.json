@@ -33,7 +33,6 @@
     }
   },
   "dependencies": {
-    "source-map-support": "^0.5.16",
     "mousetrap": "^1.6.5",
     "tone": "^14.7.58"
   },

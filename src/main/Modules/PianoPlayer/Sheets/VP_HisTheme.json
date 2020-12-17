@@ -1,0 +1,51 @@
+{
+  "data": {
+    "title":          "His Theme",
+    "genre":          "none",
+    "category":       "Video Game",
+    "difficulty":     "Easy",
+    "source":         "none",
+    "youtubeUrl":     "none",
+    "author":         "none",
+    "mainInstrument": "none"
+  },
+  "sheets": {
+    "VP": [
+      "[qo] d s o a – a – s w o s o a – a – s",
+      "[eo] d s o a – a – s t o s f d – s – d",
+      "[qto] d s o a – a – s [wy] o s o a – a – s",
+      "[euo] d s o a – a – s [wt] o s f d – s – d",
+      "[4o] d [8s] o [wa] – a-8 s 5 o [8s] o [ra] – a-w s",
+      "[6o] d [0s] o [ra] – a-0 s 8 o [ws] f [yd] – s-t d",
+      "[qo] [td] [qs] [to] [qa] t-a-q [ts] w [yo] [ws] [yo] [wa] y-a-w [ys] [eo] [ud] [es] [uo] [ea] u-a-e [us] r [uo] [os] [rf] [ud] o-s-y [rd] [4qo] d s o [qia] – a – s [5w] o s o [woa] – a – s",
+      "[6eo] d s o [epa] – a – s [8ts] o s o t",
+      "[4o]-8-[qd]-8-[4s]-8-[qo]-4-[8a]-q-8-[4a]-8-q-[8s]-4-",
+      "5-9-[wo]-9-[5s]-9-[wo]-9-[5a]-9-w-[9a]-5-q-[9s]-5-",
+      "[6o]-0-[ed]-0-[6s]-e-[0o]-6-[0a]-e-6-[0a]-e-0-[6s]-e-",
+      "8-w-[to]-w-[8s]-w-[8f]-w-[td]-w-8-[ws]-8-t-[8d]-w-",
+      "[5o]-5-5-5-[6p]-6-6-6-[7a]-7-7-7-[9d]-9-9-9-",
+      "[5p] f [9d] p [epS] – [pS]-9 [pd] 6 p [9d] p [pTS] – [pS]-e [pd] [7p] f [Qd] p [pTS] – [pS]-Q [pd] 9 p [ed] G [upf] – [pd]-y [pf] [5p] f [9d] p [epS] – [pS]-9 [pd] 6 p [9d] p [pTS] – [pS]-e [pd] [7p] f [Qd] p [pTS] – [pS]-Q [pd] 9 p [ed] G [upf] – [pd]-y [pf] 5 – 9 – w – [7r]",
+      "[oj] x z j L – L – z p j z j L – L – z",
+      "[aj] x z j L – L – z d j z C x – z – x",
+      "[oj] x z j L – L – z p j z j L – L – z",
+      "[aj] x z j L – L – z d j z C x – z – x",
+      "[qh] z l h k – k – l w h l h k – k – l",
+      "[eh] z l h k – k – l t h l x z – l – z",
+      "[qh] z l h k – k – l w h l h k – k – l",
+      "[eh] z l h k – k – l t h l x z l z",
+      "[4h] z [8l] h [wk] – k8 l 5 h [8l] h [rk] – k8 l",
+      "[6h] z [0l] h [rk] – ke l 8 h [wl] x [yz] – lt z",
+      "[qo] d [ts] o [oa] – at s w o [ts] o a – at s",
+      "[eo] d [us] o a – ap s t o [os] f d – ss d",
+      "[4o] d [8s] o [wa] – a8 s 5 o [8s] o [ra] – a8 s",
+      "[6o] d [0s] o [ra] – ae s 8 o [ws] f [yd] – st d",
+      "[4o] d [8s] o [wa] – a8 s 5 o [8s] o [ra] – a 8 s",
+      "[6o] d [0s] o [ra] – ae s 8 o [ws] f [yd] – st d",
+      "[4qo] d [8s] o [woa] – [oa]8 s [5w] o [8s] o [roa] – [oa]8 s",
+      "[6eo] d [0s] o [roa] – [oa]e s [8t] o [ws] f [yod] – [os]t [od] [4qo] d [8s] o [woa] – [oa]8 s [5w] o [8s] o [roa] – [oa]8 s",
+      "[6eo] d [0s] o [roa] – [oa]e s [8t] o [ws] f [yod] – [os]t [od] [4qo] d [8s] o [woa] – [oa]8 s [5ws] o [8s] o [roa] – [oa]8 s",
+      "[6eo] d [0s] o [roa] – [oa]e s [8ts] o [ws] f [yod] – [os]t [od] [4qo] d [8s] o [woa] – [oa]8 s [5ws] o [8s] o [roa] – [oa]8 s",
+      "[6eo] d [0s] o [roa] – [oa]e s [8ts] o [ws] f [yod] – [os]t [od]"
+    ]
+  }
+}
