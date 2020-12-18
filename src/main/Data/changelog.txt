@@ -2,8 +2,17 @@
 *Switched to Electron-Builder|
 ^This may have broken some things, fixes are on the way|
 *Changed color scheme|
-*Added descriptions to module buttons|
-*Added more preview modules
+*Expanded module button options|
+^Added descriptions to module buttons|
+^Font size now scales with the button|
+^Fixed category-arrows not being clickable|
+*Added more preview modules|
+^Added descriptions to previews|
+*Added PianoPlayer module|
+^Using the VirtualPiano layout|
+^Comes with a few default sheets to try|
+*Updated Electron to 8.5.5|
+^Not even close to latest right now, more updates soon|
 °
 
 {Regular Update}Menu Rework Update(0.3.0)

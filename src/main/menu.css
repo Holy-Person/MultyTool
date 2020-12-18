@@ -22,7 +22,6 @@ body {
   
   height: 100%;
 }
-
 html {
   height: 100%;
 }
@@ -67,6 +66,7 @@ a {
 }
 #categoryHeaderArrow {
   float: right;
+  pointer-events: none;
 }
 .moduleListSublist {
   padding: 3%;
@@ -85,9 +85,6 @@ a {
   padding-bottom: 2%;
   min-height: 10vw;
   border-radius: 10px;
-  
-  /*line-height: 70px;*/
-  
   background-color: var(--highlightPri);
   
   cursor: pointer;
