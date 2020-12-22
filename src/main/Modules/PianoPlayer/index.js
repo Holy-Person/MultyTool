@@ -1,6 +1,7 @@
 /*START Default Vars*/
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
+const Fs = require('fs');
 const Tone = require('tone');
 const whiteNotes = [
 	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
@@ -10,6 +11,9 @@ const blackNotes = [
 	'!', '@', '$', '%', '^', '*', '(',
 	'Q', 'W', 'E', 'T', 'Y', 'I', 'O', 'P', 'S', 'D', 'G', 'H', 'J', 'L', 'Z', 'C', 'V', 'B'
 ];
+const sheetObjects = [];
+var sheetPos = 0;
+//Unused vars
 var acceptedYoutubeWarning = false;
 var userExp = 0;
 /*END Default Vars*/
@@ -18,6 +22,9 @@ var userExp = 0;
 /*START Keyboard Controls*/
 Mousetrap.bind('esc', () => {
 	goBack();
+});
+Mousetrap.bind('tab', () => {
+	toggleSheetSelector();
 });
 Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 	window.location.reload();
@@ -37,7 +44,11 @@ function keyPress(keyObject) {
 
 
 /*START Load*/
-window.onload = loadPianoKeys;
+window.onload = startUp;
+function startUp() {
+	loadPianoKeys();
+	loadSheets();
+}
 
 function loadPianoKeys() {
 	whiteNotes.forEach(function (note) {
@@ -62,7 +73,84 @@ var PianoKey = function (note) {
 		`${note}`+
   `</div>`;
 }
+
+function loadSheets() {
+	var filePath = `${__dirname}/Sheets/`;
+	var counter = 0;
+  Fs.readdir(filePath, function(err, sheets) {
+    sheets.forEach(function (sheet) {
+      if(sheet.startsWith(`VP_`) && sheet.endsWith(`.json`)) {
+        Fs.readFile((`${__dirname}/Sheets/${sheet}`), 'utf8', (err, sheetJsonString) => {
+					var sheetObject = JSON.parse(sheetJsonString);
+					sheetObjects.push(sheetObject);
+					if (sheet.includes(`HowTo`)) { sheetPos = counter; }
+					counter++;
+					displaySheetPreview();
+        });
+      }
+    });
+  });
+}
 /*END Load*/
+
+
+
+/*START SHEETSELECTOR*/
+function toggleSheetSelector() {
+	var screenBlocker = 					document.getElementById('screenBlocker');
+	var sheetSelectorContainer = 	document.getElementById('sheetSelectorContainer');
+	if (sheetSelectorContainer.style.display == 'block') {
+		screenBlocker.style.display = 'none';
+		sheetSelectorContainer.style.display = 'none';
+	} else {
+		screenBlocker.style.display = 'block';
+		sheetSelectorContainer.style.display = 'block';
+	}
+}
+
+function moveSheetSelector(direction) {
+	if (direction == 'left') { sheetPos--; } else { sheetPos++; }
+	if (sheetPos < 0) { sheetPos = sheetObjects.length - 1; }
+	if (sheetPos >= sheetObjects.length) { sheetPos = 0; }
+	displaySheetPreview();
+}
+
+function displaySheetPreview() {
+	var sheetTitle = sheetObjects[sheetPos].data.title;
+	var sheetAuthor = sheetObjects[sheetPos].data.author;
+	var sheetGenre = sheetObjects[sheetPos].data.genre;
+	var sheetDifficulty = sheetObjects[sheetPos].data.difficulty;
+	var sheetInstrument = sheetObjects[sheetPos].data.mainInstrument;
+	var sheetSource = sheetObjects[sheetPos].data.source;
+	var sheetYTUrl = sheetObjects[sheetPos].data.youtubeUrl;
+	
+	
+	
+	if (sheetInstrument == 'none') {
+		document.getElementById('sheetInstrument').style.visibility = 'hidden';
+	} else {
+		document.getElementById('sheetInstrument').innerHTML = sheetInstrument;
+		document.getElementById('sheetInstrument').style.visibility = 'visible';
+	}
+	if (sheetYTUrl == 'none') {
+		document.getElementById('sheetYTButton').style.visibility = 'hidden';
+	} else {
+		document.getElementById('sheetYTButton').innerHTML = sheetYTUrl;
+		document.getElementById('sheetYTButton').style.visibility = 'visible';
+	}
+	if (sheetSource == 'none') {
+		document.getElementById('sheetSrcButton').style.visibility = 'hidden';
+	} else {
+		document.getElementById('sheetSrcButton').innerHTML = sheetSource;
+		document.getElementById('sheetSrcButton').style.visibility = 'visible';
+	}
+	document.getElementById('sheetTitle').innerHTML = sheetTitle;
+}
+
+function selectSheet() {
+	
+}
+/*END SHEETSELECTOR*/
 
 
 

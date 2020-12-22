@@ -1,0 +1,18 @@
+{
+  "data": {
+    "title":          "How to play VP sheets",
+    "genre":          "none",
+    "category":       "Tutorial",
+    "difficulty":     "Easy",
+    "source":         "none",
+    "youtubeUrl":     "none",
+    "author":         "none",
+    "mainInstrument": "Piano"
+  },
+  "sheets": {
+    "VP": [
+      "Line1",
+      "Line2"
+    ]
+  }
+}
