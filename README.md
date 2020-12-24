@@ -1,4 +1,4 @@
-# ToolByte
+# MultyTool
 A module based Electron app to create and share website-like "modules" with upgraded features.
 
 ## Table of contents
@@ -16,14 +16,14 @@ Any problems or suggestions? Contact me [here](#help).
 
 ## The stuff I use
 Currently I'm using:
-* Electron version: 8.5.3
+* Electron version: 8.5.5
 * Chromium version: 80.0.3987.163
 * Node version: 12.13.0
 
 ## Install
-1. Download the ToolByte zip from the latest update.
+1. Download the MultyTool zip from the latest update.
 2. Unzip the zip file.
-3. Use "ToolByte.exe" to open the app.
+3. Use "MultyTool.exe" to open the app.
 
 ## Help
 Need help with the app? Have questions but can't find an answer?
@@ -33,6 +33,6 @@ You can contact me on our Discord here:
 ---
 
 ## License
->[Here's](https://github.com/Holy-Person/ToolByte/blob/master/LICENSE) the full license.
+>[Here's](https://github.com/Holy-Person/MultyTool/blob/master/LICENSE) the full license.
 
 This project is licensed under the terms of the **MIT** license.

@@ -1,10 +1,11 @@
 :root {
-  --background: #282828;
-  --text: #e8e6e3;
-  --menu: #1c1c1c;
-  --highlightPri: #202020;
-  --highlightSec: #3fb9c4;
-  --header: #161616;
+  --background: rgba(224,224,244,1.0);
+  --text: rgba(18,18,18,1.0);
+  --menu: rgba(192,192,212,1.0);
+  --highlightPri: rgba(180,180,200,1.0);
+  --highlightSec: rgba(208,208,228,1.0);
+  --header: rgba(115,138,219,1.0);
+  --decoration: rgba(85,108,189,1.0);
 }
 
 body {
@@ -22,9 +23,11 @@ body {
 html {
   height: 100%;
 }
-
 a {
-  color: #738adb;
+  color: var(--decoration);
+}
+hr {
+border-top: 2px solid var(--decoration);
 }
 
 .returnButton {

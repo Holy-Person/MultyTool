@@ -1,0 +1,25 @@
+{
+  "data": {
+    "title":          "Zelda's Lullaby",
+    "genre":          "none",
+    "category":       "Video Game",
+    "difficulty":     "Easy",
+    "source":         "none",
+    "youtubeUrl":     "none",
+    "author":         "none",
+    "mainInstrument": "none"
+  },
+  "sheets": {
+    "VP": [
+      "8 w u -- 8 e I -- 8 w u -- 8 e I --",
+      "[8a] w u - d - [8p] e I - o p [8a] w u - d - [8p] e I --",
+      "[7a] y o - d - [^j] T o - h - [6d] t o - s a [9p] t I --",
+      "[8a] w u - d - [8p] e I - o p [8a] w u - d - [8p] e I --",
+      "[7a] y o - d - [^j] T o - h - [6z] t o -- 9 t I --",
+      "[qz] t u - l k [0l] [rk] [yh] -- [9l] e t - k j [8k] [wj] [rf] --",
+      "[qz] t u - l k [0l] [rk] [yh] - l - [(v] E T -- 9 e tips<wyah> --",
+      "[8a] w u - d - [8p] e I - o p [8a] w u - d - [8p] e I --",
+      "[7a] y o - d - [^j] T o - h - [6d] t o - s a [9p] t I -- o -- [wh]"
+    ]
+  }
+}

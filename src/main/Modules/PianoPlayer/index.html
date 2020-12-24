@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>PianoPlayer</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="topBar">
+    <div class="topBarButton" onclick="goBack()">
+      🡰 Return
+    </div>
+    <div class="vertLine"></div>
+    <div class="expBarContainer">
+      <div class="expBarBadge">Icon</div>
+      <div class="expBarData">
+        <div class="expBarDataInner" id="expBarLvl">Level 1</div>
+        <div class="expBarDataInner" id="expBarTitle">Beginner</div>
+        <div class="expBarDataInner" id="expBarProgress">0/10</div>
+      </div>
+      <div class="expBarOuter"><div class="expBarInner"></div></div>
+    </div>
+    <div class="vertLine"></div>
+    <div class="topBarButton" onclick="toggleSheetSelector()">
+      Sheets 𝄚𝄞
+    </div>
+  </div>
+  
+  <div class="extraContainer">
+    <div class="keyLoggerContainer">
+      <div class="keyLoggerHeader">
+        &nbsp;KeyLogger<span class="keyLoggerCloseButton">🞫&nbsp;</span>
+      </div>
+      <div class="keyLoggerCore" id="keyLoggerCore"></div>
+    </div>
+    <!--<div class="sheetContainer">sample text♩ ♪ ♫ ♬</div>-->
+  </div>
+  
+  <div class="pianoContainer">
+    <div class="pianoBody">
+      <div class="pianoHeader">MultyTool</div>
+      <div class="darkKeyContainer" id="darkKeyContainer"></div>
+      <div class="lightKeyContainer" id="lightKeyContainer"></div>
+    </div>
+  </div>
+  
+  <div id="sheetSelectorContainer">
+    <div class="sheetButtonSpace sBSLeft">
+      <div class="sheetButton" onclick="moveSheetSelector('left')">◀</div>
+    </div>
+    <div class="sheetButtonSpace sBSRight">
+      <div class="sheetButton sheetToggleButton" onclick="toggleSheetSelector()">X</div>
+      <div class="sheetButton" onclick="moveSheetSelector('right')">▶</div>
+    </div>
+    <div id="sheetSelector">
+      <!--<div id="sheetDataLeft">sheet.data.author<br>sheet.data.genre</div>
+      <div id="sheetDataRight">sheet.data.difficulty<br>sheet.data.type</div>-->
+      
+      <div id="sheetTitle">sheet.data.title</div>
+      <div id="sheetInstrument">sheet.data.mainInstrument</div>
+      
+      <div class="sheetLinkContainer">
+        <a class="sheetLinkButton" id="sheetYTButton" target="_blank">YT</a>
+        <a class="sheetLinkButton" id="sheetSrcButton" target="_blank">SRC</a>
+      </div>
+      <div id="sheetNotes">sheet.notes.VP</div>
+    </div>
+  </div>
+  
+  <div id="screenBlocker"></div>
+  
+  <div class="bottomBarContainer">
+    Currently this module requires an internet connection to load the note-sounds. This will be changed soon.
+  </div>
+</body>
+
+</html>

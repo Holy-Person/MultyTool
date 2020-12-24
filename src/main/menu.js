@@ -57,18 +57,12 @@ function loadModules() {
 					var targetModuleNum = 0;
 					
 					switch (moduleType) {
-						case 'tool': targetModuleNum = 0;
-							break;
-						case 'minigame': targetModuleNum = 1;
-							break;
-						case 'workshop': targetModuleNum = 2;
-							break;
-						case 'other': targetModuleNum = 3;
-							break;
-						case 'preview': targetModuleNum = 5;
-							break;
-						default: targetModuleNum = 4;
-							break;
+						case 'tool': 			targetModuleNum = 0; break;
+						case 'minigame': 	targetModuleNum = 1; break;
+						case 'workshop': 	targetModuleNum = 2; break;
+						case 'other': 		targetModuleNum = 3; break;
+						case 'preview': 	targetModuleNum = 5; break;
+						default: 					targetModuleNum = 4; break;
 					}
 					createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, targetModuleNum);
 					modulesLoaded++;
@@ -121,32 +115,35 @@ function createModuleButton(moduleName, moduleType, moduleDescription, moduleSiz
 	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + createdModule;
 }
 
-async function fillChangelogs() {
-	var rawChangelog = await fetch((`${__dirname}/Data/changelog.txt`)).then(response => response.text());
+function fillChangelogs() {
+	Fs.readFile(`${__dirname}/Data/changelog.txt`, 'utf8', function(err, data) {
+  	if (err) throw err;
+  	var rawChangelog = data;
+		
+		var startOfFirst = rawChangelog.indexOf(')');
+		var endOfFirst = rawChangelog.indexOf('°');
+		var cutRawChangelog = rawChangelog.substr(startOfFirst+1, endOfFirst - startOfFirst-1);
 	
-	var startOfFirst = rawChangelog.indexOf(')');
-	var endOfFirst = rawChangelog.indexOf('°');
-	var cutRawChangelog = rawChangelog.substr(startOfFirst+1, endOfFirst - startOfFirst-1);
-
-	var cutChangelog = cutRawChangelog
-    .split('|').join('<br>')
-    .split('*').join('⦿&nbsp;')
-		.split('^').join('&nbsp;&nbsp;•&nbsp;')
-		.split('°').join('<hr>');
+		var cutChangelog = cutRawChangelog
+	    .split('|').join('<br>')
+	    .split('*').join('⦿&nbsp;')
+			.split('^').join('&nbsp;&nbsp;•&nbsp;')
+			.split('°').join('<hr>');
+		
+		var fullChangelog = rawChangelog
+		  .split('|').join('<br>')
+		  .split('{').join('<div class="updateHeader"><span class="updateType">')
+		  .split('}').join('</span><br><span class="updateTitle">')
+			.split('(').join('</span>&nbsp;&nbsp;<span class="updateVersion">(')
+			.split(')').join(')</span></div>')
+		 	.split('*').join('⦿&nbsp;')
+			.split('^').join('&nbsp;&nbsp;•&nbsp;')
+			.split('°').join('<hr>');
 	
-	var fullChangelog = rawChangelog
-	  .split('|').join('<br>')
-	  .split('{').join('<div class="updateHeader"><span class="updateType">')
-	  .split('}').join('</span><br><span class="updateTitle">')
-		.split('(').join('</span>&nbsp;&nbsp;<span class="updateVersion">(')
-		.split(')').join(')</span></div>')
-	 	.split('*').join('⦿&nbsp;')
-		.split('^').join('&nbsp;&nbsp;•&nbsp;')
-		.split('°').join('<hr>');
-
-  document.getElementById("changelogPreview").innerHTML = cutChangelog;
-	
-	document.getElementById("changelogFull").innerHTML = fullChangelog;
+	  document.getElementById("changelogPreview").innerHTML = cutChangelog;
+		
+		document.getElementById("changelogFull").innerHTML = fullChangelog;
+	});
 }
 /*END LOAD*/
 

@@ -14,7 +14,6 @@ body {
   color: var(--text);
   
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  
   user-select: none;
   
   padding: 0;
@@ -23,7 +22,6 @@ body {
   
   height: 100%;
 }
-
 html {
   height: 100%;
 }
@@ -68,6 +66,7 @@ a {
 }
 #categoryHeaderArrow {
   float: right;
+  pointer-events: none;
 }
 .moduleListSublist {
   padding: 3%;
@@ -86,9 +85,6 @@ a {
   padding-bottom: 2%;
   min-height: 10vw;
   border-radius: 10px;
-  
-  /*line-height: 70px;*/
-  
   background-color: var(--highlightPri);
   
   cursor: pointer;
@@ -122,10 +118,14 @@ a {
   font-size: 1.9vw;
   
   border-bottom: 2px solid var(--decoration);
+  
+  pointer-events: none;
 }
 .moduleButtonDesc {
   font-size: 1.6vw;
   overflow-y: scroll;
+  
+  pointer-events: none;
 }
 .moduleButtonDesc::-webkit-scrollbar {
   display: none;

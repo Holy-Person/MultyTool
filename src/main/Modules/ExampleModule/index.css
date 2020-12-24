@@ -1,7 +1,18 @@
+/*Default Colors*/
+:root {
+  --background: rgba(224,224,244,1.0);
+  --text: rgba(18,18,18,1.0);
+  --menu: rgba(192,192,212,1.0);
+  --highlightPri: rgba(180,180,200,1.0);
+  --highlightSec: rgba(208,208,228,1.0);
+  --header: rgba(115,138,219,1.0);
+  --decoration: rgba(85,108,189,1.0);
+}
+
 /*Default Style*/
 body {
-  background-color: #2c2f33;
-  color: #EEEEEE;
+  background-color: var(--background);
+  color: var(--text);
   
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /*Default fonts*/
   user-select: none; /*Stops the user from highlighting text*/
@@ -14,4 +25,8 @@ body {
 .PlaceholderContainer {
   margin-top: 70px;
   margin-left: 70px;
+}
+
+a {
+  color: var(--decoration);
 }

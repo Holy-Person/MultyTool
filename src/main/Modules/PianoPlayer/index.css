@@ -1,0 +1,420 @@
+/*START MAIN*/
+:root {
+  --background: rgba(224,224,244,1.0);
+  --text: rgba(18,18,18,1.0);
+  --menu: rgba(192,192,212,1.0);
+  --highlightPri: rgba(180,180,200,1.0);
+  --highlightSec: rgba(208,208,228,1.0);
+  --header: rgba(115,138,219,1.0);
+  --decoration: rgba(85,108,189,1.0);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
+  
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+hr {
+border-top: 2px solid var(--decoration);
+}
+a {
+  text-decoration: none;
+  color: var(--decoration);
+}
+/*END MAIN*/
+
+/*START TOPBAR*/
+.topBar {
+  background-color: var(--menu);
+  height: 50px;
+  
+  border-bottom: 3px solid var(--decoration);
+}
+
+.topBarButton {
+  font-weight: bold;
+  font-size: 24px;
+  height: 50px;
+  width: 20%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  
+  float: left;
+}
+.topBarButton:hover {
+  transform: translate(-1px, -1px);
+  text-shadow: 2px 2px rgba(150,150,150,1);
+  background-color: var(--highlightPri);
+}
+
+.expBarContainer {
+  float: left;
+  width: 59%;
+  height: 50px;
+}
+.expBarContainer:hover { /*All Temporary until exp gets added*/
+  background-color: var(--highlightPri);
+  cursor: not-allowed;
+}
+.expBarData {
+  margin-left: 9%;
+  font-size: 18px;
+  font-weight: bold;
+  width: 81%;
+  height: 24px;
+}
+.expBarDataInner {
+  float: left;
+  width: 33%;
+}
+.expBarDataInner:nth-child(2) {
+  text-align: center;
+}
+.expBarDataInner:nth-child(3) {
+  text-align: right;
+}
+.expBarOuter {
+  height: 10px;
+  margin-left: 9%;
+  background-color: rgba(70,150,70,1);
+  width: 80%;
+  border-radius: 10px;
+  padding: 3px 0.5% 3px 0.5%;
+}
+.expBarInner {
+  height: 10px;
+  background-color: rgba(100,170,100,1);
+  width: 0%;
+  border-radius: 10px;
+}
+.expBarBadge {
+  text-align: center;
+  float: right;
+  margin-right: 1%;
+  width: 8%;
+  margin-top: 20px;
+}
+
+.vertLine {
+  border-left: 3px solid var(--decoration);
+  height: 50px;
+  float: left;
+}
+/*END TOPBAR*/
+
+
+
+.extraContainer {
+  width: 100%;
+  height: 230px;
+}
+
+
+
+/*START SHEETCONTAINER*/
+.sheetContainer {
+  background-color: var(--menu);
+  width: 60%;
+  height: 200px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+/*END SHEETCONTAINER*/
+
+
+
+/*START KEYLOGGER*/
+.keyLoggerContainer {
+  margin-top: 15px;
+  margin-left: 15px;
+  background-color: var(--menu);
+  height: 200px;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+}
+.keyLoggerHeader {
+  font-weight: bold;
+  font-size: 18px;
+  height: 25px;
+  line-height: 25px;
+  background-color: var(--header);
+}
+.keyLoggerCore {
+  padding: 7px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-wrap: break-word;
+  letter-spacing: 5px;
+  height: 161px;
+  scroll-behavior: smooth;
+}
+.keyLoggerCore::-webkit-scrollbar {
+  width: 12px;
+}
+.keyLoggerCore::-webkit-scrollbar-track {
+  background: var(--highlightPri);
+}
+.keyLoggerCore::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  border-radius: 20px;
+  border: 3px solid var(--highlightPri);
+}
+
+.keyLoggerCloseButton {
+  float: right;
+  cursor: not-allowed; /*Temporary*/
+}
+/*END KEYLOGGER*/
+
+
+
+/*START PIANO*/
+.pianoContainer {
+  width: 100%;
+  text-align: center;
+  height: 170px;
+}
+.pianoBody {
+  color: #DFDFDF;
+  height: 150px;
+  margin-left: 3%;
+  width: 94%;
+  background-color: #303030;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.pianoHeader {
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.lightKeyContainer {
+  width: 100%;
+  height: 110px;
+  line-height: 180px;
+}
+.darkKeyContainer {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  pointer-events: none;
+}
+
+.pianoKey {
+  background-color: var(--highlightPri);
+  
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.lightKey {
+  width: 2.6%;
+  float: left;
+  height: 100%;
+  background-color: #FFFFFF;
+  color: #454545;
+}
+.lightKey:nth-child(1) {
+  margin-left: 3.2%;
+}
+
+.darkKey {
+  width: 1.5%;
+  float: left;
+  height: 100%;
+  background-color: #454545;
+  color: #FFFFFF;
+  pointer-events: auto;
+}
+.darkKey + .darkKey {
+  margin-left: 1%;
+}
+.darkKey:nth-child(1) {
+  margin-left: 4.6%;
+}
+.darkKey:nth-child(3) {
+  margin-left: 3.5%;
+}
+.darkKey:nth-child(6) {
+  margin-left: 3.1%;
+}
+.darkKey:nth-child(8) {
+  margin-left: 3.4%;
+}
+.darkKey:nth-child(11) {
+  margin-left: 3.3%;
+}
+.darkKey:nth-child(13) {
+  margin-left: 3.4%;
+}
+
+.darkKey:nth-child(16) {
+  margin-left: 3.2%;
+}
+.darkKey:nth-child(18) {
+  margin-left: 3.4%;
+}
+
+.darkKey:nth-child(21) {
+  margin-left: 3.3%;
+}
+.darkKey:nth-child(23) {
+  margin-left: 3.3%;
+}
+/*END PIANO*/
+
+
+
+/*START SHEETSELECTOR*/
+#sheetSelectorContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  display: none;
+}
+#sheetSelector {
+  height: 80%;
+  width: 84%;
+  margin-top: 65px;
+  background-color: var(--menu);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#sheetSelector::-webkit-scrollbar {
+  width: 12px;
+}
+#sheetSelector::-webkit-scrollbar-track {
+  background: var(--highlightPri);
+}
+#sheetSelector::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  border-radius: 20px;
+  border: 3px solid var(--highlightPri);
+}
+
+#sheetDataLeft {
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+#sheetDataRight {
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+  text-align: right;
+}
+#sheetTitle {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+#sheetInstrument {
+  text-align: center;
+  font-size: 15px;
+}
+#sheetNotes {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 70px;
+  margin-left: 30px;
+  padding: 5px;
+}
+.sheetLinkContainer {
+  float: right;
+}
+.sheetLinkButton {
+  border-radius: 5px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 10px;
+  width: 45px;
+  background-color: var(--highlightPri);
+  cursor: pointer;
+}
+
+.sheetButtonSpace {
+  height: 80%;
+  width: 8%;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sBSLeft {
+  float: left;
+}
+.sBSRight {
+  float: right;
+}
+.sheetButton {
+  font-size: 2vw;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 100%;
+  line-height: 4vw;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--highlightPri);
+}
+.sheetToggleButton {
+  position: fixed;
+  align-self: flex-start;
+}
+
+#screenBlocker {
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+/*END SHEETSELECTOR*/
+
+
+
+/*START BOTTOMBAR*/
+.bottomBarContainer {
+  text-align: center;
+  position: fixed;
+  z-index: -2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--menu);
+  border-top: 3px solid var(--decoration);
+}
+/*END BOTTOMBAR*/

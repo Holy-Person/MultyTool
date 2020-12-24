@@ -1,16 +1,15 @@
-// Call in all required modules.
-const { app, BrowserWindow, Menu, ipcMain, globalShortcut } = require('electron');
+'use strict'
 
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
-  app.quit();
-}
+import { app, BrowserWindow, Menu, ipcMain, globalShortcut } from 'electron'
+import * as path from 'path'
+import { format as formatUrl } from 'url'
 
-// This keeps a global reference of the window object
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
+// global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
 
-const createWindow = () => {
-  // Creating the browser window
+function createMainWindow() {
   mainWindow = new BrowserWindow({
     width: 1200, height: 700,
     minWidth: 700, minHeight: 500,
@@ -25,16 +24,18 @@ const createWindow = () => {
     icon: __dirname + '/AppData/Icons/NaN.ico'
   });
 
-  // Loading the main menu.
-  mainWindow.loadURL(`file://${__dirname}/menu.html`);
+  mainWindow.loadURL(formatUrl({
+    pathname: path.join(__dirname, 'menu.html'),
+    protocol: 'file',
+    slashes: true
+  }))
   
-  //Remove default menu bar.
   Menu.setApplicationMenu(null);
 
   // Gets emitted when the window closes.
   mainWindow.on('closed', () => {
-    mainWindow = null;
-  });
+    mainWindow = null
+  })
   
   mainWindow.webContents.on('new-window', function(e, url) {
     e.preventDefault();
@@ -44,34 +45,44 @@ const createWindow = () => {
   globalShortcut.register('ctrl+shift+i', function () {
     mainWindow.webContents.toggleDevTools();
   });
-};
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-app.on('ready', function() {
-  app.allowRendererProcessReuse = false;
-  createWindow();
-});
+  return mainWindow
+}
 
 // Quits once all windows are closed.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit();
+    app.quit()
   }
-});
+})
 
 // Recreates window in the app when the dock icon is clicked and there are no other windows open. (On OS X)
 app.on('activate', () => {
   if (mainWindow === null) {
-    createWindow();
+    mainWindow = createMainWindow();
   }
-});
+})
+
+// This method will be called when Electron has finished
+// initialization and is ready to create browser windows.
+app.on('ready', () => {
+  app.allowRendererProcessReuse = false;
+  mainWindow = createMainWindow();
+})
 
 //Transportation between windows
-ipcMain.on('changePage', (event, destination) => { //this is a placeholder, gonna change it once the module reader is finished
+ipcMain.on('changePage', (event, destination) => {
   if(destination != "menu") {
-    mainWindow.loadURL(`file://${__dirname}/Modules/${destination}/index.html`);
+    mainWindow.loadURL(formatUrl({
+      pathname: path.join(__dirname, `/Modules/${destination}/index.html`),
+      protocol: 'file',
+      slashes: true
+    }))
   } else {
-    mainWindow.loadURL(`file://${__dirname}/${destination}.html`);
+    mainWindow.loadURL(formatUrl({
+      pathname: path.join(__dirname, 'menu.html'),
+      protocol: 'file',
+      slashes: true
+    }))
   }
 });
