@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "mousetrap": "^1.6.5",
+    "source-map-support": "^0.5.19",
     "tone": "^14.7.58"
   },
   "devDependencies": {
