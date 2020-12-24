@@ -29,6 +29,12 @@ Mousetrap.bind('tab', () => {
 Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 	window.location.reload();
 });
+Mousetrap.bind('left', () => {
+	moveSheetSelector('left');
+});
+Mousetrap.bind('right', () => {
+	moveSheetSelector('right');
+});
 function goBack() {
 	ipcRenderer.send('changePage', 'menu');
 }
@@ -123,6 +129,7 @@ function displaySheetPreview() {
 	var sheetInstrument = sheetObjects[sheetPos].data.mainInstrument;
 	var sheetSource = sheetObjects[sheetPos].data.source;
 	var sheetYTUrl = sheetObjects[sheetPos].data.youtubeUrl;
+	var sheetNotes = sheetObjects[sheetPos].sheets.VP.join('<br>');
 	
 	
 	
@@ -135,16 +142,18 @@ function displaySheetPreview() {
 	if (sheetYTUrl == 'none') {
 		document.getElementById('sheetYTButton').style.visibility = 'hidden';
 	} else {
-		document.getElementById('sheetYTButton').innerHTML = sheetYTUrl;
+		document.getElementById('sheetYTButton').href = sheetYTUrl;
 		document.getElementById('sheetYTButton').style.visibility = 'visible';
 	}
 	if (sheetSource == 'none') {
 		document.getElementById('sheetSrcButton').style.visibility = 'hidden';
 	} else {
-		document.getElementById('sheetSrcButton').innerHTML = sheetSource;
+		document.getElementById('sheetSrcButton').href = sheetSource;
 		document.getElementById('sheetSrcButton').style.visibility = 'visible';
 	}
 	document.getElementById('sheetTitle').innerHTML = sheetTitle;
+	
+	document.getElementById('sheetNotes').innerHTML = sheetNotes;
 }
 
 function selectSheet() {
@@ -300,5 +309,3 @@ function handleNote(key) {
 
 
 //String.fromCharCode(n1, n2, ..., nX)
-
-//for vp reading .join('\n');
