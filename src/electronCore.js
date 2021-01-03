@@ -1,8 +1,6 @@
-'use strict'
-
-import { app, BrowserWindow, Menu, ipcMain, globalShortcut } from 'electron'
-import * as path from 'path'
-import { format as formatUrl } from 'url'
+const { app, BrowserWindow, Menu, ipcMain, globalShortcut } = require('electron');
+const path = require('path');
+const { format } = require('url');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -24,7 +22,7 @@ function createMainWindow() {
     icon: __dirname + '/AppData/Icons/NaN.ico'
   });
 
-  mainWindow.loadURL(formatUrl({
+  mainWindow.loadURL(format({
     pathname: path.join(__dirname, 'menu.html'),
     protocol: 'file',
     slashes: true
@@ -73,13 +71,13 @@ app.on('ready', () => {
 //Transportation between windows
 ipcMain.on('changePage', (event, destination) => {
   if(destination != "menu") {
-    mainWindow.loadURL(formatUrl({
+    mainWindow.loadURL(format({
       pathname: path.join(__dirname, `/Modules/${destination}/index.html`),
       protocol: 'file',
       slashes: true
     }))
   } else {
-    mainWindow.loadURL(formatUrl({
+    mainWindow.loadURL(format({
       pathname: path.join(__dirname, 'menu.html'),
       protocol: 'file',
       slashes: true

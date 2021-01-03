@@ -16,9 +16,9 @@ Any problems or suggestions? Contact me [here](#help).
 
 ## The stuff I use
 Currently I'm using:
-* Electron version: 8.5.5
-* Chromium version: 80.0.3987.163
-* Node version: 12.13.0
+* Electron version: 11.1.1
+* Chromium version: 87.0.4280.88
+* Node version: 12.18.3
 
 ## Install
 1. Download the MultyTool zip from the latest update.

@@ -1,46 +1,59 @@
 {
   "name": "MultyTool",
   "version": "0.4.0",
-  "description": "MultyTool but now on electron-builder with yarn.",
-  "license": "MIT",
+  "description": "MultyTool Description",
+  "main": "src/electronCore.js",
   "scripts": {
-    "dev": "electron-webpack dev",
-    "compile": "electron-webpack",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "start": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
+  "keywords": [],
   "author": {
     "name": "Holy-Person",
     "email": "holyochi@gmail.com"
   },
-  "build": {
-    "appId": "com.electron.toolbyte2",
-    "files": [
-      "dist/electron/**/*",
-      "node_modules/",
-      "package.json"
-    ],
-    "win": {
-      "icon": "build/icons/icon.ico",
-      "target": [
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
         {
-          "target": "nsis",
-          "arch": [
-            "ia32"
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "MultyTool"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
           ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
         }
       ]
     }
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "mousetrap": "^1.6.5",
     "source-map-support": "^0.5.19",
     "tone": "^14.7.58"
   },
   "devDependencies": {
-    "electron": "^8.2.0",
-    "electron-builder": "^22.4.1",
-    "electron-webpack": "^2.8.2",
-    "webpack": "~4.42.1"
+    "@electron-forge/cli": "^6.0.0-beta.50",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.50",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
+    "@electron-forge/maker-zip": "^6.0.0-beta.50",
+    "electron": "^11.1.1"
   }
 }

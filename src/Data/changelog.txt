@@ -1,5 +1,5 @@
-{Regular Update}Electron Builder Update(0.4.0)
-*Switched to Electron-Builder|
+{Regular Update}Menu Expansion and Piano Update(0.4.0)
+*Switched to Electron-Builder and back to Electron-Forge|
 ^This may have broken some things, fixes are on the way|
 *Changed color scheme|
 *Expanded module button options|
@@ -11,8 +11,9 @@
 *Added PianoPlayer module|
 ^Using the VirtualPiano layout|
 ^Comes with a few default sheets to try|
-*Updated Electron to 8.5.5|
-^Not even close to latest right now, more updates soon|
+*Updated Electron to 11.1.1|
+*Updated Chromium to 87.0.4280.88|
+*Updated Node to 12.18.3|
 °
 
 {Regular Update}Menu Rework Update(0.3.0)

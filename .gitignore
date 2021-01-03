@@ -85,10 +85,11 @@ typings/
 # Webpack
 .webpack/
 
+# Electron-Forge
+out/
+
 # Customs
 .idea/
 thumbs.db
-dist/
-yarnRunScript.bat
-.yarnclean
+npmRunScript.bat
 notes.txt
