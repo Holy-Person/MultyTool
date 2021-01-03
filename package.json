@@ -33,10 +33,6 @@
           ]
         },
         {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
           "name": "@electron-forge/maker-rpm",
           "config": {}
         }
@@ -54,6 +50,6 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.50",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
     "@electron-forge/maker-zip": "^6.0.0-beta.50",
-    "electron": "^11.1.1"
+    "electron": "^10.0.0"
   }
 }

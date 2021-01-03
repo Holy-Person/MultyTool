@@ -16,7 +16,7 @@ Any problems or suggestions? Contact me [here](#help).
 
 ## The stuff I use
 Currently I'm using:
-* Electron version: 11.1.1
+* Electron version: 10.2.0
 * Chromium version: 87.0.4280.88
 * Node version: 12.18.3
 
