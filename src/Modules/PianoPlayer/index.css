@@ -162,6 +162,7 @@ a {
   letter-spacing: 5px;
   height: 161px;
   scroll-behavior: smooth;
+  user-select: text;
 }
 .keyLoggerCore::-webkit-scrollbar {
   width: 12px;
@@ -280,6 +281,26 @@ a {
 .darkKey:nth-child(23) {
   margin-left: 3.3%;
 }
+
+@media screen and (min-height: 800px) {
+  .pianoBody {
+    height: 350px;
+    margin-left: 3%;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .pianoHeader {
+    height: 100px;
+    line-height: 100px;
+  }
+  .lightKeyContainer {
+    height: 280px;
+    line-height: 350px;
+  }
+  .darkKeyContainer {
+    height: 170px;
+    line-height: 170px;
+  }
+}
 /*END PIANO*/
 
 
@@ -342,6 +363,8 @@ a {
   margin-right: 70px;
   margin-left: 30px;
   padding: 5px;
+  padding-bottom: 25px;
+  user-select: text;
 }
 .sheetLinkContainer {
   float: right;

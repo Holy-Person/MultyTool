@@ -64,7 +64,6 @@ app.on('activate', () => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', () => {
-  app.allowRendererProcessReuse = false;
   mainWindow = createMainWindow();
 })
 

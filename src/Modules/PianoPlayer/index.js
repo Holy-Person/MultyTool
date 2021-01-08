@@ -81,17 +81,31 @@ var PianoKey = function (note) {
 }
 
 function loadSheets() {
-	var filePath = `${__dirname}/Sheets/`;
+	const filePath = `${__dirname}/Sheets/`;
 	var counter = 0;
+	var introPage;
   Fs.readdir(filePath, function(err, sheets) {
     sheets.forEach(function (sheet) {
       if(sheet.startsWith(`VP_`) && sheet.endsWith(`.json`)) {
         Fs.readFile((`${__dirname}/Sheets/${sheet}`), 'utf8', (err, sheetJsonString) => {
 					var sheetObject = JSON.parse(sheetJsonString);
-					sheetObjects.push(sheetObject);
-					if (sheet.includes(`HowTo`)) { sheetPos = counter; }
+					if (sheet.startsWith(`VP_HowTo`)) { introPage = sheetObject; } else { sheetObjects.push(sheetObject); }
 					counter++;
-					displaySheetPreview();
+					if (counter >= sheets.length) {
+						sheetObjects.sort(function(a, b) {
+							let fa = a.data.title.toLowerCase(),
+				        	fb = b.data.title.toLowerCase();
+							if (fa < fb) {
+								return -1;
+							} else if (fa > fb) {
+								return 1;
+							}
+							return 0;
+						});
+						sheetObjects.unshift(introPage);
+						displaySheetPreview();
+						//// TODO: get the how to play on position 0, change file name and exclude from original, push at front of array
+					}
         });
       }
     });
