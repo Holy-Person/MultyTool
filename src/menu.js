@@ -18,12 +18,10 @@ Mousetrap.bind('esc', () => {
 
 function quitApp(type) {
 	if(type == 'toggle') {
-		if(document.getElementById(`quitConfirmContainer`).style.display == "block") {
+		if(document.getElementById(`quitConfirmContainer`).style.display == "flex") {
 			document.getElementById(`quitConfirmContainer`).style.display = "none";
-			document.getElementById(`screenBlocker`).style.display = "none";
 		} else {
-			document.getElementById(`quitConfirmContainer`).style.display = "block";
-			document.getElementById(`screenBlocker`).style.display = "block";
+			document.getElementById(`quitConfirmContainer`).style.display = "flex";
 		}
 	} else if(type == 'confirm') {
 		window.close();

@@ -6,6 +6,9 @@
 ^Sheet text can now be highlighted|
 ^Keylogger content can now be highlighted|
 ^Main piano will now look better in fullscreen mode|
+*Main menu style updates|
+^Preparing for themes with a neumorphism-type design|
+^Exit app menu is now styled to fit the rest of the menu|
 °
 
 {Regular Update}Menu Expansion and Piano Update(0.4.0)
