@@ -138,21 +138,27 @@ a {
 
 
 /*START KEYLOGGER*/
-.keyLoggerContainer {
-  margin-top: 15px;
-  margin-left: 15px;
+#keyLogger {
+  position: absolute;
+  top: 65px;
+  left: 15px;
   background-color: var(--menu);
   height: 200px;
-  width: 25%;
+  min-height: 180px;
+  width: 300px;
+  min-width: 270px;
   float: left;
   overflow: hidden;
+  resize: both;
+  z-index: 20;
 }
-.keyLoggerHeader {
+#keyLoggerHeader {
   font-weight: bold;
   font-size: 18px;
   height: 25px;
   line-height: 25px;
   background-color: var(--header);
+  cursor: move;
 }
 .keyLoggerCore {
   padding: 7px;
@@ -178,7 +184,7 @@ a {
 
 .keyLoggerCloseButton {
   float: right;
-  cursor: not-allowed; /*Temporary*/
+  cursor: pointer;
 }
 /*END KEYLOGGER*/
 

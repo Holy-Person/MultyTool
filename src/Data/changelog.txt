@@ -5,6 +5,9 @@
 ^Sheets are now sorted|
 ^Sheet text can now be highlighted|
 ^Keylogger content can now be highlighted|
+^Keylogger can now be closed|
+^Keylogger now movable by dragging the header|
+^Keylogger now resizable|
 ^Main piano will now look better in fullscreen mode|
 *Main menu style updates|
 ^Preparing for themes with a neumorphism-type design|

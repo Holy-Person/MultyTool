@@ -321,5 +321,6 @@ function handleNote(key) {
 }
 /*END NoteHandler*/
 
-
-//String.fromCharCode(n1, n2, ..., nX)
+function closeKeyLogger() {
+	document.getElementById(`keyLogger`).style.display = 'none';
+}

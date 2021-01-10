@@ -29,13 +29,14 @@
     </div>
   </div>
   
-  <div class="extraContainer">
-    <div class="keyLoggerContainer">
-      <div class="keyLoggerHeader">
-        &nbsp;KeyLogger<span class="keyLoggerCloseButton">🞫&nbsp;</span>
-      </div>
-      <div class="keyLoggerCore" id="keyLoggerCore"></div>
+  <div id="keyLogger">
+    <div id="keyLoggerHeader">
+      &nbsp;KeyLogger<span class="keyLoggerCloseButton" onclick="closeKeyLogger()">🞫&nbsp;</span>
     </div>
+    <div class="keyLoggerCore" id="keyLoggerCore"></div>
+  </div>
+  
+  <div class="extraContainer">
     <!--<div class="sheetContainer">sample text♩ ♪ ♫ ♬</div>-->
   </div>
   
@@ -76,5 +77,43 @@
     Currently this module requires an internet connection to load the note-sounds. This will be changed soon.
   </div>
 </body>
+
+<script>
+  dragElement(document.getElementById("keyLogger"));
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+  function dragElement(elmnt) {
+    if (document.getElementById(elmnt.id + "Header")) {
+      document.getElementById(elmnt.id + "Header").onmousedown = dragMouseDown;
+    } else {
+      elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+</script>
 
 </html>
