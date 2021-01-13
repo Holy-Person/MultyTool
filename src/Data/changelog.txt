@@ -1,4 +1,8 @@
 {Regular Update}Title(0.5.0)
+*Main menu style updates|
+^Preparing for themes with a neumorphism-type design|
+^Reworked entire menu with new color scheme|
+^Exit app menu is now styled to fit the rest of the menu|
 *More PianoPlayer improvements|
 ^More sheets|
 ^More sheet-attributes|
@@ -12,9 +16,6 @@
 ^Main piano will now look better in fullscreen mode|
 ^Held down keys will no longer repeat a note forever|
 ^Background now has a temporary gradient|
-*Main menu style updates|
-^Preparing for themes with a neumorphism-type design|
-^Exit app menu is now styled to fit the rest of the menu|
 °
 
 {Regular Update}Menu Expansion and Piano Update(0.4.0)

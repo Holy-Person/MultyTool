@@ -8,148 +8,150 @@
   </head>
   
   <body>
-    <div class="moduleListContainer">
-      <div class="moduleListCategory">
-        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
-          Tools<span id="categoryHeaderArrow">▽&nbsp;</span>
+    <div class="mainFlexScreen">
+      <div class="moduleListContainer">
+        <div class="moduleListCategory">
+          <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+            Tools<span id="categoryHeaderArrow">▽&nbsp;</span>
+          </div>
+          <div class="moduleListSublist" id="toolSubList"></div>
         </div>
-        <div class="moduleListSublist" id="toolSubList"></div>
-      </div>
-      
-      <div class="moduleListCategory">
-        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
-          Minigames<span id="categoryHeaderArrow">▽&nbsp;</span>
+        
+        <div class="moduleListCategory">
+          <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+            Minigames<span id="categoryHeaderArrow">▽&nbsp;</span>
+          </div>
+          <div class="moduleListSublist" id="minigameSubList"></div>
         </div>
-        <div class="moduleListSublist" id="minigameSubList"></div>
-      </div>
-      
-      <div class="moduleListCategory">
-        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
-          Workshops<span id="categoryHeaderArrow">▽&nbsp;</span>
+        
+        <div class="moduleListCategory">
+          <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+            Workshops<span id="categoryHeaderArrow">▽&nbsp;</span>
+          </div>
+          <div class="moduleListSublist" id="workshopSubList"></div>
         </div>
-        <div class="moduleListSublist" id="workshopSubList"></div>
-      </div>
-      
-      <div class="moduleListCategory">
-        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
-          Other<span id="categoryHeaderArrow">▽&nbsp;</span>
+        
+        <div class="moduleListCategory">
+          <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+            Other<span id="categoryHeaderArrow">▽&nbsp;</span>
+          </div>
+          <div class="moduleListSublist" id="otherSubList"></div>
         </div>
-        <div class="moduleListSublist" id="otherSubList"></div>
-      </div>
-      
-      <div class="moduleListCategory">
-        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
-          Deprecated<span id="categoryHeaderArrow">▽&nbsp;</span>
+        
+        <div class="moduleListCategory">
+          <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+            Deprecated<span id="categoryHeaderArrow">▽&nbsp;</span>
+          </div>
+          <div class="moduleListSublist" id="installedSubList"></div>
         </div>
-        <div class="moduleListSublist" id="installedSubList"></div>
-      </div>
-      
-      <div class="moduleListCategory">
-        <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
-          Previews<span id="categoryHeaderArrow">▽&nbsp;</span>
+        
+        <div class="moduleListCategory">
+          <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
+            Previews<span id="categoryHeaderArrow">▽&nbsp;</span>
+          </div>
+          <div class="moduleListSublist" id="previewSubList"></div>
         </div>
-        <div class="moduleListSublist" id="previewSubList"></div>
+        
+        <div class="moduleFolderButton" onclick="openModuleFolder()">📂 Open Folder</div>
       </div>
       
-      <div class="moduleFolderButton" onclick="openModuleFolder()">📂 Open Folder</div>
-    </div>
-    
-    
-    
-    <div class="mainMenuContainer">
-      <div class="mainMenuButton" onclick="switchDetailContainer()">Home</div>
-      <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div>
-      <div class="mainMenuButton" onclick="switchDetailContainer()">Control Panel</div>
-      <div class="mainMenuButton" onclick="switchDetailContainer()">Credits</div><hr>
-      <div class="mainMenuButton" onclick="quitApp('toggle')">Quit MultyTool</div>
-    </div>
-    
-    
-    
-    <div class="detailContainer" id="homeDC">
-      <span class="titleHeader">MultyTool</span><hr>
-      <div class="changelogPreviewHeader">Latest Changes</div>
-      <div class="changelogPreviewContent" id="changelogPreview">Loading changelog...</div><hr>
-      <div class="changelogPreviewHeader">Upcoming Changes</div>
-      <div class="changelogPreviewContent">
-        • More additions to the ExampleModule<br>
-        • More additions to the ModuleBuidler<br>
-        • More appearance options for your modules<br>
-        • Additional improvements to the main menu<br>
-        • Better Devtools<br>
-        • Changelog directly from Github<br>
-        • Account system with multiple accounts & saves<br>
-        • Update button or auto update system<br>
-        • Notification system<br>
-        • Help menu (F1/CTRL+Shift+H)<br>
-        • Global support functions to make your life easy<br>
-        • Support for Linux (No Mac support for now)
-      </div><hr>
-      <a class="externalCreditLink" href="https://github.com/Holy-Person/MultyTool" target="_blank">
-        GitHub
-      </a>
-      <a class="externalCreditLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">
-        Discord
-      </a>
-      <hr>
-      <div class="finalHomeCredits">
-        <b>MultyTool</b> by <a href="https://github.com/Holy-Person" target="_blank">Holy-Person</a><br>
-        Contact us on Discord
+      
+      
+      <div class="mainMenuContainer">
+        <div class="mainMenuButton" onclick="switchDetailContainer()">Home</div>
+        <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div>
+        <div class="mainMenuButton" onclick="switchDetailContainer()">Control Panel</div>
+        <div class="mainMenuButton" onclick="switchDetailContainer()">Credits</div><hr>
+        <div class="mainMenuButton" onclick="quitApp('toggle')">Quit MultyTool</div>
       </div>
-    </div>
-    
-    <div class="detailContainer" id="changelogDC">
-      <span class="titleHeader">MultyTool</span><hr>
-      <div class="changelogPreviewHeader">Full Changelog</div>
-      <div id="changelogFull">Loading changelog...</div>
-    </div>
-    
-    <div class="detailContainer" id="controlpanelDC">
-      <span class="titleHeader">MultyTool</span><hr>
-      Please come back at a later time, this feature isn't finished yet.<br><br>
-      This tab will contain:<br>
-      Themes<br>
-      Accounts<br>
-      Volume (if i can figure out how)<br>
-      Language-options (very big maybe)<br>
-      Developer mode(enables devtools and other extras)<br>
-      Reset all settings to default<br>
-      And more, this is just all i could think of on the spot.
-    </div>
-    
-    <div class="detailContainer" id="creditsDC">
-      <span class="titleHeader">MultyTool</span><hr>
-      <u><b>This app was made using:</b></u><br>
-      <div class="versionFloater">
-        <script>document.write(process.versions.electron)</script><br>
-        <script>document.write(process.versions.chrome)</script><br>
-        <script>document.write(process.versions.node)</script>
+      
+      
+      
+      <div class="detailContainer" id="homeDC">
+        <span class="titleHeader">MultyTool</span><hr>
+        <div class="changelogPreviewHeader">Latest Changes</div>
+        <div class="changelogPreviewContent" id="changelogPreview">Loading changelog...</div><hr>
+        <div class="changelogPreviewHeader">Upcoming Changes</div>
+        <div class="changelogPreviewContent">
+          • More additions to the ExampleModule<br>
+          • More additions to the ModuleBuidler<br>
+          • More appearance options for your modules<br>
+          • Additional improvements to the main menu<br>
+          • Better Devtools<br>
+          • Changelog directly from Github<br>
+          • Account system with multiple accounts & saves<br>
+          • Update button or auto update system<br>
+          • Notification system<br>
+          • Help menu (F1/CTRL+Shift+H)<br>
+          • Global support functions to make your life easy<br>
+          • Support for Linux (No Mac support for now)
+        </div><hr>
+        <a class="externalCreditLink" href="https://github.com/Holy-Person/MultyTool" target="_blank">
+          GitHub
+        </a>
+        <a class="externalCreditLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">
+          Discord
+        </a>
+        <hr>
+        <div class="finalHomeCredits">
+          <b>MultyTool</b> by <a href="https://github.com/Holy-Person" target="_blank">Holy-Person</a><br>
+          Contact us on Discord
+        </div>
       </div>
-      Electron:<br>
-      Chromium:<br>
-      Node:
-      <hr>
-      <div class="abtMeHeader">About me:</div>
-      <!--<img class="abtMeImage" href="./a.png"/>-->
-      Hi, my name's Holy, or at least that's what my online handle is, I'm a student and making this app in my free time so expect some updates to take a bit longer.
-      <hr>
       
-      <div class="abtMeSubHeader">Age: 18</div>
-      <hr>
+      <div class="detailContainer" id="changelogDC">
+        <span class="titleHeader">MultyTool</span><hr>
+        <div class="changelogPreviewHeader">Full Changelog</div>
+        <div id="changelogFull">Loading changelog...</div>
+      </div>
       
-      <div class="abtMeSubHeader">Languages:</div>
-      <div class="langFloater">• C<br>• C#<br>• Assembler<br>• Arduino<br>• Processing</div>
-      &nbsp;&nbsp;• HTML<br>&nbsp;&nbsp;• CSS<br>&nbsp;&nbsp;• JavaScript<br>&nbsp;&nbsp;• nodeJS<br>&nbsp;&nbsp;• Java
-      <hr>
+      <div class="detailContainer" id="controlpanelDC">
+        <span class="titleHeader">MultyTool</span><hr>
+        Please come back at a later time, this feature isn't finished yet.<br><br>
+        This tab will contain:<br>
+        Themes<br>
+        Accounts<br>
+        Volume (if i can figure out how)<br>
+        Language-options (very big maybe)<br>
+        Developer mode(enables devtools and other extras)<br>
+        Reset all settings to default<br>
+        And more, this is just all i could think of on the spot.
+      </div>
       
-      <div class="abtMeSubHeader">Links:</div>
-      <a class="abtMeLink" href="https://github.com/Holy-Person/MultyTool" target="_blank">GitHub</a>
-      <a class="abtMeLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">Discord</a>
-      <a class="abtMeLink" href="https://twitter.com/HolyDev1" target="_blank">Twitter</a>
-      <hr>
-      
-      <div class="abtMeSubHeader">Contact me:</div>
-      <a class="abtMeContactLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">Discord</a>
+      <div class="detailContainer" id="creditsDC">
+        <span class="titleHeader">MultyTool</span><hr>
+        <u><b>This app was made using:</b></u><br>
+        <div class="versionFloater">
+          <script>document.write(process.versions.electron)</script><br>
+          <script>document.write(process.versions.chrome)</script><br>
+          <script>document.write(process.versions.node)</script>
+        </div>
+        Electron:<br>
+        Chromium:<br>
+        Node:
+        <hr>
+        <div class="abtMeHeader">About me:</div>
+        <!--<img class="abtMeImage" href="./a.png"/>-->
+        Hi, my name's Holy, or at least that's what my online handle is, I'm a student and making this app in my free time so expect some updates to take a bit longer.
+        <hr>
+        
+        <div class="abtMeSubHeader">Age: 18</div>
+        <hr>
+        
+        <div class="abtMeSubHeader">Languages:</div>
+        <div class="langFloater">• C<br>• C#<br>• Assembler<br>• Arduino<br>• Processing</div>
+        &nbsp;&nbsp;• HTML<br>&nbsp;&nbsp;• CSS<br>&nbsp;&nbsp;• JavaScript<br>&nbsp;&nbsp;• nodeJS<br>&nbsp;&nbsp;• Java
+        <hr>
+        
+        <div class="abtMeSubHeader">Links:</div>
+        <a class="abtMeLink" href="https://github.com/Holy-Person/MultyTool" target="_blank">GitHub</a>
+        <a class="abtMeLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">Discord</a>
+        <a class="abtMeLink" href="https://twitter.com/HolyDev1" target="_blank">Twitter</a>
+        <hr>
+        
+        <div class="abtMeSubHeader">Contact me:</div>
+        <a class="abtMeContactLink" href="https://discord.gg/9dcaKKSyKa" target="_blank">Discord</a>
+      </div>
     </div>
     
     <div class="versionNum">v0.5.0-alpha</div>
