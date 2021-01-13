@@ -2,8 +2,6 @@ const { app, BrowserWindow, Menu, ipcMain, globalShortcut } = require('electron'
 const path = require('path');
 const { format } = require('url');
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
-
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
 
@@ -11,13 +9,14 @@ function createMainWindow() {
   mainWindow = new BrowserWindow({
     width: 1200, height: 700,
     minWidth: 700, minHeight: 500,
+    backgroundColor: '#e0e0f4',
     frame: true,
     resizable: true, closable: true,
     center: true,
     webPreferences: {
         nodeIntegration: true,
-        devTools: true,
-        enableRemoteModule: false //Going to deprecate in later versions of electron anyway.
+        devTools: true
+        //enableRemoteModule: false //Should be deprecated by now
     },
     icon: __dirname + '/AppData/Icons/NaN.ico'
   });
@@ -32,7 +31,7 @@ function createMainWindow() {
 
   // Gets emitted when the window closes.
   mainWindow.on('closed', () => {
-    mainWindow = null
+    mainWindow = null;
   })
   
   mainWindow.webContents.on('new-window', function(e, url) {
@@ -44,13 +43,13 @@ function createMainWindow() {
     mainWindow.webContents.toggleDevTools();
   });
 
-  return mainWindow
+  return mainWindow;
 }
 
 // Quits once all windows are closed.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    app.quit();
   }
 })
 

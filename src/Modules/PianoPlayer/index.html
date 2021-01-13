@@ -9,44 +9,48 @@
 </head>
 
 <body>
-  <div class="topBar">
-    <div class="topBarButton" onclick="goBack()">
-      🡰 Return
-    </div>
-    <div class="vertLine"></div>
-    <div class="expBarContainer">
-      <div class="expBarBadge">Icon</div>
-      <div class="expBarData">
-        <div class="expBarDataInner" id="expBarLvl">Level 1</div>
-        <div class="expBarDataInner" id="expBarTitle">Beginner</div>
-        <div class="expBarDataInner" id="expBarProgress">0/10</div>
+  <div class="mainFlexScreen">
+    <div class="topBar">
+      <div class="topBarButton" onclick="goBack()">
+        🡰 Return
       </div>
-      <div class="expBarOuter"><div class="expBarInner"></div></div>
+      <div class="vertLine"></div>
+      <div class="expBarContainer">
+        <div class="expBarBadge">Icon</div>
+        <div class="expBarData">
+          <div class="expBarDataInner" id="expBarLvl">Level 1</div>
+          <div class="expBarDataInner" id="expBarTitle">Beginner</div>
+          <div class="expBarDataInner" id="expBarProgress">0/10</div>
+        </div>
+        <div class="expBarOuter"><div class="expBarInner"></div></div>
+      </div>
+      <div class="vertLine"></div>
+      <div class="topBarButton" onclick="toggleSheetSelector()">
+        Sheets 𝄚𝄞
+      </div>
     </div>
-    <div class="vertLine"></div>
-    <div class="topBarButton" onclick="toggleSheetSelector()">
-      Sheets 𝄚𝄞
+    
+    <div class="pianoContainer">
+      <div class="pianoBody">
+        <div class="pianoHeader">MultyTool</div>
+        <div class="darkKeyContainer" id="darkKeyContainer"></div>
+        <div class="lightKeyContainer" id="lightKeyContainer"></div>
+      </div>
+    </div>
+    
+    <div class="bottomBarContainer">
+      Currently this module requires an internet connection to load the note-sounds. This will be changed soon.
     </div>
   </div>
   
   <div id="keyLogger">
     <div id="keyLoggerHeader">
-      &nbsp;KeyLogger<span class="keyLoggerCloseButton" onclick="closeKeyLogger()">🞫&nbsp;</span>
+      &nbsp;KeyLogger<span class="keyLoggerCloseButton" onclick="toggleKeyLogger()">🞫&nbsp;</span>
     </div>
     <div class="keyLoggerCore" id="keyLoggerCore"></div>
   </div>
   
-  <div class="extraContainer">
-    <!--<div class="sheetContainer">sample text♩ ♪ ♫ ♬</div>-->
-  </div>
-  
-  <div class="pianoContainer">
-    <div class="pianoBody">
-      <div class="pianoHeader">MultyTool</div>
-      <div class="darkKeyContainer" id="darkKeyContainer"></div>
-      <div class="lightKeyContainer" id="lightKeyContainer"></div>
-    </div>
-  </div>
+  <!--<div class="sheetContainer">sample text♩ ♪ ♫ ♬</div>-->
   
   <div id="sheetSelectorContainer">
     <div class="sheetButtonSpace sBSLeft">
@@ -72,10 +76,6 @@
   </div>
   
   <div id="screenBlocker"></div>
-  
-  <div class="bottomBarContainer">
-    Currently this module requires an internet connection to load the note-sounds. This will be changed soon.
-  </div>
 </body>
 
 <script>

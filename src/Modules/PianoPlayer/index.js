@@ -1,3 +1,5 @@
+// TODO: restyle sheetviewer, maybe like actual sheets, also add a marker showing you can play in sheet-view
+
 /*START Default Vars*/
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
@@ -41,6 +43,7 @@ function goBack() {
 
 window.addEventListener("keydown", keyPress);
 function keyPress(keyObject) {
+	if (keyObject.repeat) { return }
 	if(keyObject.keyCode >= 48 && keyObject.keyCode <= 90) {
 		handleNote(keyObject.key);
 	}
@@ -104,7 +107,6 @@ function loadSheets() {
 						});
 						sheetObjects.unshift(introPage);
 						displaySheetPreview();
-						//// TODO: get the how to play on position 0, change file name and exclude from original, push at front of array
 					}
         });
       }
@@ -296,12 +298,12 @@ function handleNote(key) {
 	}
 	sampler.triggerAttackRelease(note, "2n");
 	
-	var keyLogger = document.getElementById(`keyLoggerCore`);
+	const keyLogger = document.getElementById(`keyLoggerCore`);
 	
 	keyLogger.innerHTML = keyLogger.innerHTML + key;
 	keyLogger.scrollTo(0, keyLogger.scrollHeight);
 	
-	var noteKey = document.getElementById(`pKey_${key}`);
+	const noteKey = document.getElementById(`pKey_${key}`);
 	
 	if (noteKey.classList.contains('darkKey')) {
 		noteKey.style.fontWeight = "bold";
@@ -321,6 +323,11 @@ function handleNote(key) {
 }
 /*END NoteHandler*/
 
-function closeKeyLogger() {
-	document.getElementById(`keyLogger`).style.display = 'none';
+function toggleKeyLogger() {
+	const keyLogger = document.getElementById(`keyLogger`);
+	if (keyLogger.style.display === 'none') {
+		keyLogger.style.display = 'flex';
+	} else {
+		keyLogger.style.display = 'none';
+	}
 }

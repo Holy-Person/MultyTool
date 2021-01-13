@@ -11,6 +11,7 @@
 
 body {
   background-color: var(--background);
+  background-image: linear-gradient(to bottom right, var(--background), var(--header));
   color: var(--text);
   
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -32,12 +33,23 @@ a {
   text-decoration: none;
   color: var(--decoration);
 }
+kbd {
+  background-color: var(--highlightSec);
+}
+
+.mainFlexScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /*END MAIN*/
 
 /*START TOPBAR*/
 .topBar {
   background-color: var(--menu);
-  height: 50px;
+  flex: 0 1 50px;
   
   border-bottom: 3px solid var(--decoration);
 }
@@ -117,13 +129,6 @@ a {
 
 
 
-.extraContainer {
-  width: 100%;
-  height: 230px;
-}
-
-
-
 /*START SHEETCONTAINER*/
 .sheetContainer {
   background-color: var(--menu);
@@ -142,7 +147,6 @@ a {
   position: absolute;
   top: 65px;
   left: 15px;
-  background-color: var(--menu);
   height: 200px;
   min-height: 180px;
   width: 300px;
@@ -151,24 +155,31 @@ a {
   overflow: hidden;
   resize: both;
   z-index: 20;
+  display: flex;
+  flex-flow: column;
+  
+  box-shadow: 6px 6px 6px rgba(74,74,94,0.8);
+  background-color: rgba(224,224,244,0.8);
 }
 #keyLoggerHeader {
   font-weight: bold;
   font-size: 18px;
-  height: 25px;
+  flex: 0 1 25px;
   line-height: 25px;
   background-color: var(--header);
   cursor: move;
 }
 .keyLoggerCore {
   padding: 7px;
+  padding-left: 15px;
   overflow-x: hidden;
   overflow-y: auto;
   word-wrap: break-word;
   letter-spacing: 5px;
-  height: 161px;
+  flex: 1 1 auto;
   scroll-behavior: smooth;
   user-select: text;
+  box-shadow: inset 5px 0px 0px var(--header);
 }
 .keyLoggerCore::-webkit-scrollbar {
   width: 12px;
@@ -192,14 +203,16 @@ a {
 
 /*START PIANO*/
 .pianoContainer {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  height: 170px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
 }
 .pianoBody {
   color: #DFDFDF;
   height: 150px;
-  margin-left: 3%;
   width: 94%;
   background-color: #303030;
   border-radius: 10px 10px 10px 10px;
@@ -433,14 +446,8 @@ a {
 /*START BOTTOMBAR*/
 .bottomBarContainer {
   text-align: center;
-  position: fixed;
-  z-index: -2;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30px;
+  flex: 0 1 30px;
   line-height: 30px;
-  padding-left: 10px;
   font-weight: bold;
   font-size: 18px;
   background-color: var(--menu);
