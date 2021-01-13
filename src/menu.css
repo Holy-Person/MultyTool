@@ -93,7 +93,8 @@ a {
   min-height: 10vw;
   border-radius: 10px;
   background-color: rgba(30,30,30,0.05);
-  box-shadow: 2px 2px 2px #404040, -2px -2px 2px white;
+  transition: 0.06s ease;
+  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   
   cursor: pointer;
   
@@ -179,8 +180,6 @@ a {
 }
 
 .mainMenuButton {
-  background-color: rgba(30,30,30,0.05);
-  
   height: 50px;
   width: 100%;
   
@@ -195,15 +194,17 @@ a {
   
   cursor: pointer;
   
-  box-shadow: 2px 2px 2px #cbced1, -2px -2px 2px white;
+  background-color: rgba(30,30,30,0.05);
+  transition: 0.06s ease;
+  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
 }
 .mainMenuButton:hover {
   box-shadow: none;
-  line-height: 48px;
+  transform: translate(2px, 2px);
 }
 .mainMenuButton:hover:active {
-  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px white;
-  line-height: 45px;
+  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
+  transform: translate(4px, 4px);
 }
 .mainMenuButton + .mainMenuButton {
   margin-top: 12px;
@@ -419,7 +420,9 @@ a {
 
 /*START ADDITIONS*/
 #quitConfirmContainer {
-  position: fixed;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   z-index: 100;
   
   width: 100%;
