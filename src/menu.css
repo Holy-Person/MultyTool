@@ -225,7 +225,7 @@ a {
   padding: 1%;
   
   display: none;
-}.detailContainer::-webkit-scrollbar {
+} .detailContainer::-webkit-scrollbar {
   display: none;
 }
 #homeDC {
@@ -288,15 +288,17 @@ a {
   height: 45px;
   line-height: 45px;
   
-  box-shadow: 2px 2px 2px #cbced1, -2px -2px 2px white;
+  background-color: rgba(30,30,30,0.05);
+  transition: 0.06s ease;
+  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
 } .externalCreditLink + .externalCreditLink {
   margin-left: 10%;
 } .externalCreditLink:hover {
-  line-height: 43px;
   box-shadow: none;
+  transform: translate(2px, 2px);
 } .externalCreditLink:hover:active {
-  line-height: 40px;
-  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px white;
+  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
+  transform: translate(4px, 4px);
 }
 
 .finalHomeCredits {
@@ -313,7 +315,7 @@ a {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 70%;
-  box-shadow: inset 5px 5px 5px #404040, inset -2px -2px 2px #404040;
+  box-shadow: inset 3px 5px 5px #404040, inset -1px -1px 1px #404040;
 }
 #changelogFull::-webkit-scrollbar {
   display: none;
@@ -373,21 +375,21 @@ a {
   
   color: var(--text);
   background-color: rgba(30,30,30,0.05);
+  transition: 0.06s ease;
+  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   border-radius: 10px;
   
   width: 32%;
   height: 40px;
   line-height: 40px;
-  
-  box-shadow: 2px 2px 2px #cbced1, -2px -2px 2px white;
 } .abtMeLink + .abtMeLink {
   margin-left: 2%;
 } .abtMeLink:hover {
-  line-height: 38px;
   box-shadow: none;
+  transform: translate(2px, 2px);
 } .abtMeLink:hover:active {
-  line-height: 35px;
-  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px white;
+  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
+  transform: translate(4px, 4px);
 }
 
 .abtMeContactLink {
@@ -402,19 +404,19 @@ a {
   
   color: var(--text);
   background-color: rgba(30,30,30,0.05);
+  transition: 0.06s ease;
+  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   border-radius: 10px;
   
   width: 100%;
   height: 40px;
   line-height: 40px;
-  
-  box-shadow: 2px 2px 2px #cbced1, -2px -2px 2px white;
 } .abtMeContactLink:hover {
-  line-height: 38px;
   box-shadow: none;
+  transform: translate(2px, 2px);
 } .abtMeContactLink:hover:active {
-  line-height: 35px;
-  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px white;
+  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
+  transform: translate(4px, 4px);
 }
 /*END CREDITS*/
 
@@ -440,6 +442,7 @@ a {
   
   background-image: linear-gradient(to bottom right, var(--background), var(--header));
   border-radius: 15px;
+  box-shadow: 7px 7px 7px #404040, inset 3px 3px 3px white;
 }
 
 .quitConfirmHeader {
@@ -462,17 +465,18 @@ a {
   font-size: 24px;
   
   background-color: rgba(30,30,30,0.05);
-  box-shadow: 2px 2px 2px #cbced1, -2px -2px 2px white;
+  transition: 0.06s ease;
+  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   border-radius: 10px;
   
   cursor: pointer;
 } .quitConfirmButton + .quitConfirmButton {
   margin-left: 4%;
 } .quitConfirmButton:hover {
-  line-height: 38px;
   box-shadow: none;
+  transform: translate(2px, 2px);
 } .quitConfirmButton:hover:active {
-  line-height: 35px;
-  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px white;
+  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
+  transform: translate(4px, 4px);
 }
 /*END ADDITIONS*/
