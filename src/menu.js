@@ -12,7 +12,7 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 
 Mousetrap.bind('esc', () => {
 	quitApp('toggle');
-})
+});
 
 
 

@@ -1,6 +1,10 @@
-{Regular Update}Title(0.5.0)
+{Regular Update}Designer Update(0.5.0)
+*Improved overall code|
+^Future proofed layouts and buttons|
+^Prepared main page for themes|
 *Main menu style updates|
-^Preparing for themes with a neumorphism-type design|
+^Prepared for themes with a neumorphism-type design|
+^Buttons now have reworked animations and shading|
 ^Reworked entire menu with new color scheme|
 ^Exit app menu is now styled to fit the rest of the menu|
 *More PianoPlayer improvements|
@@ -13,6 +17,7 @@
 ^Keylogger can now be closed|
 ^Keylogger now movable by dragging the header|
 ^Keylogger now resizable|
+^Main piano now has shading for the keys and body|
 ^Main piano will now look better in fullscreen mode|
 ^Held down keys will no longer repeat a note forever|
 ^Background now has a temporary gradient|

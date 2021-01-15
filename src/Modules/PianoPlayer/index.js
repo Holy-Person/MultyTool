@@ -305,19 +305,22 @@ function handleNote(key) {
 	
 	const noteKey = document.getElementById(`pKey_${key}`);
 	
+	noteKey.style.fontWeight = "bold";
 	if (noteKey.classList.contains('darkKey')) {
-		noteKey.style.fontWeight = "bold";
-		noteKey.style.backgroundColor = "#252525";
+		noteKey.style.boxShadow = "1px 1px 1px #404040";
 		setTimeout(() => {
 			noteKey.style.fontWeight = "normal";
 			noteKey.style.backgroundColor = "#454545";
+			noteKey.style.boxShadow = "3px 0px 3px #202020, 1px 2px 3px #202020, inset 0px 12px 8px -10px #202020";
 		}, 250);
 	} else {
-		noteKey.style.fontWeight = "bold";
-		noteKey.style.backgroundColor = "#DFDFDF";
+		noteKey.style.filter = "brightness(90%)";
+		noteKey.style.boxShadow = "1px 1px 1px #404040, inset 0px 18px 8px -10px #202020, inset 4px 0px 4px -3px #202020";
 		setTimeout(() => {
+			noteKey.style.filter = "none";
 			noteKey.style.fontWeight = "normal";
 			noteKey.style.backgroundColor = "#FFFFFF";
+			noteKey.style.boxShadow = "1px 5px 3px #404040, inset 0px 15px 8px -10px #202020";
 		}, 250);
 	}
 }
