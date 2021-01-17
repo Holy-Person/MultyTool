@@ -2,7 +2,7 @@
   "module": {
     "name": "PianoPlayer",
     "description": "Play and test your piano sheets. Supports VP layout. MIDI support to be expected.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "type": "tool",
     "size": "large",
     "icon": "unused field",
