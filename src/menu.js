@@ -13,13 +13,13 @@
 // TODO: add more to the app made with using
 // TODO: add option to open keylogger again
 // TODO: add update button to check new version
-// TODO: sort modules on main page
 
 
 /*START MAIN*/
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
 const Fs = require('fs');
+var moduleObjects = [];
 var moduleNum = [0, 0, 0, 0, 0, 0];
 
 
@@ -62,59 +62,59 @@ function startUp() {
 
 function loadModules() {
 	var filePath = `${__dirname}/Modules/`;
-	var modulesLoaded = 0;
 	
   Fs.readdir(filePath, function(err, modules) {
     modules.forEach(function (module) {
-      if(!module.startsWith(`off_`)) {
-
-        Fs.readFile((`${__dirname}/Modules/${module}/moduleinfo.json`), 'utf8', (err, moduleJsonString) => {
-					//console.log(err); //make nice looking error handler, might even make notif in-app
-          var infoObject = JSON.parse(moduleJsonString);
-          var moduleType = infoObject.module.type;
-					var moduleName = infoObject.module.name;
-					var moduleDescription = infoObject.module.description;
-					var moduleSize = infoObject.module.size;
+      Fs.readFile((`${__dirname}/Modules/${module}/moduleinfo.json`), 'utf8', (err, moduleJsonString) => {
+				if(err) { console.log(err); } //make nice looking error handler, might even make notif in-app
+				var moduleObject = JSON.parse(moduleJsonString);
+				
+				moduleObjects.push(moduleObject);
+				var moduleName = moduleObject.module.name;
+				
+				
+				
+				if(moduleObjects.length == modules.length) {
+					console.group(`%cFinished loading modules.`, `color:green; font-size: 2em`);
+					console.info(`Loaded a total of ${moduleObjects.length} modules.`);
 					
-					var targetModuleNum = 0;
-					
-					switch (moduleType) {
-						case 'tool': 			targetModuleNum = 0; break;
-						case 'minigame': 	targetModuleNum = 1; break;
-						case 'workshop': 	targetModuleNum = 2; break;
-						case 'other': 		targetModuleNum = 3; break;
-						case 'preview': 	targetModuleNum = 5; break;
-						default: 					targetModuleNum = 4; break;
-					}
-					createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, targetModuleNum);
-					modulesLoaded++;
-					
-					if(modulesLoaded == modules.length) {
-						console.group(`%cFinished loading modules.`, `color:green; font-size: 2em`);
-						console.info(`Loaded a total of ${modulesLoaded} modules.`);
-    			}
-        });
-      }
+					moduleObjects.sort(function(a, b) {
+						let fa = a.module.name.toLowerCase(),
+			        	fb = b.module.name.toLowerCase();
+						if (fa < fb) {
+							return -1;
+						} else if (fa > fb) {
+							return 1;
+						} return 0;
+					});
+					insertModules();
+  			}
+      });
     });
   });
 }
 
-var ModuleButton = function (moduleName, moduleDescription, sortPos) {
-  this.smallModule =
-  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton" onclick="openModule()">`+
-		`<div class="moduleButtonHeader">${moduleName}</div>`+
-		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
-  `</div>`;
-	this.previewModule =
-  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton">`+
-		`<div class="moduleButtonHeader">${moduleName}</div>`+
-		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
-  `</div>`;
-	this.largeModule =
-  `<div class="largeModuleButton moduleButton" onclick="openModule()">`+
-		`<div class="moduleButtonHeader">${moduleName}</div>`+
-		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
-  `</div>`;
+function insertModules() {
+	var targetModuleNum = 0;
+	
+	moduleObjects.forEach(function (moduleObject) {
+		var moduleType = moduleObject.module.type;
+		
+		switch (moduleType) {
+			case 'tool': 			targetModuleNum = 0; break;
+			case 'minigame':	targetModuleNum = 1; break;
+			case 'workshop':	targetModuleNum = 2; break;
+			case 'other':			targetModuleNum = 3; break;
+			case 'preview': 	targetModuleNum = 5; break;
+			default: 					targetModuleNum = 4; break;
+		}
+		
+		var moduleName =				moduleObject.module.name;
+		var moduleDescription = moduleObject.module.description;
+		var moduleSize =				moduleObject.module.size;
+		
+		createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, targetModuleNum);
+	});
 }
 
 function createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, x) {
@@ -136,6 +136,24 @@ function createModuleButton(moduleName, moduleType, moduleDescription, moduleSiz
 		createdModule = moduleButton.smallModule;
 	}
 	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + createdModule;
+}
+
+var ModuleButton = function (moduleName, moduleDescription, sortPos) {
+  this.smallModule =
+  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton" onclick="openModule()">`+
+		`<div class="moduleButtonHeader">${moduleName}</div>`+
+		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
+  `</div>`;
+	this.previewModule =
+  `<div class="smallModuleButton moduleButton" id="${sortPos}SmallButton">`+
+		`<div class="moduleButtonHeader">${moduleName}</div>`+
+		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
+  `</div>`;
+	this.largeModule =
+  `<div class="largeModuleButton moduleButton" onclick="openModule()">`+
+		`<div class="moduleButtonHeader">${moduleName}</div>`+
+		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
+  `</div>`;
 }
 
 function fillChangelogs() {
