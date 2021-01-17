@@ -1,6 +1,5 @@
 // TODO: Create unclickable button class
 // TODO: Create grouped classes for repeated css stuff
-// TODO: Tell console ammount of modules loaded
 // TODO: Flexbox center part and detail container for full spacings
 // TODO: Exit/close button at bottom of menu
 // TODO: extend upcoming section to support general updates and one full upcoming
@@ -91,7 +90,8 @@ function loadModules() {
 					modulesLoaded++;
 					
 					if(modulesLoaded == modules.length) {
-						console.log(`%cFinished loading modules.\n`, `color:green; font-size: 1.5em`);
+						console.group(`%cFinished loading modules.`, `color:green; font-size: 2em`);
+						console.info(`Loaded a total of ${modulesLoaded} modules.`);
     			}
         });
       }
