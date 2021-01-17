@@ -54,6 +54,14 @@ a {
   box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
   transform: translate(4px, 4px);
 }
+
+.disabledButton {
+  text-decoration: line-through;
+  background-color: rgba(60,30,30,0.3);
+  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
+  transform: translate(4px, 4px);
+  cursor: not-allowed;
+}
 /*END GROUPED*/
 
 /*START MODULELIST*/
@@ -118,12 +126,8 @@ a {
 #firstSmallButton + #secondSmallButton {
   margin-left: 4%;
 }
-.moduleButton + #firstSmallButton {
-  margin-top: 4%;
-}
-.moduleButton + #firstSmallButton + #secondSmallButton {
-  margin-top: 4%;
-}
+.moduleButton + #firstSmallButton,
+.moduleButton + #firstSmallButton + #secondSmallButton,
 .moduleButton + .largeModuleButton {
   margin-top: 4%;
 }
@@ -186,7 +190,6 @@ a {
   height: 50px;
   width: 100%;
   
-  /*text-indent: 20%;*/
   text-align: center;
   line-height: 50px;
   
@@ -194,8 +197,7 @@ a {
   font-weight: bold;
   
   border-radius: 10px;
-}
-.mainMenuButton + .mainMenuButton {
+} .mainMenuButton + .mainMenuButton {
   margin-top: 12px;
 }
 /*END MAINMENU*/

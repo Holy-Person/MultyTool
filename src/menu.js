@@ -77,6 +77,7 @@ function loadModules() {
 				if(moduleObjects.length == modules.length) {
 					console.group(`%cFinished loading modules.`, `color:green; font-size: 2em`);
 					console.info(`Loaded a total of ${moduleObjects.length} modules.`);
+					console.groupEnd();
 					
 					moduleObjects.sort(function(a, b) {
 						let fa = a.module.name.toLowerCase(),
