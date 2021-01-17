@@ -14,6 +14,8 @@
 // TODO: add more to the app made with using
 // TODO: clean up comments at bottom of html
 // TODO: add option to open keylogger again
+// TODO: add update button to check new version
+// TODO: sort modules on main page
 
 
 /*START MAIN*/
