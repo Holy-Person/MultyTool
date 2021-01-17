@@ -1,3 +1,21 @@
+// TODO: Create unclickable button class
+// TODO: Create grouped classes for repeated css stuff
+// TODO: Tell console ammount of modules loaded
+// TODO: Flexbox center part and detail container for full spacings
+// TODO: Exit/close button at bottom of menu
+// TODO: extend upcoming section to support general updates and one full upcoming
+// TODO: upcoming text file
+// TODO: notes module
+// TODO: flexbox the modulebuilder with mdn layout
+// TODO: make empty categories be closed by default
+// TODO: move these todos to upcoming
+// TODO: centralize colors to prepare for themes
+// TODO: clean up html (after cleaned css to make it nice)
+// TODO: add more to the app made with using
+// TODO: clean up comments at bottom of html
+// TODO: add option to open keylogger again
+
+
 /*START MAIN*/
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
@@ -12,6 +30,12 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 
 Mousetrap.bind('esc', () => {
 	quitApp('toggle');
+
+	/*for(var i in this) {
+		if((typeof this[i]).toString()=="function"&&this[i].toString().indexOf("native")==-1){
+			console.log(this[i].name);
+		}
+	}*/
 });
 
 

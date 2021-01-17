@@ -59,8 +59,9 @@
       
       <div class="mainMenuContainer">
         <div class="mainMenuButton" onclick="switchDetailContainer()">Home</div>
-        <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div>
+        <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div><hr>
         <div class="mainMenuButton" onclick="switchDetailContainer()">Control Panel</div>
+        <!--<div class="mainMenuButton" onclick="switchDetailContainer()">Account</div>--><hr>
         <div class="mainMenuButton" onclick="switchDetailContainer()">Credits</div><hr>
         <div class="mainMenuButton" onclick="quitApp('toggle')">Quit MultyTool</div>
       </div>
@@ -110,12 +111,21 @@
         Please come back at a later time, this feature isn't finished yet.<br><br>
         This tab will contain:<br>
         Themes<br>
-        Accounts<br>
         Volume (if i can figure out how)<br>
         Language-options (very big maybe)<br>
         Developer mode(enables devtools and other extras)<br>
         Reset all settings to default<br>
-        And more, this is just all i could think of on the spot.
+        And more, this is just all i could think of on the spot.<hr>
+      </div>
+      
+      <div class="detailContainer" id="accountDC">
+        <span class="titleHeader">MultyTool</span><hr>
+        Please come back at a later time, this feature isn't finished yet.<br><br>
+        This tab will contain:<br>
+        Accounts<hr>
+        Name *<br><input type="text" placeholder="Name"><br> <!--* = required-->
+        Pronouns<br><input type="text" placeholder="They/Them"><hr> <!--Must include / and 2 pronouns-->
+        <div class="accountButton">Create Account</div>
       </div>
       
       <div class="detailContainer" id="creditsDC">

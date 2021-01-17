@@ -2,6 +2,8 @@ const { app, BrowserWindow, Menu, ipcMain, globalShortcut } = require('electron'
 const path = require('path');
 const { format } = require('url');
 
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
+
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
 

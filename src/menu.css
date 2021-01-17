@@ -93,7 +93,6 @@ a {
   min-height: 10vw;
   border-radius: 10px;
   background-color: rgba(30,30,30,0.05);
-  transition: 0.06s ease;
   box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   
   cursor: pointer;
@@ -195,7 +194,6 @@ a {
   cursor: pointer;
   
   background-color: rgba(30,30,30,0.05);
-  transition: 0.06s ease;
   box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
 }
 .mainMenuButton:hover {
@@ -289,7 +287,6 @@ a {
   line-height: 45px;
   
   background-color: rgba(30,30,30,0.05);
-  transition: 0.06s ease;
   box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
 } .externalCreditLink + .externalCreditLink {
   margin-left: 10%;
@@ -337,9 +334,46 @@ a {
 }
 /*END CHANGELOG*/
 
-/*START SETTINGS*/
+/*START CONTROL PANEL*/
 /*nothing here yet*/
-/*END SETTINGS*/
+/*END CONTROL PANEL*/
+
+/*START ACCOUNT*/
+#accountDC input {
+  height: 35px;
+  width: 75%;
+  
+  text-indent: 1%;
+  line-height: 35px;
+  
+  font-size: 18px;
+  
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0);
+  box-shadow: inset 3px 3px 3px #808080, inset -3px -3px 3px white;
+}
+.accountButton {
+  height: 35px;
+  width: 45%;
+  
+  text-align: center;
+  line-height: 35px;
+  
+  cursor: pointer;
+  
+  border-radius: 10px;
+  background-color: rgba(30,30,30,0.05);
+  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
+} .accountButton:hover {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+} .accountButton:hover:active {
+  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
+  transform: translate(4px, 4px);
+}
+/*END ACCOUNT*/
 
 /*START CREDITS*/
 .versionFloater {
@@ -375,7 +409,6 @@ a {
   
   color: var(--text);
   background-color: rgba(30,30,30,0.05);
-  transition: 0.06s ease;
   box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   border-radius: 10px;
   
@@ -404,7 +437,6 @@ a {
   
   color: var(--text);
   background-color: rgba(30,30,30,0.05);
-  transition: 0.06s ease;
   box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   border-radius: 10px;
   
@@ -465,7 +497,6 @@ a {
   font-size: 24px;
   
   background-color: rgba(30,30,30,0.05);
-  transition: 0.06s ease;
   box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
   border-radius: 10px;
   
