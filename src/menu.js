@@ -12,7 +12,6 @@
 // TODO: centralize colors to prepare for themes
 // TODO: clean up html (after cleaned css to make it nice)
 // TODO: add more to the app made with using
-// TODO: clean up comments at bottom of html
 // TODO: add option to open keylogger again
 // TODO: add update button to check new version
 // TODO: sort modules on main page
