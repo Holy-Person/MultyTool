@@ -1,0 +1,23 @@
+*Creator and Account Update|
+^Future proofed layouts and buttons|
+°
+*General Updates|
+^Future proofed layouts and buttons|
+°
+*New Modules|
+^Unit Converter|
+°
+
+
+  • More additions to the ExampleModule<br>
+  • More additions to the ModuleBuidler<br>
+  • More appearance options for your modules<br>
+  • Additional improvements to the main menu<br>
+  • Better Devtools<br>
+  • Changelog directly from Github<br>
+  • Account system with multiple accounts & saves<br>
+  • Update button or auto update system<br>
+  • Notification system<br>
+  • Help menu (F1/CTRL+Shift+H)<br>
+  • Global support functions to make your life easy<br>
+  • Support for Linux (No Mac support for now)

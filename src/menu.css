@@ -73,8 +73,7 @@ a {
   
   overflow-x: hidden;
   overflow-y: auto;
-}
-.moduleListContainer::-webkit-scrollbar {
+} .moduleListContainer::-webkit-scrollbar {
   display: none;
 }
 
@@ -344,17 +343,7 @@ a {
   text-align: center;
   line-height: 35px;
   
-  cursor: pointer;
-  
   border-radius: 10px;
-  background-color: rgba(30,30,30,0.05);
-  box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
-} .accountButton:hover {
-  box-shadow: none;
-  transform: translate(2px, 2px);
-} .accountButton:hover:active {
-  box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
-  transform: translate(4px, 4px);
 }
 /*END ACCOUNT*/
 

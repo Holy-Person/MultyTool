@@ -1,9 +1,11 @@
 {Regular Update}Designer Update(0.5.0)
 *Improved overall code|
 ^Future proofed layouts and buttons|
-^Prepared main page for themes|
-*Main menu style updates|
+^Prepared main menu for themes|
+*Main menu updates|
+^Modules are now alphabetically sorted|
 ^Prepared for themes with a neumorphism-type design|
+^Grouped CSS classes for faster and cleaner workflow|
 ^Buttons now have reworked animations and shading|
 ^Reworked entire menu with new color scheme|
 ^Exit app menu is now styled to fit the rest of the menu|

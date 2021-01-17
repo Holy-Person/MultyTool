@@ -1,10 +1,6 @@
-// TODO: Create unclickable button class
-// TODO: Create grouped classes for repeated css stuff
 // TODO: Flexbox center part and detail container for full spacings
 // TODO: Exit/close button at bottom of menu
 // TODO: extend upcoming section to support general updates and one full upcoming
-// TODO: upcoming text file
-// TODO: notes module
 // TODO: flexbox the modulebuilder with mdn layout
 // TODO: make empty categories be closed by default
 // TODO: move these todos to upcoming
@@ -58,6 +54,7 @@ window.onload = startUp;
 function startUp() {
 	loadModules();
 	fillChangelogs();
+	fillUpcoming();
 }
 
 function loadModules() {
@@ -185,6 +182,18 @@ function fillChangelogs() {
 	  document.getElementById("changelogPreview").innerHTML = cutChangelog;
 		
 		document.getElementById("changelogFull").innerHTML = fullChangelog;
+	});
+}
+
+function fillUpcoming() {
+	Fs.readFile(`${__dirname}/Data/upcoming.txt`, 'utf8', function(err, data) {
+  	if (err) throw err;
+  	var rawUpcoming = data;
+		
+		var fullUpcoming = rawUpcoming
+		  .split('|').join('<br>');
+		
+		document.getElementById("upcomingPreview").innerHTML = fullUpcoming;
 	});
 }
 /*END LOAD*/
