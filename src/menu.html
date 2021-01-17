@@ -58,12 +58,15 @@
       
       
       <div class="mainMenuContainer">
-        <div class="mainMenuButton" onclick="switchDetailContainer()">Home</div>
-        <div class="mainMenuButton" onclick="switchDetailContainer()">Changelog</div><hr>
-        <div class="mainMenuButton" onclick="switchDetailContainer()">Control Panel</div>
-        <!--<div class="mainMenuButton" onclick="switchDetailContainer()">Account</div>--><hr>
-        <div class="mainMenuButton" onclick="switchDetailContainer()">Credits</div><hr>
-        <div class="mainMenuButton" onclick="quitApp('toggle')">Quit MultyTool</div>
+        <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Home</div>
+        <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Changelog</div>
+        <hr>
+        <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Control Panel</div>
+        <!--<div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Account</div>-->
+        <hr>
+        <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Credits</div>
+        <hr>
+        <div class="mainMenuButton neoButton" onclick="quitApp('toggle')">Quit MultyTool</div>
       </div>
       
       
@@ -87,10 +90,10 @@
           • Global support functions to make your life easy<br>
           • Support for Linux (No Mac support for now)
         </div><hr>
-        <a class="externalCreditLink" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">
+        <a class="externalCreditLink neoButton" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">
           GitHub
         </a>
-        <a class="externalCreditLink" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">
+        <a class="externalCreditLink neoButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">
           Discord
         </a>
         <hr>
@@ -154,13 +157,13 @@
         <hr>
         
         <div class="abtMeSubHeader">Links:</div>
-        <a class="abtMeLink" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">GitHub</a>
-        <a class="abtMeLink" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
-        <a class="abtMeLink" href="https://twitter.com/HolyDev1" target="_blank" rel="noopener">Twitter</a>
+        <a class="abtMeLink neoButton" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">GitHub</a>
+        <a class="abtMeLink neoButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
+        <a class="abtMeLink neoButton" href="https://twitter.com/HolyDev1" target="_blank" rel="noopener">Twitter</a>
         <hr>
         
         <div class="abtMeSubHeader">Contact me:</div>
-        <a class="abtMeContactLink" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
+        <a class="abtMeContactLink neoButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
       </div>
     </div>
     
@@ -169,8 +172,8 @@
     <div id="quitConfirmContainer">
       <div class="quitConfirmMenu">
         <div class="quitConfirmHeader">Do you really want to quit?</div>
-        <div class="quitConfirmButton" onclick="quitApp('toggle')">No</div>
-        <div class="quitConfirmButton" onclick="quitApp('confirm')">Yes</div>
+        <div class="quitConfirmButton neoButton" onclick="quitApp('toggle')">No</div>
+        <div class="quitConfirmButton neoButton" onclick="quitApp('confirm')">Yes</div>
       </div>
     </div>
   </body>
