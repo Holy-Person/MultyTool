@@ -1,16 +1,3 @@
-// TODO: Flexbox center part and detail container for full spacings
-// TODO: Exit/close button at bottom of menu
-// TODO: extend upcoming section to support general updates and one full upcoming
-// TODO: flexbox the modulebuilder with mdn layout
-// TODO: make empty categories be closed by default
-// TODO: move these todos to upcoming
-// TODO: centralize colors to prepare for themes
-// TODO: clean up html (after cleaned css to make it nice)
-// TODO: add more to the app made with using
-// TODO: add option to open keylogger again
-// TODO: add update button to check new version
-
-
 /*START MAIN*/
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
@@ -191,7 +178,9 @@ function fillUpcoming() {
   	var rawUpcoming = data;
 		
 		var fullUpcoming = rawUpcoming
-		  .split('|').join('<br>');
+			.split('*').join('⦿&nbsp;')
+			.split('^').join('<br>&nbsp;&nbsp;•&nbsp;')
+			.split('°').join('<hr>');
 		
 		document.getElementById("upcomingPreview").innerHTML = fullUpcoming;
 	});

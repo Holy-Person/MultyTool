@@ -1,23 +1,34 @@
-*Creator and Account Update|
-^Future proofed layouts and buttons|
+*Creator and Account Update
+^More additions to the ExampleModule
+^Complete rework of the ModuleBuidler
+^Additional appearance options for modules
+^Account system with multiple accounts & saves
+^Notification system
+^Global functions to improve module creation
 °
-*General Updates|
-^Future proofed layouts and buttons|
+*General Updates
+^Future proofed layouts and buttons
+^Better Devtools
+^Update button on main menu
+^Help menu (F1/CTRL+Shift+H)
+^Linux support
 °
-*New Modules|
-^Unit Converter|
-°
+*New Modules
+^AI Assistant
+^Cytus Story Manager
+^Chat Module
+^Language Trainer
+^Note Manager
+^Theme Creator and Manager
+^Unit Converter
 
-
-  • More additions to the ExampleModule<br>
-  • More additions to the ModuleBuidler<br>
-  • More appearance options for your modules<br>
-  • Additional improvements to the main menu<br>
-  • Better Devtools<br>
-  • Changelog directly from Github<br>
-  • Account system with multiple accounts & saves<br>
-  • Update button or auto update system<br>
-  • Notification system<br>
-  • Help menu (F1/CTRL+Shift+H)<br>
-  • Global support functions to make your life easy<br>
-  • Support for Linux (No Mac support for now)
+<!--
+// TODO: Flexbox center part and detail container for full spacings
+// TODO: Exit/close button at bottom of menu
+// TODO: flexbox the modulebuilder with mdn layout
+// TODO: make empty categories be closed by default
+// TODO: centralize colors to prepare for themes
+// TODO: clean up html (after cleaned css to make it nice)
+// TODO: add more to the app made with using list like atom
+// TODO: add option to open keylogger again
+-->
