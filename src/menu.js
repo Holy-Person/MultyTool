@@ -127,17 +127,17 @@ var ModuleButton = function (moduleName, moduleDescription, sortPos) {
   this.smallModule =
   `<div class="smallModuleButton moduleButton neoButton" id="${sortPos}SmallButton" onclick="openModule()">`+
 		`<div class="moduleButtonHeader">${moduleName}</div>`+
-		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
+		`<div class="moduleButtonDesc noScrollBar">${moduleDescription}</div>`+
   `</div>`;
 	this.previewModule =
   `<div class="smallModuleButton moduleButton neoButton" id="${sortPos}SmallButton">`+
 		`<div class="moduleButtonHeader">${moduleName}</div>`+
-		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
+		`<div class="moduleButtonDesc noScrollBar">${moduleDescription}</div>`+
   `</div>`;
 	this.largeModule =
   `<div class="largeModuleButton moduleButton neoButton" onclick="openModule()">`+
 		`<div class="moduleButtonHeader">${moduleName}</div>`+
-		`<div class="moduleButtonDesc">${moduleDescription}</div>`+
+		`<div class="moduleButtonDesc noScrollBar">${moduleDescription}</div>`+
   `</div>`;
 }
 

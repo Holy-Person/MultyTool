@@ -9,7 +9,7 @@
   
   <body>
     <div class="mainFlexScreen">
-      <div class="moduleListContainer">
+      <div class="moduleListContainer noScrollBar">
         <div class="moduleListCategory">
           <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
             Tools<span id="categoryHeaderArrow">▽&nbsp;</span>
@@ -57,7 +57,7 @@
       
       
       
-      <div class="mainMenuContainer">
+      <div class="mainMenuContainer noScrollBar">
         <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Home</div>
         <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Changelog</div>
         <hr>
@@ -66,7 +66,8 @@
         <hr>
         <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Credits</div>
         <hr>
-        <div class="mainMenuButton neoButton" onclick="quitApp('toggle')">Quit MultyTool</div>
+        <hr>
+        <div class="mainMenuButton neoButton" onclick="quitApp('toggle')">Quit App</div>
       </div>
       
       
@@ -93,7 +94,7 @@
       <div class="detailContainer" id="changelogDC">
         <span class="titleHeader">MultyTool</span><hr>
         <div class="changelogPreviewHeader">Full Changelog</div>
-        <div id="changelogFull">Loading changelog...</div>
+        <div class="noScrollBar" id="changelogFull">Loading changelog...</div>
       </div>
       
       <div class="detailContainer" id="controlpanelDC">

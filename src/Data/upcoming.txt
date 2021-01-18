@@ -23,12 +23,9 @@
 ^Unit Converter
 
 <!--
-// TODO: Flexbox center part and detail container for full spacings
-// TODO: Exit/close button at bottom of menu
 // TODO: flexbox the modulebuilder with mdn layout
 // TODO: make empty categories be closed by default
 // TODO: centralize colors to prepare for themes
-// TODO: clean up html (after cleaned css to make it nice)
 // TODO: add more to the app made with using list like atom
 // TODO: add option to open keylogger again
 -->
