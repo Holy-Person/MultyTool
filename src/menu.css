@@ -80,7 +80,7 @@ a {
 }
 
 .moduleListCategoryHeader {
-  flex: 0 1 30px;
+  height: 30px;
   
   line-height: 30px;
   text-indent: 10px;
@@ -97,7 +97,6 @@ a {
   pointer-events: none;
 }
 .moduleListSublist {
-  flex: 0 1 auto;
   padding: 3%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -146,9 +145,15 @@ a {
   pointer-events: none;
 }
 
-
+.moduleFolderSpacer {
+  flex: 1 0 30px;
+}
 .moduleFolderButton {
-  flex: 0 1 30px;
+  position: fixed;
+  bottom: 0;
+  
+  height: 30px;
+  width: 34%;
   
   text-align: center;
   

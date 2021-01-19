@@ -7,6 +7,7 @@
 ^Global functions to improve module creation
 °
 *General Updates
+^Support to create 3D games
 ^Future proofed layouts and buttons
 ^Better Devtools
 ^Update button on main menu
