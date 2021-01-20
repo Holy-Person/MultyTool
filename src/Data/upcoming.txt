@@ -10,12 +10,14 @@
 ^Support to create 3D games
 ^Future proofed layouts and buttons
 ^Better Devtools
+^Empty categories are closed by default
 ^Update button on main menu
 ^Help menu (F1/CTRL+Shift+H)
 ^Linux support
 °
 *New Modules
 ^AI Assistant
+^Dev Playground
 ^Cytus Story Manager
 ^Chat Module
 ^Language Trainer
@@ -25,7 +27,6 @@
 
 <!--
 // TODO: flexbox the modulebuilder with mdn layout
-// TODO: make empty categories be closed by default
 // TODO: centralize colors to prepare for themes
 // TODO: add more to the app made with using list like atom
 // TODO: add option to open keylogger again
