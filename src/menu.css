@@ -46,13 +46,14 @@ a {
 .neoButton {
   background-color: rgba(30,30,30,0.05);
   box-shadow: 2px 2px 2px #404040, inset 2px 2px 2px white;
+  transform: translate(-1px, -1px);
   cursor: pointer;
 } .neoButton:hover {
   box-shadow: none;
-  transform: translate(2px, 2px);
+  transform: translate(1px, 1px);
 } .neoButton:hover:active {
   box-shadow: inset 2px 2px 2px #404040, inset -2px -2px 2px white;
-  transform: translate(4px, 4px);
+  transform: translate(3px, 3px);
 }
 
 .disabledButton {
