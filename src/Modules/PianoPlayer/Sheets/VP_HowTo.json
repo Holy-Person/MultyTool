@@ -1,14 +1,14 @@
 {
   "data": {
     "title":          "How to play VP sheets",
-    "origin":         "none",
+    "origin":         "MultyTool",
     "genre":          "none",
     "category":       "Tutorial",
-    "difficulty":     "Easy",
+    "difficulty":     "none",
     "source":         "none",
     "youtubeUrl":     "none",
     "author":         "Holy",
-    "mainInstrument": "Piano"
+    "mainInstrument": "none"
   },
   "sheets": {
     "VP": [

@@ -26,8 +26,7 @@
 ^Unit Converter
 
 <!--
-// TODO: flexbox the modulebuilder with mdn layout
-// TODO: centralize colors to prepare for themes
-// TODO: add more to the app made with using list like atom
-// TODO: add option to open keylogger again
+TODO fix piano being offcenter on fullscreen, might be because media query, might not
+TODO flexbox the modulebuilder with mdn layout
+TODO centralize colors to prepare for themes
 -->

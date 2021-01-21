@@ -45,9 +45,9 @@
   
   <div id="keyLogger">
     <div id="keyLoggerHeader">
-      &nbsp;KeyLogger<span class="keyLoggerCloseButton" onclick="toggleKeyLogger()">🞫&nbsp;</span>
+      &nbsp;KeyLogger<span class="keyLoggerCloseButton" onclick="toggleKeyLogger()">🗕&nbsp;</span>
     </div>
-    <div class="keyLoggerCore" id="keyLoggerCore"></div>
+    <div id="keyLoggerCore"></div>
   </div>
   
   <!--<div class="sheetContainer">sample text♩ ♪ ♫ ♬</div>-->
@@ -61,11 +61,19 @@
       <div class="sheetButton" onclick="moveSheetSelector('right')">▶</div>
     </div>
     <div id="sheetSelector">
-      <!--<div id="sheetDataLeft">sheet.data.author<br>sheet.data.genre</div>
-      <div id="sheetDataRight">sheet.data.difficulty<br>sheet.data.type</div>-->
+      <div class="sheetDataLeft">
+        <b>Author:</b> <span id="sheetAuthor">sheet.data.author</span><br>
+        <b>Difficulty:</b> <span id="sheetDifficulty">sheet.data.difficulty</span>
+      </div>
+      <div class="sheetDataRight">
+        <b>Genre:</b> <span id="sheetGenre">sheet.data.genre</span><br>
+        <b>Origin:</b> <span id="sheetOrigin">sheet.data.origin</span>
+      </div>
       
-      <div id="sheetTitle">sheet.data.title</div>
-      <div id="sheetInstrument">sheet.data.mainInstrument</div>
+      <div class="sheetDataCenter">
+        <span id="sheetTitle">sheet.data.title</span><br>
+        <span id="sheetInstrument">sheet.data.mainInstrument</span>
+      </div>
       
       <div class="sheetLinkContainer">
         <a class="sheetLinkButton" id="sheetYTButton" target="_blank" rel="noopener">YT</a>
