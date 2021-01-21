@@ -151,7 +151,7 @@ kbd {
   top: 65px;
   left: 15px;
   height: 200px;
-  min-height: 180px;
+  min-height: 25px;
   width: 300px;
   min-width: 270px;
   float: left;
@@ -172,7 +172,7 @@ kbd {
   background-color: var(--header);
   cursor: move;
 }
-.keyLoggerCore {
+#keyLoggerCore {
   padding: 7px;
   padding-left: 15px;
   overflow-x: hidden;
@@ -184,13 +184,13 @@ kbd {
   user-select: text;
   box-shadow: inset 5px 0px 0px var(--header);
 }
-.keyLoggerCore::-webkit-scrollbar {
+#keyLoggerCore::-webkit-scrollbar {
   width: 12px;
 }
-.keyLoggerCore::-webkit-scrollbar-track {
+#keyLoggerCore::-webkit-scrollbar-track {
   background: var(--highlightPri);
 }
-.keyLoggerCore::-webkit-scrollbar-thumb {
+#keyLoggerCore::-webkit-scrollbar-thumb {
   background-color: var(--text);
   border-radius: 20px;
   border: 3px solid var(--highlightPri);
@@ -198,7 +198,11 @@ kbd {
 
 .keyLoggerCloseButton {
   float: right;
+  text-align: center;
   cursor: pointer;
+  width: 35px;
+} .keyLoggerCloseButton:hover {
+  background-color: rgba(30,30,30,0.2);
 }
 /*END KEYLOGGER*/
 
@@ -361,31 +365,35 @@ kbd {
   border: 3px solid var(--highlightPri);
 }
 
-#sheetDataLeft {
+.sheetDataLeft {
   margin-top: 10px;
   margin-left: 10px;
   float: left;
 }
-#sheetDataRight {
+
+.sheetDataRight {
   margin-top: 10px;
   margin-right: 10px;
   float: right;
-  text-align: right;
 }
+
+.sheetDataCenter {
+  position: fixed;
+  width: 84%;
+  margin-top: 10px;
+  text-align: center;
+}
+
 #sheetTitle {
-  padding-top: 10px;
   font-weight: bold;
   font-size: 24px;
-  text-align: center;
   text-decoration: underline;
-}
-#sheetInstrument {
-  text-align: center;
+} #sheetInstrument {
   font-size: 15px;
 }
 #sheetNotes {
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 60px;
   margin-right: 70px;
   margin-left: 30px;
   padding: 5px;

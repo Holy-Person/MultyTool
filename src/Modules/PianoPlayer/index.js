@@ -43,7 +43,7 @@ function goBack() {
 
 window.addEventListener("keydown", keyPress);
 function keyPress(keyObject) {
-	if (keyObject.repeat) { return }
+	if (keyObject.repeat) { return; }
 	if(keyObject.keyCode >= 48 && keyObject.keyCode <= 90) {
 		handleNote(keyObject.key);
 	}
@@ -140,6 +140,7 @@ function moveSheetSelector(direction) {
 function displaySheetPreview() {
 	var sheetTitle = sheetObjects[sheetPos].data.title;
 	var sheetAuthor = sheetObjects[sheetPos].data.author;
+	var sheetOrigin = sheetObjects[sheetPos].data.origin;
 	var sheetGenre = sheetObjects[sheetPos].data.genre;
 	var sheetDifficulty = sheetObjects[sheetPos].data.difficulty;
 	var sheetInstrument = sheetObjects[sheetPos].data.mainInstrument;
@@ -147,33 +148,59 @@ function displaySheetPreview() {
 	var sheetYTUrl = sheetObjects[sheetPos].data.youtubeUrl;
 	var sheetNotes = sheetObjects[sheetPos].sheets.VP.join('<br>');
 	
+	document.getElementById('sheetTitle').innerHTML = sheetTitle;
+	document.getElementById('sheetNotes').innerHTML = sheetNotes;
 	
-	
-	if (sheetInstrument == 'none') {
-		document.getElementById('sheetInstrument').style.visibility = 'hidden';
+	if (sheetAuthor == 'none') {
+		document.getElementById('sheetAuthor').style.display = 'none';
 	} else {
-		document.getElementById('sheetInstrument').innerHTML = sheetInstrument;
-		document.getElementById('sheetInstrument').style.visibility = 'visible';
+		document.getElementById('sheetAuthor').innerHTML = sheetAuthor;
+		document.getElementById('sheetAuthor').style.display = 'inline';
 	}
+	if (sheetGenre == 'none') {
+		document.getElementById('sheetGenre').style.display = 'none';
+	} else {
+		document.getElementById('sheetGenre').innerHTML = sheetGenre;
+		document.getElementById('sheetGenre').style.display = 'inline';
+	}
+	
+	if (sheetDifficulty == 'none') {
+		document.getElementById('sheetDifficulty').style.display = 'none';
+	} else {
+		document.getElementById('sheetDifficulty').innerHTML = sheetDifficulty;
+		document.getElementById('sheetDifficulty').style.display = 'inline';
+	}
+	if (sheetOrigin == 'none') {
+		document.getElementById('sheetOrigin').style.display = 'none';
+	} else {
+		document.getElementById('sheetOrigin').innerHTML = sheetOrigin;
+		document.getElementById('sheetOrigin').style.display = 'inline';
+	}
+	
 	if (sheetYTUrl == 'none') {
-		document.getElementById('sheetYTButton').style.visibility = 'hidden';
+		document.getElementById('sheetYTButton').style.display = 'none';
 	} else {
 		document.getElementById('sheetYTButton').href = sheetYTUrl;
-		document.getElementById('sheetYTButton').style.visibility = 'visible';
+		document.getElementById('sheetYTButton').style.display = 'inline';
 	}
 	if (sheetSource == 'none') {
-		document.getElementById('sheetSrcButton').style.visibility = 'hidden';
+		document.getElementById('sheetSrcButton').style.display = 'none';
 	} else {
 		document.getElementById('sheetSrcButton').href = sheetSource;
-		document.getElementById('sheetSrcButton').style.visibility = 'visible';
+		document.getElementById('sheetSrcButton').style.display = 'inline';
 	}
-	document.getElementById('sheetTitle').innerHTML = sheetTitle;
 	
-	document.getElementById('sheetNotes').innerHTML = sheetNotes;
+	if (sheetInstrument == 'none') {
+		document.getElementById('sheetInstrument').style.display = 'none';
+	} else {
+		document.getElementById('sheetInstrument').innerHTML = sheetInstrument;
+		document.getElementById('sheetInstrument').style.display = 'inline';
+	}
 }
 
 function selectSheet() {
-	
+	console.log('executed unused function \'selectSheet\'');
+	toggleSheetSelector();
 }
 /*END SHEETSELECTOR*/
 
@@ -328,9 +355,15 @@ function handleNote(key) {
 
 function toggleKeyLogger() {
 	const keyLogger = document.getElementById(`keyLogger`);
-	if (keyLogger.style.display === 'none') {
-		keyLogger.style.display = 'flex';
+	const keyLoggerCore = document.getElementById(`keyLoggerCore`);
+	if (keyLoggerCore.style.display === 'none') {
+		keyLogger.style.height = '200px';
+		keyLogger.style.resize = 'both';
+		keyLoggerCore.style.display = 'block';
 	} else {
-		keyLogger.style.display = 'none';
+		keyLogger.style.height = '25px';
+		keyLogger.style.resize = 'none';
+		keyLoggerCore.style.display = 'none';
 	}
+	keyLogger.style.width = '300px';
 }
