@@ -5,15 +5,16 @@ const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
 const Fs = require('fs');
 const Tone = require('tone');
-const whiteNotes = [
+const whiteNotesQWERTY = [
 	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
 	'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'
 ];
-const blackNotes = [
+const blackNotesQWERTY = [
 	'!', '@', '$', '%', '^', '*', '(',
 	'Q', 'W', 'E', 'T', 'Y', 'I', 'O', 'P', 'S', 'D', 'G', 'H', 'J', 'L', 'Z', 'C', 'V', 'B'
 ];
-const sheetObjects = [];
+var fullNotes = [];
+var sheetObjects = [];
 var sheetPos = 0;
 //Unused vars
 var acceptedYoutubeWarning = false;
@@ -44,7 +45,7 @@ function goBack() {
 window.addEventListener("keydown", keyPress);
 function keyPress(keyObject) {
 	if (keyObject.repeat) { return; }
-	if(keyObject.keyCode >= 48 && keyObject.keyCode <= 90) {
+	if(whiteNotesQWERTY.includes(keyObject.key) || blackNotesQWERTY.includes(keyObject.key)) {
 		handleNote(keyObject.key);
 	}
 }
@@ -60,16 +61,18 @@ function startUp() {
 }
 
 function loadPianoKeys() {
-	whiteNotes.forEach(function (note) {
+	whiteNotesQWERTY.forEach(function (note) {
 		var pianoKey = new PianoKey(note);
 		createdKey = pianoKey.lightKey;
 		document.getElementById(`lightKeyContainer`).innerHTML = document.getElementById(`lightKeyContainer`).innerHTML + createdKey;
 	});
-	blackNotes.forEach(function (note) {
+	blackNotesQWERTY.forEach(function (note) {
 		var pianoKey = new PianoKey(note);
 		createdKey = pianoKey.darkKey;
 		document.getElementById(`darkKeyContainer`).innerHTML = document.getElementById(`darkKeyContainer`).innerHTML + createdKey;
 	});
+	
+	fullNotes = whiteNotesQWERTY.concat(blackNotesQWERTY);
 }
 
 var PianoKey = function (note) {
@@ -249,78 +252,79 @@ const sampler = new Tone.Sampler({
 
 function handleNote(key) {
 	var note = '';
-	switch (key) {
-		case "1": note = 'C2'; break;
-		case "2": note = 'D2'; break;
-		case "3": note = 'E2'; break;
-		case "4": note = 'F2'; break;
-		case "5": note = 'G2'; break;
-		case "6": note = 'A2'; break;
-		case "7": note = 'B2'; break;
-		case "8": note = 'C3'; break;
-		case "9": note = 'D3'; break;
-		case "0": note = 'E3'; break;
-		case "q": note = 'F3'; break;
-    case "w": note = 'G3'; break;
-    case "e": note = 'A3'; break;
-    case "r": note = 'B3'; break;
-    case "t": note = 'C4'; break;
-    case "y": note = 'D4'; break;
-    case "u": note = 'E4'; break;
-		case "i": note = 'F4'; break;
-		case "o": note = 'G4'; break;
-		case "p": note = 'A4'; break;
-		case "a": note = 'B4'; break;
-		case "s": note = 'C5'; break;
-		case "d": note = 'D5'; break;
-		case "f": note = 'E5'; break;
-		case "g": note = 'F5'; break;
-		case "h": note = 'G5'; break;
-    case "j": note = 'A5'; break;
-		case "k": note = 'B5'; break;
-		case "l": note = 'C6'; break;
-		case "z": note = 'D6'; break;
-		case "x": note = 'E6'; break;
-		case "c": note = 'F6'; break;
-		case "v": note = 'G6'; break;
-    case "b": note = 'A6'; break;
-		case "n": note = 'B6'; break;
-		case "m": note = 'C7'; break;
+	switch (fullNotes.indexOf(key) ) {
+		case 0: note = 'C2'; break;
+		case 1: note = 'D2'; break;
+		case 2: note = 'E2'; break;
+		case 3: note = 'F2'; break;
+		case 4: note = 'G2'; break;
+		case 5: note = 'A2'; break;
+		case 6: note = 'B2'; break;
+		case 7: note = 'C3'; break;
+		case 8: note = 'D3'; break;
+		case 9: note = 'E3'; break;
 		
-		case "!": note = 'C#2'; break;
-		case "@": note = 'D#2'; break;
+		case 10: note = 'F3'; break;
+    case 11: note = 'G3'; break;
+    case 12: note = 'A3'; break;
+    case 13: note = 'B3'; break;
+    case 14: note = 'C4'; break;
+    case 15: note = 'D4'; break;
+    case 16: note = 'E4'; break;
+		case 17: note = 'F4'; break;
+		case 18: note = 'G4'; break;
+		case 19: note = 'A4'; break;
+		case 20: note = 'B4'; break;
+		case 21: note = 'C5'; break;
+		case 22: note = 'D5'; break;
+		case 23: note = 'E5'; break;
+		case 24: note = 'F5'; break;
+		case 25: note = 'G5'; break;
+    case 26: note = 'A5'; break;
+		case 27: note = 'B5'; break;
+		case 28: note = 'C6'; break;
+		case 29: note = 'D6'; break;
+		case 30: note = 'E6'; break;
+		case 31: note = 'F6'; break;
+		case 32: note = 'G6'; break;
+    case 33: note = 'A6'; break;
+		case 34: note = 'B6'; break;
+		case 35: note = 'C7'; break;
 		
-		case "$": note = 'F#2'; break;
-		case "%": note = 'G#2'; break;
-		case "^": note = 'A#2'; break;
+		case 36: note = 'C#2'; break;
+		case 37: note = 'D#2'; break;
 		
-		case "*": note = 'C#3'; break;
-		case "(": note = 'D#3'; break;
+		case 38: note = 'F#2'; break;
+		case 39: note = 'G#2'; break;
+		case 40: note = 'A#2'; break;
 		
-		case "Q": note = 'F#3'; break;
-    case "W": note = 'G#3'; break;
-    case "E": note = 'A#3'; break;
+		case 41: note = 'C#3'; break;
+		case 42: note = 'D#3'; break;
 		
-    case "T": note = 'C#4'; break;
-    case "Y": note = 'D#4'; break;
+		case 43: note = 'F#3'; break;
+    case 44: note = 'G#3'; break;
+    case 45: note = 'A#3'; break;
 		
-		case "I": note = 'F#4'; break;
-		case "O": note = 'G#4'; break;
-		case "P": note = 'A#4'; break;
+    case 46: note = 'C#4'; break;
+    case 47: note = 'D#4'; break;
 		
-		case "S": note = 'C#5'; break;
-		case "D": note = 'D#5'; break;
+		case 48: note = 'F#4'; break;
+		case 49: note = 'G#4'; break;
+		case 50: note = 'A#4'; break;
 		
-		case "G": note = 'F#5'; break;
-		case "H": note = 'G#5'; break;
-    case "J": note = 'A#5'; break;
+		case 51: note = 'C#5'; break;
+		case 52: note = 'D#5'; break;
 		
-		case "L": note = 'C#6'; break;
-		case "Z": note = 'D#6'; break;
+		case 53: note = 'F#5'; break;
+		case 54: note = 'G#5'; break;
+    case 55: note = 'A#5'; break;
 		
-		case "C": note = 'F#6'; break;
-		case "V": note = 'G#6'; break;
-    case "B": note = 'A#6'; break;
+		case 56: note = 'C#6'; break;
+		case 57: note = 'D#6'; break;
+		
+		case 58: note = 'F#6'; break;
+		case 59: note = 'G#6'; break;
+    case 60: note = 'A#6'; break;
     default: return;
 	}
 	sampler.triggerAttackRelease(note, "2n");

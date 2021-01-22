@@ -219,7 +219,7 @@ kbd {
 }
 .pianoBody {
   color: #DFDFDF;
-  height: 150px;
+  height: 200px;
   width: 94%;
   background-color: #303030;
   border-radius: 10px 10px 10px 10px;
@@ -227,8 +227,8 @@ kbd {
 }
 
 .pianoHeader {
-  height: 50px;
-  line-height: 50px;
+  height: 100px;
+  line-height: 100px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -312,13 +312,13 @@ kbd {
 
 @media screen and (min-height: 800px) {
   .pianoBody {
-    height: 350px;
+    height: 400px;
     margin-left: 3%;
     border-radius: 10px 10px 10px 10px;
   }
   .pianoHeader {
-    height: 100px;
-    line-height: 100px;
+    height: 150px;
+    line-height: 150px;
   }
   .lightKeyContainer {
     height: 280px;
