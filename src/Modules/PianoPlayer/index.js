@@ -13,10 +13,23 @@ const blackNotesQWERTY = [
 	'!', '@', '$', '%', '^', '*', '(',
 	'Q', 'W', 'E', 'T', 'Y', 'I', 'O', 'P', 'S', 'D', 'G', 'H', 'J', 'L', 'Z', 'C', 'V', 'B'
 ];
+
+const whiteNotesQWERTZ = [
+	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+	'q', 'w', 'e', 'r', 't', 'z', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'y', 'x', 'c', 'v', 'b', 'n', 'm'
+];
+const blackNotesQWERTZ = [
+	'!', '"', '$', '%', '&', '(', ')',
+	'Q', 'W', 'E', 'T', 'Z', 'I', 'O', 'P', 'S', 'D', 'G', 'H', 'J', 'L', 'Y', 'C', 'V', 'B'
+];
+
 var fullNotes = [];
 var sheetObjects = [];
+
+//User Changable Vars
 var sheetPos = 0;
-//Unused vars
+var keyboardLayout = 'QWERTY';
+//Unused Vars
 var acceptedYoutubeWarning = false;
 var userExp = 0;
 /*END Default Vars*/
@@ -44,8 +57,10 @@ function goBack() {
 
 window.addEventListener("keydown", keyPress);
 function keyPress(keyObject) {
+	const whiteNotes = eval('whiteNotes' + keyboardLayout);
+	const blackNotes = eval('blackNotes' + keyboardLayout);
 	if (keyObject.repeat) { return; }
-	if(whiteNotesQWERTY.includes(keyObject.key) || blackNotesQWERTY.includes(keyObject.key)) {
+	if(whiteNotes.includes(keyObject.key) || blackNotes.includes(keyObject.key)) {
 		handleNote(keyObject.key);
 	}
 }
@@ -61,18 +76,22 @@ function startUp() {
 }
 
 function loadPianoKeys() {
-	whiteNotesQWERTY.forEach(function (note) {
-		var pianoKey = new PianoKey(note);
-		createdKey = pianoKey.lightKey;
-		document.getElementById(`lightKeyContainer`).innerHTML = document.getElementById(`lightKeyContainer`).innerHTML + createdKey;
+	const whiteNotes = eval('whiteNotes' + keyboardLayout);
+	const blackNotes = eval('blackNotes' + keyboardLayout);
+	
+	whiteNotes.forEach(function (note) {
+		const pianoKey = new PianoKey(note);
+		const createdKey = pianoKey.lightKey;
+		document.getElementById(`lightKeyContainer`).innerHTML += createdKey;
 	});
-	blackNotesQWERTY.forEach(function (note) {
-		var pianoKey = new PianoKey(note);
-		createdKey = pianoKey.darkKey;
-		document.getElementById(`darkKeyContainer`).innerHTML = document.getElementById(`darkKeyContainer`).innerHTML + createdKey;
+	blackNotes.forEach(function (note) {
+		const pianoKey = new PianoKey(note);
+		const createdKey = pianoKey.darkKey;
+		document.getElementById(`darkKeyContainer`).innerHTML += createdKey;
 	});
 	
-	fullNotes = whiteNotesQWERTY.concat(blackNotesQWERTY);
+	fullNotes = whiteNotes.concat(blackNotes);
+	console.log(fullNotes);
 }
 
 var PianoKey = function (note) {
@@ -252,7 +271,8 @@ const sampler = new Tone.Sampler({
 
 function handleNote(key) {
 	var note = '';
-	switch (fullNotes.indexOf(key) ) {
+	console.log(fullNotes.indexOf(key));
+	switch (fullNotes.indexOf(key)) {
 		case 0: note = 'C2'; break;
 		case 1: note = 'D2'; break;
 		case 2: note = 'E2'; break;
@@ -331,7 +351,7 @@ function handleNote(key) {
 	
 	const keyLogger = document.getElementById(`keyLoggerCore`);
 	
-	keyLogger.innerHTML = keyLogger.innerHTML + key;
+	keyLogger.innerHTML += key;
 	keyLogger.scrollTo(0, keyLogger.scrollHeight);
 	
 	const noteKey = document.getElementById(`pKey_${key}`);
