@@ -2,13 +2,15 @@
 *Improved overall code|
 ^Future proofed layouts and buttons|
 ^Prepared main menu for themes|
+^Reworked upcoming to have it's own file|
+^Extended upcoming section with more content|
 *Main menu updates|
 ^Modules are now alphabetically sorted|
 ^Prepared for themes with a neumorphism-type design|
 ^Grouped CSS classes for faster and cleaner workflow|
 ^Buttons now have reworked animations and shading|
-^Reworked entire menu with new color scheme|
 ^Exit app menu is now styled to fit the rest of the menu|
+^Background now has a temporary gradient|
 *More PianoPlayer improvements|
 ^More sheets|
 ^More sheet-attributes|
