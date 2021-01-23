@@ -170,7 +170,6 @@ kbd {
   flex: 0 1 25px;
   line-height: 25px;
   background-color: var(--header);
-  cursor: move;
 }
 #keyLoggerCore {
   padding: 7px;
@@ -227,11 +226,26 @@ kbd {
 }
 
 .pianoHeader {
+  display: flex;
+  flex-direction: row;
   height: 100px;
   line-height: 100px;
   font-size: 25px;
   font-weight: bold;
 }
+.pianoHeaderPiece {
+  flex: 1 1 33%;
+}
+.pianoHeaderPiece select {
+  background-color: rgba(30,30,30,0.2);
+  color: inherit;
+}
+.pianoHeaderPiece select option {
+  background-color: rgba(30,30,30,0.2);
+  color: black;
+}
+
+
 .lightKeyContainer {
   height: 110px;
   line-height: 180px;
@@ -313,7 +327,6 @@ kbd {
 @media screen and (min-height: 800px) {
   .pianoBody {
     height: 400px;
-    margin-left: 3%;
     border-radius: 10px 10px 10px 10px;
   }
   .pianoHeader {
