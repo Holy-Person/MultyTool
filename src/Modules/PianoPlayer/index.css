@@ -230,15 +230,16 @@ kbd {
   flex-direction: row;
   height: 100px;
   line-height: 100px;
-  font-size: 25px;
-  font-weight: bold;
 }
 .pianoHeaderPiece {
   flex: 1 1 33%;
+  font-size: 35px;
+  font-weight: bold;
 }
 .pianoHeaderPiece select {
   background-color: rgba(30,30,30,0.2);
   color: inherit;
+  height: 30px;
 }
 .pianoHeaderPiece select option {
   background-color: rgba(30,30,30,0.2);

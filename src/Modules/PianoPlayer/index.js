@@ -6,21 +6,30 @@ const { ipcRenderer } = require('electron');
 const Fs = require('fs');
 const Tone = require('tone');
 const whiteNotesQWERTY = [
-	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
-	'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'
+	`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `0`,
+	`q`, `w`, `e`, `r`, `t`, `y`, `u`, `i`, `o`, `p`, `a`, `s`, `d`, `f`, `g`, `h`, `j`, `k`, `l`, `z`, `x`, `c`, `v`, `b`, `n`, `m`
 ];
 const blackNotesQWERTY = [
-	'!', '@', '$', '%', '^', '*', '(',
-	'Q', 'W', 'E', 'T', 'Y', 'I', 'O', 'P', 'S', 'D', 'G', 'H', 'J', 'L', 'Z', 'C', 'V', 'B'
+	`!`, `@`, `$`, `%`, `^`, `*`, `(`,
+	`Q`, `W`, `E`, `T`, `Y`, `I`, `O`, `P`, `S`, `D`, `G`, `H`, `J`, `L`, `Z`, `C`, `V`, `B`
 ];
 
 const whiteNotesQWERTZ = [
-	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
-	'q', 'w', 'e', 'r', 't', 'z', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'y', 'x', 'c', 'v', 'b', 'n', 'm'
+	`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `0`,
+	`q`, `w`, `e`, `r`, `t`, `z`, `u`, `i`, `o`, `p`, `a`, `s`, `d`, `f`, `g`, `h`, `j`, `k`, `l`, `y`, `x`, `c`, `v`, `b`, `n`, `m`
 ];
 const blackNotesQWERTZ = [
-	'!', '"', '$', '%', '&', '(', ')',
-	'Q', 'W', 'E', 'T', 'Z', 'I', 'O', 'P', 'S', 'D', 'G', 'H', 'J', 'L', 'Y', 'C', 'V', 'B'
+	`!`, `"`, `$`, `%`, `&`, `(`, `)`,
+	`Q`, `W`, `E`, `T`, `Z`, `I`, `O`, `P`, `S`, `D`, `G`, `H`, `J`, `L`, `Y`, `C`, `V`, `B`
+];
+
+const whiteNotesAZERTY = [
+	`&`, `é`, `"`, `'`, `(`, `-`, `è`, `_`, `ç`, `à`,
+	`a`, `z`, `e`, `r`, `t`, `y`, `u`, `i`, `o`, `p`, `q`, `s`, `d`, `f`, `g`, `h`, `j`, `k`, `l`, `w`, `x`, `c`, `v`, `b`, `n`, `,`
+];
+const blackNotesAZERTY = [
+	`1`, `2`, `4`, `5`, `6`, `8`, `9`,
+	`A`, `Z`, `E`, `T`, `Y`, `I`, `O`, `P`, `S`, `D`, `G`, `H`, `J`, `L`, `W`, `C`, `V`, `B`
 ];
 
 var fullNotes = [];
@@ -79,19 +88,24 @@ function loadPianoKeys() {
 	const whiteNotes = eval('whiteNotes' + keyboardLayout);
 	const blackNotes = eval('blackNotes' + keyboardLayout);
 	
+	const lightContainer = document.getElementById(`lightKeyContainer`);
+	const darkContainer = document.getElementById(`darkKeyContainer`);
+	
+	lightContainer.innerHTML = '';
+	darkContainer.innerHTML = '';
+	
 	whiteNotes.forEach(function (note) {
 		const pianoKey = new PianoKey(note);
 		const createdKey = pianoKey.lightKey;
-		document.getElementById(`lightKeyContainer`).innerHTML += createdKey;
+		lightContainer.innerHTML += createdKey;
 	});
 	blackNotes.forEach(function (note) {
 		const pianoKey = new PianoKey(note);
 		const createdKey = pianoKey.darkKey;
-		document.getElementById(`darkKeyContainer`).innerHTML += createdKey;
+		darkContainer.innerHTML += createdKey;
 	});
 	
 	fullNotes = whiteNotes.concat(blackNotes);
-	console.log(fullNotes);
 }
 
 var PianoKey = function (note) {
@@ -271,7 +285,6 @@ const sampler = new Tone.Sampler({
 
 function handleNote(key) {
 	var note = '';
-	console.log(fullNotes.indexOf(key));
 	switch (fullNotes.indexOf(key)) {
 		case 0: note = 'C2'; break;
 		case 1: note = 'D2'; break;
@@ -390,4 +403,10 @@ function toggleKeyLogger() {
 		keyLoggerCore.style.display = 'none';
 	}
 	keyLogger.style.width = '300px';
+}
+
+function switchLayout() {
+	console.log('test');
+	keyboardLayout = document.getElementById('boardLayout').value.toUpperCase();
+	loadPianoKeys();
 }

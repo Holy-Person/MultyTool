@@ -11,9 +11,8 @@
 <body>
   <div class="mainFlexScreen">
     <div class="topBar">
-      <div class="topBarButton" onclick="goBack()">
-        🡰 Return
-      </div>
+      <div class="topBarButton" onclick="goBack()">🡰 Return</div>
+      
       <div class="vertLine"></div>
       <div class="expBarContainer">
         <div class="expBarBadge">Icon</div>
@@ -34,9 +33,10 @@
       <div class="pianoBody">
         <div class="pianoHeader">
           <div class="pianoHeaderPiece">
-            <select name="layout" id="boardLayout">
+            <select name="layout" id="boardLayout" onchange="switchLayout()">
               <option value="qwerty">QWERTY</option>
               <option value="qwertz">QWERTZ</option>
+              <option value="azerty">AZERTY</option>
             </select>
           </div>
           <div class="pianoHeaderPiece">
