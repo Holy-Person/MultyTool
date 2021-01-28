@@ -12,18 +12,20 @@
   },
   "sheets": {
     "VP": [
-      "Use your keyboard via the VirtualPiano layout to play piano.",
+      "Use your keyboard to play piano, utilizing the VirtualPiano keyboard. Press <kbd>SHIFT</kbd> to play black keys.",
       "Notes in [square brackets] are played at the same time.",
       "Notes in {curly brackets} are played in rapid succesion.",
-      "To play capital letters you need to hold shift, pressing a capital and a lowercase note at the same time is sadly impossible, so you just need top play them in succession as fast as you can.",
+      "To play capital letters you need to hold shift, pressing a capital and a lowercase note at the same time is sadly impossible, so you just need to play them in succession as fast as you can.",
       "",
       "You can play the piano while this menu is open, try playing some sheets!",
+      "Please note that these sheets are written for a QWERTY keyboard, and will not work on QWERTZ or AZERTY.",
       "",
       "Try using keybinds such as <kbd>TAB</kbd> for opening this menu, or the <kbd>LEFT</kbd> and <kbd>RIGHT</kbd> keys to switch sheets.",
       "",
-      "Want to be able to play MIDI files here? MIDI support is on its way, but for now you can use <a href=\"https://github.com/Yoshify/Tower-Unite-MIDI-.NET\" target=\"_blank\">TowerUniteMidi.NET</a> to play them, just remember to have Multytool focused while doing so!",
+      "Want to be able to play MIDI files here? MIDI support is on its way, but for now you can use <a href=\"https://github.com/Yoshify/Tower-Unite-MIDI-.NET\" target=\"_blank\" tabindex=\"-1\">TowerUniteMidi.NET</a> to play them, just remember to have Multytool focused while doing so!",
+      "Warning: TowerUniteMidi.NET only works in QWERTY mode!",
       "",
-      "Upcoming: MIDI support, support for other keyboard layouts, more sheets, sheetviewer remake with genre search, volume slider, adjustable keypress duration, adjustable pitch, autoplay, level systems and unlockables, instrument selection, continuous click, disable keylogger, youtube player, more keybinds, custom colors and more!"
+      "Upcoming: MIDI support, mission system, more sheets, sheetviewer remake with genre search, volume slider, adjustable keypress duration, adjustable pitch, autoplay, level systems and unlockables, instrument selection, continuous click, youtube player, more keybinds, custom colors and more!"
     ]
   }
 }

@@ -11,9 +11,8 @@
 <body>
   <div class="mainFlexScreen">
     <div class="topBar">
-      <div class="topBarButton" onclick="goBack()">
-        🡰 Return
-      </div>
+      <div class="topBarButton" onclick="goBack()">🡰 Return</div>
+
       <div class="vertLine"></div>
       <div class="expBarContainer">
         <div class="expBarBadge">Icon</div>
@@ -29,29 +28,43 @@
         Sheets 𝄚𝄞
       </div>
     </div>
-    
+
     <div class="pianoContainer">
       <div class="pianoBody">
-        <div class="pianoHeader">MultyTool</div>
+        <div class="pianoHeader">
+          <div class="pianoHeaderPiece">
+            <select name="layout" id="boardLayout" tabindex="-1" onchange="switchLayout()">
+              <option value="qwerty">QWERTY</option>
+              <option value="qwertz">QWERTZ</option>
+              <option value="azerty">AZERTY</option>
+            </select>
+          </div>
+          <div class="pianoHeaderPiece">
+            MultyTool
+          </div>
+          <div class="pianoHeaderPiece">
+
+          </div>
+        </div>
         <div class="darkKeyContainer" id="darkKeyContainer"></div>
         <div class="lightKeyContainer" id="lightKeyContainer"></div>
       </div>
     </div>
-    
+
     <div class="bottomBarContainer">
       Currently this module requires an internet connection to load the note-sounds. This will be changed soon.
     </div>
   </div>
-  
+
   <div id="keyLogger">
     <div id="keyLoggerHeader">
       &nbsp;KeyLogger<span class="keyLoggerCloseButton" onclick="toggleKeyLogger()">🗕&nbsp;</span>
     </div>
     <div id="keyLoggerCore"></div>
   </div>
-  
+
   <!--<div class="sheetContainer">sample text♩ ♪ ♫ ♬</div>-->
-  
+
   <div id="sheetSelectorContainer">
     <div class="sheetButtonSpace sBSLeft">
       <div class="sheetButton" onclick="moveSheetSelector('left')">◀</div>
@@ -69,12 +82,12 @@
         <b>Genre:</b> <span id="sheetGenre">sheet.data.genre</span><br>
         <b>Origin:</b> <span id="sheetOrigin">sheet.data.origin</span>
       </div>
-      
+
       <div class="sheetDataCenter">
         <span id="sheetTitle">sheet.data.title</span><br>
         <span id="sheetInstrument">sheet.data.mainInstrument</span>
       </div>
-      
+
       <div class="sheetLinkContainer">
         <a class="sheetLinkButton" id="sheetYTButton" target="_blank" rel="noopener">YT</a>
         <a class="sheetLinkButton" id="sheetSrcButton" target="_blank" rel="noopener">SRC</a>
@@ -82,7 +95,7 @@
       <div id="sheetNotes">sheet.notes.VP</div>
     </div>
   </div>
-  
+
   <div id="screenBlocker"></div>
 </body>
 
