@@ -87,13 +87,13 @@ function startUp() {
 function loadPianoKeys() {
 	const whiteNotes = eval('whiteNotes' + keyboardLayout);
 	const blackNotes = eval('blackNotes' + keyboardLayout);
-	
+
 	const lightContainer = document.getElementById(`lightKeyContainer`);
 	const darkContainer = document.getElementById(`darkKeyContainer`);
-	
+
 	lightContainer.innerHTML = '';
 	darkContainer.innerHTML = '';
-	
+
 	whiteNotes.forEach(function (note) {
 		const pianoKey = new PianoKey(note);
 		const createdKey = pianoKey.lightKey;
@@ -104,7 +104,7 @@ function loadPianoKeys() {
 		const createdKey = pianoKey.darkKey;
 		darkContainer.innerHTML += createdKey;
 	});
-	
+
 	fullNotes = whiteNotes.concat(blackNotes);
 }
 
@@ -183,10 +183,10 @@ function displaySheetPreview() {
 	var sheetSource = sheetObjects[sheetPos].data.source;
 	var sheetYTUrl = sheetObjects[sheetPos].data.youtubeUrl;
 	var sheetNotes = sheetObjects[sheetPos].sheets.VP.join('<br>');
-	
+
 	document.getElementById('sheetTitle').innerHTML = sheetTitle;
 	document.getElementById('sheetNotes').innerHTML = sheetNotes;
-	
+
 	if (sheetAuthor == 'none') {
 		document.getElementById('sheetAuthor').style.display = 'none';
 	} else {
@@ -199,7 +199,7 @@ function displaySheetPreview() {
 		document.getElementById('sheetGenre').innerHTML = sheetGenre;
 		document.getElementById('sheetGenre').style.display = 'inline';
 	}
-	
+
 	if (sheetDifficulty == 'none') {
 		document.getElementById('sheetDifficulty').style.display = 'none';
 	} else {
@@ -212,7 +212,7 @@ function displaySheetPreview() {
 		document.getElementById('sheetOrigin').innerHTML = sheetOrigin;
 		document.getElementById('sheetOrigin').style.display = 'inline';
 	}
-	
+
 	if (sheetYTUrl == 'none') {
 		document.getElementById('sheetYTButton').style.display = 'none';
 	} else {
@@ -225,7 +225,7 @@ function displaySheetPreview() {
 		document.getElementById('sheetSrcButton').href = sheetSource;
 		document.getElementById('sheetSrcButton').style.display = 'inline';
 	}
-	
+
 	if (sheetInstrument == 'none') {
 		document.getElementById('sheetInstrument').style.display = 'none';
 	} else {
@@ -245,7 +245,6 @@ function selectSheet() {
 /*START NoteHandler*/
 //const synth = new Tone.Synth().connect(vol).toDestination();
 //synth.oscillator.type = "sine";
-const vol = new Tone.Volume(-100).toDestination();
 const sampler = new Tone.Sampler({
 	urls: {
 		A0: "A0.mp3",
@@ -280,8 +279,9 @@ const sampler = new Tone.Sampler({
 		C8: "C8.mp3"
 	},
 	baseUrl: "https://tonejs.github.io/audio/salamander/",
-	release: 1
-}).connect(vol).toDestination();
+	release: 1,
+	volume: -13
+}).toDestination();
 
 function handleNote(key) {
 	var note = '';
@@ -296,7 +296,7 @@ function handleNote(key) {
 		case 7: note = 'C3'; break;
 		case 8: note = 'D3'; break;
 		case 9: note = 'E3'; break;
-		
+
 		case 10: note = 'F3'; break;
     case 11: note = 'G3'; break;
     case 12: note = 'A3'; break;
@@ -323,52 +323,52 @@ function handleNote(key) {
     case 33: note = 'A6'; break;
 		case 34: note = 'B6'; break;
 		case 35: note = 'C7'; break;
-		
+
 		case 36: note = 'C#2'; break;
 		case 37: note = 'D#2'; break;
-		
+
 		case 38: note = 'F#2'; break;
 		case 39: note = 'G#2'; break;
 		case 40: note = 'A#2'; break;
-		
+
 		case 41: note = 'C#3'; break;
 		case 42: note = 'D#3'; break;
-		
+
 		case 43: note = 'F#3'; break;
     case 44: note = 'G#3'; break;
     case 45: note = 'A#3'; break;
-		
+
     case 46: note = 'C#4'; break;
     case 47: note = 'D#4'; break;
-		
+
 		case 48: note = 'F#4'; break;
 		case 49: note = 'G#4'; break;
 		case 50: note = 'A#4'; break;
-		
+
 		case 51: note = 'C#5'; break;
 		case 52: note = 'D#5'; break;
-		
+
 		case 53: note = 'F#5'; break;
 		case 54: note = 'G#5'; break;
     case 55: note = 'A#5'; break;
-		
+
 		case 56: note = 'C#6'; break;
 		case 57: note = 'D#6'; break;
-		
+
 		case 58: note = 'F#6'; break;
 		case 59: note = 'G#6'; break;
     case 60: note = 'A#6'; break;
     default: return;
 	}
 	sampler.triggerAttackRelease(note, "2n");
-	
+
 	const keyLogger = document.getElementById(`keyLoggerCore`);
-	
+
 	keyLogger.innerHTML += key;
 	keyLogger.scrollTo(0, keyLogger.scrollHeight);
-	
+
 	const noteKey = document.getElementById(`pKey_${key}`);
-	
+
 	noteKey.style.fontWeight = "bold";
 	if (noteKey.classList.contains('darkKey')) {
 		noteKey.style.boxShadow = "1px 1px 1px #404040";

@@ -13,14 +13,14 @@ body {
   background-color: var(--background);
   background-image: linear-gradient(to bottom right, var(--background), var(--header));
   color: var(--text);
-  
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   user-select: none;
-  
+
   padding: 0;
   margin: 0;
   overflow: hidden;
-  
+
   height: 100%;
 }
 html {
@@ -51,9 +51,9 @@ kbd {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+
   flex: 0 1 50px;
-  
+
   border-bottom: 3px solid var(--decoration);
 }
 
@@ -66,7 +66,7 @@ kbd {
   line-height: 50px;
   cursor: pointer;
   transition: 0.5s ease;
-  
+
   float: left;
 }
 .topBarButton:hover {
@@ -160,7 +160,7 @@ kbd {
   z-index: 20;
   display: flex;
   flex-flow: column;
-  
+
   box-shadow: 6px 6px 6px rgba(30,30,30,0.8);
   background-color: rgba(224,224,244,0.8);
 }
@@ -240,10 +240,14 @@ kbd {
   background-color: rgba(30,30,30,0.2);
   color: inherit;
   height: 30px;
+  width: 110px;
+  border-radius: 5px;
+}
+.pianoHeaderPiece select:focus {
+  outline: none;
 }
 .pianoHeaderPiece select option {
-  background-color: rgba(30,30,30,0.2);
-  color: black;
+  background-color: #303030;
 }
 
 
@@ -264,7 +268,7 @@ kbd {
 
 .pianoKey {
   background-color: var(--highlightPri);
-  
+
   text-align: center;
   cursor: pointer;
   border-radius: 0px 0px 5px 5px;
@@ -479,7 +483,7 @@ kbd {
   line-height: 30px;
   font-weight: bold;
   font-size: 18px;
-  background-color: var(--menu);
+  background-color: rgba(0, 0, 0, 0.2);
   border-top: 3px solid var(--decoration);
 }
 /*END BOTTOMBAR*/
