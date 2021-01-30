@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="menu.css">
     <script src="menu.js"></script>
   </head>
-  
+
   <body>
     <div class="mainFlexScreen">
       <div class="moduleListContainer noScrollBar">
@@ -15,69 +15,69 @@
             Tools<span id="categoryHeaderArrow">▽&nbsp;</span>
           </div><div class="moduleListSublist" id="toolSubList"></div>
         </div>
-        
+
         <div class="moduleListCategory">
           <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
             Minigames<span id="categoryHeaderArrow">▽&nbsp;</span>
           </div><div class="moduleListSublist" id="minigameSubList"></div>
         </div>
-        
+
         <div class="moduleListCategory">
           <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
             Workshops<span id="categoryHeaderArrow">▽&nbsp;</span>
           </div><div class="moduleListSublist" id="workshopSubList"></div>
         </div>
-        
+
         <div class="moduleListCategory">
           <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
             Other<span id="categoryHeaderArrow">▽&nbsp;</span>
           </div><div class="moduleListSublist" id="otherSubList"></div>
         </div>
-        
+
         <div class="moduleListCategory">
           <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
             Deprecated<span id="categoryHeaderArrow">▽&nbsp;</span>
           </div><div class="moduleListSublist" id="installedSubList"></div>
         </div>
-        
+
         <div class="moduleListCategory">
           <div class="moduleListCategoryHeader" onclick="toggleCategoryVisibility()">
             Previews<span id="categoryHeaderArrow">▽&nbsp;</span>
           </div><div class="moduleListSublist" id="previewSubList"></div>
         </div>
-        
+
         <div class="moduleFolderSpacer">&nbsp;</div>
-        
+
         <div class="moduleFolderButton" onclick="openModuleFolder()">📂 Open Folder</div>
       </div>
-      
-      
-      
+
+
+
       <div class="mainMenuContainer noScrollBar">
-        <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Home</div>
-        <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Changelog</div>
+        <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Home</div>
+        <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Changelog</div>
         <hr>
         <div class="mainMenuButton disabledButton">Control Panel</div>
         <div class="mainMenuButton disabledButton">Account</div>
         <hr>
-        <div class="mainMenuButton neoButton" onclick="switchDetailContainer()">Credits</div>
+        <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Credits</div>
         <hr>
         <hr>
-        <div class="mainMenuButton neoButton" onclick="quitApp('toggle')">Quit App</div>
+        <div class="mainMenuButton neuButton" onclick="quitApp('toggle')">Quit App</div>
       </div>
-      
-      
-      
+
+
+
       <div class="detailContainer" id="homeDC">
         <span class="titleHeader">MultyTool</span><hr>
         <div class="changelogPreviewHeader">Latest Changes</div>
         <div class="changelogPreviewContent" id="changelogPreview">Loading changelog...</div><hr>
         <div class="changelogPreviewHeader">Upcoming Changes</div>
         <div class="changelogPreviewContent" id="upcomingPreview">Loading upcoming...</div><hr>
-        <a class="externalCreditLink neoButton" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">
+        <a class="externalCreditLink neuButton" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">
           GitHub
         </a>
-        <a class="externalCreditLink neoButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">
+        <a class="externalCreditLink neuButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">
           Discord
         </a>
         <hr>
@@ -86,13 +86,13 @@
           Contact us on Discord
         </div>
       </div>
-      
+
       <div class="detailContainer" id="changelogDC">
         <span class="titleHeader">MultyTool</span><hr>
         <div class="changelogPreviewHeader">Full Changelog</div>
         <div class="noScrollBar" id="changelogFull">Loading changelog...</div>
       </div>
-      
+
       <div class="detailContainer" id="controlpanelDC">
         <span class="titleHeader">MultyTool</span><hr>
         Please come back at a later time, this feature isn't finished yet.<br><br>
@@ -104,7 +104,7 @@
         Reset all settings to default<br>
         And more, this is just all i could think of on the spot.<hr>
       </div>
-      
+
       <div class="detailContainer" id="accountDC">
         <span class="titleHeader">MultyTool</span><hr>
         Please come back at a later time, this feature isn't finished yet.<br><br>
@@ -112,9 +112,9 @@
         Accounts<hr>
         Name *<br><input type="text" placeholder="Name"><br> <!--* = required-->
         Pronouns<br><input type="text" placeholder="They/Them"><hr> <!--Must include / and 2 pronouns-->
-        <div class="accountButton neoButton">Create Account</div>
+        <div class="accountButton neuButton">Create Account</div>
       </div>
-      
+
       <div class="detailContainer" id="creditsDC">
         <span class="titleHeader">MultyTool</span><hr>
         <u><b>This app was made using:</b></u><br>
@@ -131,33 +131,33 @@
         <!--<img class="abtMeImage" href="./a.png"/>-->
         Hi, my name's Holy, or at least that's what my online handle is, I'm a student and making this app in my free time so expect some updates to take a bit longer.
         <hr>
-        
+
         <div class="abtMeSubHeader">Age: 18</div>
         <hr>
-        
+
         <div class="abtMeSubHeader">Languages:</div>
         <div class="langFloater">• C<br>• C#<br>• Assembler<br>• Arduino<br>• Processing</div>
         &nbsp;&nbsp;• HTML<br>&nbsp;&nbsp;• CSS<br>&nbsp;&nbsp;• JavaScript<br>&nbsp;&nbsp;• nodeJS<br>&nbsp;&nbsp;• Java
         <hr>
-        
+
         <div class="abtMeSubHeader">Links:</div>
-        <a class="abtMeLink neoButton" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">GitHub</a>
-        <a class="abtMeLink neoButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
-        <a class="abtMeLink neoButton" href="https://twitter.com/HolyDev1" target="_blank" rel="noopener">Twitter</a>
+        <a class="abtMeLink neuButton" href="https://github.com/Holy-Person/MultyTool" target="_blank" rel="noopener">GitHub</a>
+        <a class="abtMeLink neuButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
+        <a class="abtMeLink neuButton" href="https://twitter.com/HolyDev1" target="_blank" rel="noopener">Twitter</a>
         <hr>
-        
+
         <div class="abtMeSubHeader">Contact me:</div>
-        <a class="abtMeContactLink neoButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
+        <a class="abtMeContactLink neuButton" href="https://discord.gg/9dcaKKSyKa" target="_blank" rel="noopener">Discord</a>
       </div>
     </div>
-    
+
     <div class="versionNum">v0.5.0-alpha</div>
-    
+
     <div id="quitConfirmContainer">
       <div class="quitConfirmMenu">
         <div class="quitConfirmHeader">Do you really want to quit?</div>
-        <div class="quitConfirmButton neoButton" onclick="quitApp('toggle')">No</div>
-        <div class="quitConfirmButton neoButton" onclick="quitApp('confirm')">Yes</div>
+        <div class="quitConfirmButton neuButton" onclick="quitApp('toggle')">No</div>
+        <div class="quitConfirmButton neuButton" onclick="quitApp('confirm')">Yes</div>
       </div>
     </div>
   </body>

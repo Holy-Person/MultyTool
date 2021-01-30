@@ -11,7 +11,7 @@
 ^Future proofed layouts and buttons
 ^Better Devtools
 ^Empty categories are closed by default
-^Update button on main menu
+^Update button on main menu / perhaps auto updates
 ^Help menu (F1/CTRL+Shift+H)
 ^Linux support
 °

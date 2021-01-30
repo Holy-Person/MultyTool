@@ -1,3 +1,8 @@
+{Regular Update}Creator and Account Update(0.6.0)
+*free|
+^free|
+°
+
 {Regular Update}Designer Update(0.5.0)
 *Improved overall code|
 ^Future proofed layouts and buttons|

@@ -408,5 +408,6 @@ function toggleKeyLogger() {
 function switchLayout() {
 	console.log('test');
 	keyboardLayout = document.getElementById('boardLayout').value.toUpperCase();
+	document.getElementById('darkKeyContainer').focus();
 	loadPianoKeys();
 }

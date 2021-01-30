@@ -46,23 +46,23 @@ function startUp() {
 
 function loadModules() {
 	var filePath = `${__dirname}/Modules/`;
-	
+
   Fs.readdir(filePath, function(err, modules) {
     modules.forEach(function (module) {
       Fs.readFile((`${__dirname}/Modules/${module}/moduleinfo.json`), 'utf8', (err, moduleJsonString) => {
 				if(err) { console.log(err); } //make nice looking error handler, might even make notif in-app
 				var moduleObject = JSON.parse(moduleJsonString);
-				
+
 				moduleObjects.push(moduleObject);
 				var moduleName = moduleObject.module.name;
-				
-				
-				
+
+
+
 				if(moduleObjects.length == modules.length) {
 					console.group(`%cFinished loading modules.`, `color:green; font-size: 2em`);
 					console.info(`Loaded a total of ${moduleObjects.length} modules.`);
 					console.groupEnd();
-					
+
 					moduleObjects.sort(function(a, b) {
 						let fa = a.module.name.toLowerCase(),
 			        	fb = b.module.name.toLowerCase();
@@ -81,10 +81,10 @@ function loadModules() {
 
 function insertModules() {
 	var targetModuleNum = 0;
-	
+
 	moduleObjects.forEach(function (moduleObject) {
 		var moduleType = moduleObject.module.type;
-		
+
 		switch (moduleType) {
 			case 'tool': 			targetModuleNum = 0; break;
 			case 'minigame':	targetModuleNum = 1; break;
@@ -93,11 +93,11 @@ function insertModules() {
 			case 'preview': 	targetModuleNum = 5; break;
 			default: 					targetModuleNum = 4; break;
 		}
-		
+
 		var moduleName =				moduleObject.module.name;
 		var moduleDescription = moduleObject.module.description;
 		var moduleSize =				moduleObject.module.size;
-		
+
 		createModuleButton(moduleName, moduleType, moduleDescription, moduleSize, targetModuleNum);
 	});
 }
@@ -125,17 +125,17 @@ function createModuleButton(moduleName, moduleType, moduleDescription, moduleSiz
 
 var ModuleButton = function (moduleName, moduleDescription, sortPos) {
   this.smallModule =
-  `<div class="smallModuleButton moduleButton neoButton" id="${sortPos}SmallButton" onclick="openModule()">`+
+  `<div class="smallModuleButton moduleButton neuButton" id="${sortPos}SmallButton" onclick="openModule()">`+
 		`<div class="moduleButtonHeader">${moduleName}</div>`+
 		`<div class="moduleButtonDesc noScrollBar">${moduleDescription}</div>`+
   `</div>`;
 	this.previewModule =
-  `<div class="smallModuleButton moduleButton neoButton" id="${sortPos}SmallButton">`+
+  `<div class="smallModuleButton moduleButton neuButton" id="${sortPos}SmallButton">`+
 		`<div class="moduleButtonHeader">${moduleName}</div>`+
 		`<div class="moduleButtonDesc noScrollBar">${moduleDescription}</div>`+
   `</div>`;
 	this.largeModule =
-  `<div class="largeModuleButton moduleButton neoButton" onclick="openModule()">`+
+  `<div class="largeModuleButton moduleButton neuButton" onclick="openModule()">`+
 		`<div class="moduleButtonHeader">${moduleName}</div>`+
 		`<div class="moduleButtonDesc noScrollBar">${moduleDescription}</div>`+
   `</div>`;
@@ -145,17 +145,17 @@ function fillChangelogs() {
 	Fs.readFile(`${__dirname}/Data/changelog.txt`, 'utf8', function(err, data) {
   	if (err) throw err;
   	var rawChangelog = data;
-		
+
 		var startOfFirst = rawChangelog.indexOf(')');
 		var endOfFirst = rawChangelog.indexOf('°');
 		var cutRawChangelog = rawChangelog.substr(startOfFirst+1, endOfFirst - startOfFirst-1);
-	
+
 		var cutChangelog = cutRawChangelog
 	    .split('|').join('<br>')
 	    .split('*').join('⦿&nbsp;')
 			.split('^').join('&nbsp;&nbsp;•&nbsp;')
 			.split('°').join('<hr>');
-		
+
 		var fullChangelog = rawChangelog
 		  .split('|').join('<br>')
 		  .split('{').join('<div class="updateHeader"><span class="updateType">')
@@ -165,9 +165,9 @@ function fillChangelogs() {
 		 	.split('*').join('⦿&nbsp;')
 			.split('^').join('&nbsp;&nbsp;•&nbsp;')
 			.split('°').join('<hr>');
-	
+
 	  document.getElementById("changelogPreview").innerHTML = cutChangelog;
-		
+
 		document.getElementById("changelogFull").innerHTML = fullChangelog;
 	});
 }
@@ -176,12 +176,12 @@ function fillUpcoming() {
 	Fs.readFile(`${__dirname}/Data/upcoming.txt`, 'utf8', function(err, data) {
   	if (err) throw err;
   	var rawUpcoming = data;
-		
+
 		var fullUpcoming = rawUpcoming
 			.split('*').join('⦿&nbsp;')
 			.split('^').join('<br>&nbsp;&nbsp;•&nbsp;')
 			.split('°').join('<hr>');
-		
+
 		document.getElementById("upcomingPreview").innerHTML = fullUpcoming;
 	});
 }
@@ -214,7 +214,7 @@ function openModuleFolder() {
 /*START MAINMENU*/
 function switchDetailContainer() {
 	var destination = event.target.innerHTML.toLowerCase().split(' ').join('');
-	
+
 	var x = document.getElementsByClassName("detailContainer");
 	for (var i = 0; i < x.length; i++) {
 	  x[i].style.display = `none`;
