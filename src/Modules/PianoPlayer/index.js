@@ -36,6 +36,7 @@ var fullNotes = [];
 var sheetObjects = [];
 
 //User Changable Vars
+var userVolume = -18.333333333333332;
 var sheetPos = 0;
 var keyboardLayout = 'QWERTY';
 //Unused Vars
@@ -243,7 +244,7 @@ function selectSheet() {
 
 
 /*START NoteHandler*/
-//const synth = new Tone.Synth().connect(vol).toDestination();
+//const synth = new Tone.Synth().toDestination();
 //synth.oscillator.type = "sine";
 const sampler = new Tone.Sampler({
 	urls: {
@@ -280,7 +281,7 @@ const sampler = new Tone.Sampler({
 	},
 	baseUrl: "https://tonejs.github.io/audio/salamander/",
 	release: 1,
-	volume: -13
+	volume: userVolume
 }).toDestination();
 
 function handleNote(key) {
@@ -405,9 +406,23 @@ function toggleKeyLogger() {
 	keyLogger.style.width = '300px';
 }
 
+function clearKeyLogger() {
+	const keyLoggerCore = document.getElementById(`keyLoggerCore`);
+	keyLoggerCore.innerHTML = '';
+}
+
 function switchLayout() {
 	console.log('test');
 	keyboardLayout = document.getElementById('boardLayout').value.toUpperCase();
 	document.getElementById('darkKeyContainer').focus();
 	loadPianoKeys();
+}
+
+function changeVolume() {
+	var	volSlider = document.getElementById('volumeSlider');
+	var volDisplay = document.getElementById("volumeDisplay");
+
+	userVolume = volSlider.valueAsNumber / 3 - 35;
+	volDisplay.innerHTML = volSlider.valueAsNumber;
+	sampler.volume.value = userVolume;
 }

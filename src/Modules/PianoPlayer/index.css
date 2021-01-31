@@ -195,12 +195,12 @@ kbd {
   border: 3px solid var(--highlightPri);
 }
 
-.keyLoggerCloseButton {
+.keyLoggerHeaderButton {
   float: right;
   text-align: center;
   cursor: pointer;
   width: 35px;
-} .keyLoggerCloseButton:hover {
+} .keyLoggerHeaderButton:hover {
   background-color: rgba(30,30,30,0.2);
 }
 /*END KEYLOGGER*/
@@ -231,10 +231,8 @@ kbd {
   height: 100px;
   line-height: 100px;
 }
-.pianoHeaderPiece {
-  flex: 1 1 33%;
-  font-size: 35px;
-  font-weight: bold;
+.pianoHeaderPiece:nth-child(1) {
+  flex: 1 1 38%;
 }
 .pianoHeaderPiece select {
   background-color: rgba(30,30,30,0.2);
@@ -248,6 +246,25 @@ kbd {
 }
 .pianoHeaderPiece select option {
   background-color: #303030;
+}
+
+.pianoHeaderPiece:nth-child(2) {
+  flex: 1 1 23%;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.pianoHeaderPiece:nth-child(3) {
+  flex: 1 1 38%;
+}
+#volumeSlider:focus {
+  outline: none;
+}
+#volumeDisplay {
+  display: inline-block;
+  width: 60px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 
