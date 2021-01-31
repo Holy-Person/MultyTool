@@ -1,34 +1,74 @@
 # MultyTool
-A module based Electron app to create and share website-like "modules" with upgraded features.
+[![Discord Shield](https://img.shields.io/discord/762333294201143307?color=7289da&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/invites/9dcaKKSyKa)
 
 ## Table of contents
-* [Info](#so-whats-this)
-* [Tech](#the-stuff-i-use)
-* [Install](#install)
-* [Help](#help)
-* [License](#license)
+- [About](#about)
+- [Installation](#installation-how-to)
+- [Tech](#the-stuff-i-use)
+- [Creating Modules](#creating-modules)
+ - [Quick Start Guide](#quick-start-guide)
+ - [Special Custom Features](#special-custom-features)
+- [Community](#community)
+- [License](#license)
 
-## So, what's this?
-This is an Electron app, I am working on this on my own right now as a student, so development might be a bit slower than what you're used to.<br>
-A module based Electron application, customizable depending on what module you need, the goal will be to make modules for whatever I might need with ease, or even create a module to create more modules, for now this will be a simple test for myself.
+## About
+An Electron application based on "Modules", independent sub-folders for different uses.
+Modules can be easily created with HTML, CSS and JavaScript, featuring additional tools and an easy-to-use account system to save settings and data.
 
-Any problems or suggestions? Contact me [here](#help).
+While some modules are already pre-installed with the latest release, other modules or module-updates can be downloaded on our [Discord Server](https://discord.gg/invites/9dcaKKSyKa).<br>
+More info about our Discord Server can be found in the [Community](#community) section of this readme.
 
-## The stuff I use
-Currently I'm using:
-* Electron version: 10.2.0
-* Chromium version: 87.0.4280.88
-* Node version: 12.18.3
+This is still under development and far from finished, v0.6.0 is supposed to be the first beta release featuring all of the planned creator features like accounts, settings, full documentations for additional tools and more.<br>
+The current public release is v0.5.0-alpha, featuring basic module tools, a barren documentation and a fully usable piano module.
 
-## Install
+## Installation How-To
 1. Download the MultyTool zip from the latest update.
 2. Unzip the zip file.
 3. Use "MultyTool.exe" to open the app.
 
-## Help
-Need help with the app? Have questions but can't find an answer?
-You can contact me on our Discord here:
->https://discord.gg/invites/9dcaKKSyKa
+## The Stuff I Use
+Currently I'm using:
+- Electron version: 10.2.0
+- Chromium version: 85.0.4183.121
+- Node version: 12.16.3
+
+## Creating Modules
+This section is unfinished and will be expanded upon with the release of v0.6.0-beta
+A step-by-step guide can be found in-app so far, and custom features are currently being worked on.
+
+#### Quick Start Guide
+<details>
+<summary><strong>Step-By-Step Guide</strong></summary>
+
+1. step one
+2. two
+3. and three
+
+*test* **test** ***test*** `test`
+
+</details>
+
+#### Special Custom Features
+<details>
+<summary><strong>Custom features</strong></summary>
+
+##### Feature Title
+Feature Description
+```javascript
+feature code block
+```
+
+##### Feature Title
+Feature Description
+```javascript
+feature code block
+```
+
+</details>
+
+## Community
+Most of the community activity is on our [Discord Server](https://discord.gg/invites/9dcaKKSyKa).<br>
+Things like sharing or downloading modules, support and feedback or even bugs and feature suggestions go there.<br><br>
 
 ---
 
