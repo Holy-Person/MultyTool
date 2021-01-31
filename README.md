@@ -6,8 +6,8 @@
 - [Installation](#installation-how-to)
 - [Tech](#the-stuff-i-use)
 - [Creating Modules](#creating-modules)
- - [Quick Start Guide](#quick-start-guide)
- - [Special Custom Features](#special-custom-features)
+  - [Quick Start Guide](#quick-start-guide)
+  - [Special Custom Features](#special-custom-features)
 - [Community](#community)
 - [License](#license)
 
@@ -36,7 +36,7 @@ Currently I'm using:
 This section is unfinished and will be expanded upon with the release of v0.6.0-beta
 A step-by-step guide can be found in-app so far, and custom features are currently being worked on.
 
-#### Quick Start Guide
+### Quick Start Guide
 <details>
 <summary><strong>Step-By-Step Guide</strong></summary>
 
@@ -48,17 +48,17 @@ A step-by-step guide can be found in-app so far, and custom features are current
 
 </details>
 
-#### Special Custom Features
+### Special Custom Features
 <details>
 <summary><strong>Custom features</strong></summary>
 
-##### Feature Title
+#### Feature Title
 Feature Description
 ```javascript
 feature code block
 ```
 
-##### Feature Title
+#### Feature Title
 Feature Description
 ```javascript
 feature code block
@@ -68,7 +68,8 @@ feature code block
 
 ## Community
 Most of the community activity is on our [Discord Server](https://discord.gg/invites/9dcaKKSyKa).<br>
-Things like sharing or downloading modules, support and feedback or even bugs and feature suggestions go there.<br><br>
+Things like sharing or downloading modules is done through here.<br>
+Support and feedback or even bugs and feature suggestions go here too.<br><br>
 
 ---
 
