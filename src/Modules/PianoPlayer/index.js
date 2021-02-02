@@ -1,4 +1,6 @@
 // TODO: restyle sheetviewer, maybe like actual sheets, also add a marker showing you can play in sheet-view
+// TODO: stop default inputs like search or arrows for slider and selector
+// TODO: change style of volume slider, more width etc
 
 /*START Default Vars*/
 const Mousetrap = require('mousetrap');
