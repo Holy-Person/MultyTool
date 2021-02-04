@@ -260,22 +260,21 @@ kbd {
 #volumeSlider {
   -webkit-appearance: none;
   width: 150px;
-  opacity: 0.7;
-  transition: opacity .2s;
 }
 #volumeSlider::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   background-color: rgb(30,30,30);
-  height: 15px;
+  height: 10px;
 }
 #volumeSlider::-webkit-slider-thumb {
   -webkit-appearance: none;
   box-shadow: none;
-  height: 42px;
-  margin-top: -15px;
-  width: 22px;
+  height: 26px;
+  margin-top: -10px;
+  width: 16px;
   border-radius: 22px;
   background: #FFFFFF;
+  cursor: ew-resize;
 }
 #volumeSlider:hover {
   opacity: 1;
