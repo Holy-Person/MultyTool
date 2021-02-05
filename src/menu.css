@@ -318,6 +318,14 @@ hr + hr {
 
 /*START CONTROL PANEL*/
 /*nothing here yet*/
+#controlpanelDC li { /* TODO: fix indent */
+  list-style: none;
+}
+.settingsToggle {
+
+} .settingsToggle:checked {
+
+}
 /*END CONTROL PANEL*/
 
 /*START ACCOUNT*/

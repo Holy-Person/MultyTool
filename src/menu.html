@@ -57,7 +57,7 @@
         <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Home</div>
         <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Changelog</div>
         <hr>
-        <div class="mainMenuButton disabledButton">Control Panel</div>
+        <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Control Panel</div>
         <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Account</div>
         <hr>
         <div class="mainMenuButton neuButton" onclick="switchDetailContainer()">Credits</div>
@@ -103,6 +103,17 @@
         Developer mode(enables devtools and other extras)<br>
         Reset all settings to default<br>
         And more, this is just all i could think of on the spot.<hr>
+        <ul>
+          <li>
+            <input id="c1" type="checkbox" name="" checked><label for="c1">Setting 1</label>
+          </li>
+          <li>
+            <input id="c2" type="checkbox" name=""><label for="c2">Setting 2</label>
+          </li>
+          <li>
+            <input id="c3" type="checkbox" name=""><label for="c3">Setting 3</label>
+          </li>
+        </ul>
       </div>
 
       <div class="detailContainer" id="accountDC">
@@ -113,8 +124,8 @@
           <input type="text" placeholder="Name" id="accountNameField" minlength="8"><br> <!--* = required-->
           <label for="accountPronounField">Pronouns</label><br>
           <input type="text" placeholder="They/Them" id="accountPronounField"><hr> <!--Must include / and 2 pronouns-->
-          <input class="accountButton neuButton" type="reset" value="Reset Form">
-          <input class="accountButton neuButton" type="submit" value="Create Account">
+          <input class="neuButton" type="reset" value="Reset Form">
+          <input class="neuButton" type="submit" value="Create Account">
         </form>
       </div>
 
