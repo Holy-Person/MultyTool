@@ -392,20 +392,20 @@ function handleNote(key) {
 	}
 }
 /*END NoteHandler*/
-
+var keyLoggerSize = '200px';
 function toggleKeyLogger() {
 	const keyLogger = document.getElementById(`keyLogger`);
 	const keyLoggerCore = document.getElementById(`keyLoggerCore`);
 	if (keyLoggerCore.style.display === 'none') {
-		keyLogger.style.height = '200px';
+		keyLogger.style.height = keyLoggerSize;
 		keyLogger.style.resize = 'both';
 		keyLoggerCore.style.display = 'block';
 	} else {
+		keyLoggerSize = keyLogger.clientHeight + 'px';
 		keyLogger.style.height = '25px';
 		keyLogger.style.resize = 'none';
 		keyLoggerCore.style.display = 'none';
 	}
-	keyLogger.style.width = '300px';
 }
 
 function clearKeyLogger() {
