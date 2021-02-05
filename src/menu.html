@@ -107,11 +107,15 @@
 
       <div class="detailContainer" id="accountDC">
         <span class="titleHeader">MultyTool</span><hr>
-        It seems like you don't have an account yet. You can create an account here for things like custom settings.
-        <hr>
-        <label>Name *</label><br><input type="text" placeholder="Name"><br> <!--* = required-->
-        <label>Pronouns</label><br><input type="text" placeholder="They/Them"><hr> <!--Must include / and 2 pronouns-->
-        <div class="accountButton neuButton">Create Account</div>
+        It seems like you don't have an account yet. You can create an account here for things like custom settings.<hr>
+        <form action="javascript: createAccount();">
+          <label for="accountNameField">Name *</label><br>
+          <input type="text" placeholder="Name" id="accountNameField" minlength="8"><br> <!--* = required-->
+          <label for="accountPronounField">Pronouns</label><br>
+          <input type="text" placeholder="They/Them" id="accountPronounField"><hr> <!--Must include / and 2 pronouns-->
+          <input class="accountButton neuButton" type="reset" value="Reset Form">
+          <input class="accountButton neuButton" type="submit" value="Create Account">
+        </form>
       </div>
 
       <div class="detailContainer" id="creditsDC">

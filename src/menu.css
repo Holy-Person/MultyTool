@@ -321,7 +321,19 @@ hr + hr {
 /*END CONTROL PANEL*/
 
 /*START ACCOUNT*/
-#accountDC input {
+#accountDC input[type=submit], #accountDC input[type=reset] {
+  outline: none;
+  border: none;
+  font-weight: bold;
+
+  height: 35px;
+  width: 45%;
+
+  text-align: center;
+  line-height: 35px;
+
+  border-radius: 10px;
+} #accountDC input[type=text] {
   height: 35px;
   width: 75%;
 
@@ -330,20 +342,12 @@ hr + hr {
 
   font-size: 18px;
 
-  border: none;
   outline: none;
+
+  border: none;
   border-radius: 10px;
   background-color: rgba(0,0,0,0);
   box-shadow: inset 3px 3px 3px #808080, inset -3px -3px 3px white;
-}
-.accountButton {
-  height: 35px;
-  width: 45%;
-
-  text-align: center;
-  line-height: 35px;
-
-  border-radius: 10px;
 }
 /*END ACCOUNT*/
 

@@ -187,6 +187,7 @@ function fillUpcoming() {
 }
 /*END LOAD*/
 
+
 /*START MODULELIST*/
 function toggleCategoryVisibility() {
 	var siblings = event.target.parentElement.children;
@@ -222,3 +223,14 @@ function switchDetailContainer() {
 	document.getElementById(`${destination}DC`).style.display = "block";
 }
 /*END MAINMENU*/
+
+
+/*START ACCOUNT*/
+function createAccount() {
+	const accountName = document.getElementById(`accountNameField`).value;
+	const accountPronouns = document.getElementById(`accountPronounField`).value;
+	console.log(accountName + 'and' + accountPronouns);
+	console.log('account tested');
+	return false;
+}
+/*END ACCOUNT*/
