@@ -329,7 +329,7 @@ hr + hr {
 /*END CONTROL PANEL*/
 
 /*START ACCOUNT*/
-#accountDC input[type=submit], #accountDC input[type=reset] {
+input[type=submit], input[type=reset] {
   outline: none;
   border: none;
   font-weight: bold;

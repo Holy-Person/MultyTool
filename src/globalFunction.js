@@ -36,6 +36,7 @@ module.exports = {
 		// TODO: actually make the function
 	},
 	getUserName: function() {
+		console.log('test recieved');
 		// TODO: actually make the function
 	},
 	getUserPronoun: function(/*Selection here*/) {
