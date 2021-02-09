@@ -1,4 +1,4 @@
-/*Default Colors*/
+/*START MAIN*/
 :root {
   --background: rgba(224,224,244,1.0);
   --text: rgba(18,18,18,1.0);
@@ -14,14 +14,36 @@ body {
   background-color: var(--background);
   color: var(--text);
 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /*Default fonts*/
-  user-select: none; /*Stops the user from highlighting text*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
 
-  padding: 0; /*Removes default padding*/
-  margin: 0; /*Removes Default margin*/
-  overflow: hidden; /*In case you want users to be able to scroll on this page, remove this line*/
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  height: 100%;
+} html {
+  height: 100%;
+} hr {
+border-top: 2px solid var(--decoration);
+} a {
+  color: var(--decoration);
 }
 
-a {
-  color: var(--decoration);
+.mainFlexScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/*END MAIN*/
+
+.sidebar {
+  flex: 0 1 20%;
+  background-color: var(--menu);
+}
+
+.contentContainer {
+  flex: 0 1 80%;
 }

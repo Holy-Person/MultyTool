@@ -10,5 +10,5 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 });
 
 function test() {
-	MultyTool.getUserName();
+	MultyTool.loadUserTheme();
 }

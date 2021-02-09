@@ -28,19 +28,19 @@ function createMainWindow() {
     protocol: 'file',
     slashes: true
   }))
-  
+
   Menu.setApplicationMenu(null);
 
   // Gets emitted when the window closes.
   mainWindow.on('closed', () => {
     mainWindow = null;
   })
-  
+
   mainWindow.webContents.on('new-window', function(e, url) {
     e.preventDefault();
     require('electron').shell.openExternal(url);
   });
-  
+
   globalShortcut.register('ctrl+shift+i', function () {
     mainWindow.webContents.toggleDevTools();
   });
