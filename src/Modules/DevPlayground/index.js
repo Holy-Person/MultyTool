@@ -1,6 +1,6 @@
 const Mousetrap = require('mousetrap');
 const { ipcRenderer } = require('electron');
-const MultyTool = require(__dirname+'/../globalFunction.js'); //// TODO: fix this
+const MultyTool = require(__dirname+'/../../globalFunction.js');
 
 Mousetrap.bind('esc', () => {
 	ipcRenderer.send('changePage', 'menu');
