@@ -43,6 +43,12 @@ const SB_Content = function (buttonName) {
 
 /*START CS LOGIC*/
 function switchCotentScreen() {
-	console.log(event.target.innerHTML);
+	var targetScreen = event.target.innerHTML.split(' ').join('-');
+
+	var x = document.getElementsByClassName("contentScreen");
+	for (var i = 0; i < x.length; i++) {
+		x[i].style.display = `none`;
+	}
+	document.getElementById(`cs_${targetScreen}`).style.display = "block";
 }
 /*END CS LOGIC*/
