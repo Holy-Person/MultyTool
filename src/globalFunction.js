@@ -3,14 +3,14 @@ const { ipcRenderer } = require('electron');
 
 module.exports = {
 	loadUserTheme: function() {
-		Fs.readFile((`${__dirname}/Data/settings.json`), 'utf8', (err, jsonString) => {
+		Fs.readFile((`${__dirname}/Data/appSettings.json`), 'utf8', (err, jsonString) => {
 			var settingsObject = JSON.parse(jsonString);
 	    var userTheme  		 = settingsObject.app.theme;
 
-			Fs.readFile((`${__dirname}/Themes/${userTheme}.json`), 'utf8', (err, themeJson) => {
+			Fs.readFile((`${__dirname}/Data/Themes/${userTheme}.json`), 'utf8', (err, themeJson) => {
 		    var themeObject = JSON.parse(themeJson);
 				console.log(themeObject);
-				console.log('This function does nothing yet. Please wait for the release of themes.');
+				alert('This function does nothing as of right now. Please wait for the release of themes to use this.');
 				/*document.documentElement.style.setProperty('--text', themeObject.colors.text);
 		    document.body.style.backgroundImage 					 = themeObject.links.bgImage;
 		    document.getElementById(`BackgroundVideo`).src = themeObject.links.bgVideo;*/
