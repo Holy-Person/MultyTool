@@ -18,7 +18,7 @@ Mousetrap.bind('esc', () => {
 		if((typeof this[i]).toString()=="function"&&this[i].toString().indexOf("native")==-1){
 			console.log(this[i].name);
 		}
-	}*/
+	}*/ //This is for a future feature that lists all functions a dev can call
 });
 
 
@@ -120,7 +120,7 @@ function createModuleButton(moduleName, moduleType, moduleDescription, moduleSiz
 	} else {
 		createdModule = moduleButton.smallModule;
 	}
-	document.getElementById(`${moduleType}SubList`).innerHTML = document.getElementById(`${moduleType}SubList`).innerHTML + createdModule;
+	document.getElementById(`${moduleType}SubList`).innerHTML += createdModule;
 }
 
 var ModuleButton = function (moduleName, moduleDescription, sortPos) {
