@@ -2,7 +2,7 @@
 :root {
   --background: rgba(224,224,244,1.0);
   --text: rgba(18,18,18,1.0);
-  --menu: rgba(192,192,212,1.0);
+  --menu: rgba(192,192,212,0.3);
   --highlightPri: rgba(180,180,200,1.0);
   --highlightSec: rgba(208,208,228,1.0);
   --header: rgba(115,138,219,1.0);
@@ -12,6 +12,7 @@
 /*Default Style*/
 body {
   background-color: var(--background);
+  background-image: linear-gradient(to bottom right, var(--background), var(--header));
   color: var(--text);
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -41,9 +42,55 @@ border-top: 2px solid var(--decoration);
 
 .sidebar {
   flex: 0 1 20%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
   background-color: var(--menu);
+} .sidebar::-webkit-scrollBar {
+  display: none;
+}
+
+.sidebar .header {
+  height: 40px;
+  line-height: 40px;
+
+  font-weight: bold;
+}
+.sidebar .button {
+  height: 40px;
+  line-height: 40px;
+
+  cursor: pointer;
+} .sidebar .button:hover {
+  background-color: var(--menu);
+}
+.sidebar .footerSpacer {
+  flex: 1 0 40px;
+}
+
+.sidebar .footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 20%;
+  height: 40px;
+  line-height: 40px;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  background-color: var(--header);
+
+  cursor: pointer;
 }
 
 .contentContainer {
   flex: 0 1 80%;
+}
+.contentScreen:not(#cs_About) {
+  display: none;
 }
