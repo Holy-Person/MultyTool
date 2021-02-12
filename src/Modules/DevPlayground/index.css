@@ -30,6 +30,36 @@ border-top: 2px solid var(--decoration);
 } a {
   color: var(--decoration);
 }
+pre {
+  display: block;
+
+  font-family: Consolas,"courier new";
+  background-color: rgba(70,70,80,0.7);
+  color: rgba(235,235,235,1);
+  user-select: text;
+
+  margin-left: 1%;
+
+  width: 68%;
+  padding: 1%;
+  line-height: 1.6;
+
+  overflow-x: auto;
+
+  border: 1px solid #222222;
+  border-left: 4px solid var(--header);
+  border-radius: 5px;
+} pre:hover, pre:focus {
+  border-left: 4px solid var(--decoration);
+} pre::-webkit-scrollbar {
+  height: 12px;
+} pre::-webkit-scrollbar-track {
+  background-color: rgba(70,70,80,1);
+} pre::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  border-radius: 20px;
+  border: 3px solid rgba(70,70,80,1);
+}
 
 .mainFlexScreen {
   width: 100%;
@@ -49,6 +79,8 @@ border-top: 2px solid var(--decoration);
   overflow-x: hidden;
   overflow-y: auto;
 
+  box-shadow: inset -2px 0px 0px var(--decoration);
+
   background-color: var(--menu);
 } .sidebar::-webkit-scrollBar {
   display: none;
@@ -60,6 +92,8 @@ border-top: 2px solid var(--decoration);
   height: 40px;
   line-height: 40px;
 
+  overflow: hidden;
+
   font-weight: bold;
   font-size: 18px;
 }
@@ -68,6 +102,8 @@ border-top: 2px solid var(--decoration);
 
   height: 40px;
   line-height: 40px;
+
+  overflow: hidden;
 
   cursor: pointer;
 } .sidebar .button:hover {
@@ -94,7 +130,9 @@ border-top: 2px solid var(--decoration);
 }
 
 .contentContainer {
-  flex: 0 1 80%;
+  flex: 0 1 78%;
+
+  padding: 1%;
 }
 .contentScreen:not(#cs_About) {
   display: none;
