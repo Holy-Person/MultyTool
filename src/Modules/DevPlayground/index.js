@@ -33,10 +33,14 @@ function loadButtons() {
 	});
 }
 
-const SB_Content = function (buttonName) {
+const SB_Content = function (title) {
+	this.header =
+  `<div class="header">`+
+		`${title}`+
+  `</div>`;
   this.button =
   `<div class="button" onclick="switchCotentScreen()">`+
-		`${buttonName}`+
+		`${title}`+
   `</div>`;
 }
 /*END LOAD*/

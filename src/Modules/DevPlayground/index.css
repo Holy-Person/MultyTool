@@ -30,11 +30,22 @@ border-top: 2px solid var(--decoration);
 } a {
   color: var(--decoration);
 }
+
+.mainFlexScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/*END MAIN*/
+
+/*START CODE BLOCKS*/
 pre {
   display: block;
 
   font-family: Consolas,"courier new";
-  background-color: rgba(70,70,80,0.7);
+  background-color: #212836;
   color: rgba(235,235,235,1);
   user-select: text;
 
@@ -54,21 +65,35 @@ pre {
 } pre::-webkit-scrollbar {
   height: 12px;
 } pre::-webkit-scrollbar-track {
-  background-color: rgba(70,70,80,1);
+  background-color: #212836;
 } pre::-webkit-scrollbar-thumb {
-  background-color: var(--text);
+  background-color: var(--decoration);
   border-radius: 20px;
-  border: 3px solid rgba(70,70,80,1);
+  border: 3px solid #212836;
 }
-
-.mainFlexScreen {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+pre em {
+  color: #6EAA7F;
+  font-style: normal; /*Disable default*/
+} pre s {
+  color: #9EC8E6;
+  text-decoration: none; /*Disable default*/
+} pre i {
+  color: #c98b7e;
+  font-style: normal; /*Disable default*/
+} pre b {
+  color: #7B6D9C;
+  font-weight: normal; /*Disable default*/
+} pre u {
+  color: #E6BC9E;
+  text-decoration: none; /*Disable default*/
+} pre mark {
+  color: #8B4B65;
+  background-color: inherit; /*Disable default*/
+} pre small {
+  color: #C8E69E;
+  font-size: inherit; /*Disable default*/
 }
-/*END MAIN*/
+/*END CODE BLOCKS*/
 
 .sidebar {
   flex: 0 1 20%;
