@@ -12,32 +12,32 @@
   <div class="mainFlexScreen">
     <div class="sidebar">
       <div id="sidebarList">
-        <div class="header">Dev Playground</div>
+        <div class="header">Dev Playground</div><hr>
       </div>
       <div class="footerSpacer"></div>
       <div class="footer" onclick="goBack()">🡰 Return</div>
     </div>
 
     <div class="contentContainer">
-      <div class="contentScreen" id="cs_About">
-        Screen 0<br>
+      <div class="contentItem contentScreen" id="cs_About">
         About Text<br>
         Welcome to the Dev-Playground, you can find snippets and code examples here.<br>
         In general this place is for tests of new code and settings without breaking other modules.
       </div>
-      <div class="contentScreen" id="cs_Userdata">
-        Screen 1<br>
+      <div class="contentItem contentScreen" id="cs_Userdata">
         I'm looking for [name](user), I need to give [pronoun2](them) [pronoun1changed](their) umbrella.<br>
         they/them<br>
         he/him<br>
         she/her<br>
         <div onclick="test()">Click</div>
       </div>
-      <div class="contentScreen" id="cs_Code-Snippets">
-        Screen 2<br>
-        <pre><i>&lt;div <u>class</u>=<em>&quot;classname&quot;</em>&gt;</i>text in a div<i>&lt;/div&gt;</i></pre>
+      <div class="contentItem contentScreen" id="cs_Code-Snippets">
+        <pre>&lt;<i>div</i> <u>class</u>=<em>&quot;classname&quot;</em>&gt;text in a div&lt;/<i>div</i>&gt;</pre>
         You can copy text from these code snippets to use in your module.<br>
-        <pre>i am code <i>&lt;div&gt;</i>
+        Including globalFunction.js in your module:
+        <pre><mark>const</mark> <small>MultyTool</small> = <s>require</s>(<i>__dirname</i>+<em>'/../../globalFunction.js'</em>);</pre>
+        This is an overview of all usable colors in code blocks.
+        <pre>i am code &lt;<i>div</i>&gt;test&lt;/<i>div</i>&gt;
 more code in pre
   indented code
 <em>//em text</em>
@@ -47,14 +47,8 @@ more code in pre
 <i>i text</i>
 <b>b text</b>
 <u>u text</u></pre>
-        Including globalFunction.js in your module:
-        <pre><mark>const</mark> <small>MultyTool</small> = <s>require</s>(<i>__dirname</i>+<em>'/../../globalFunction.js'</em>);</pre>
       </div>
-      <div class="contentScreen" id="cs_Screen-3">
-        Screen 3<br>
-      </div>
-      <div class="contentScreen" id="cs_Test-For-Really-Long-Name">
-        Screen 4<br>
+      <div class="contentItem contentScreen" id="cs_Test-For-Really-Long-Name">
         Annoying<br>
       </div>
     </div>

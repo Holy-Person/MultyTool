@@ -29,7 +29,10 @@ function loadButtons() {
 		  .split('-').join(' ');
 
 		var sb_content = new SB_Content(screenID);
-		document.getElementById('sidebarList').innerHTML += sb_content.button;
+		if (screen.classList.contains('contentScreen') ) {
+			screen.innerHTML = `<h1>${screenID}</h1><hr>` + screen.innerHTML;
+			document.getElementById('sidebarList').innerHTML += sb_content.button;
+		}
 	});
 }
 

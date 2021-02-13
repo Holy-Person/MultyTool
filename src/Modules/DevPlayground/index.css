@@ -155,10 +155,33 @@ pre em {
 }
 
 .contentContainer {
-  flex: 0 1 78%;
+  height: 100%;
 
-  padding: 1%;
+  flex: 0 1 80%;
 }
-.contentScreen:not(#cs_About) {
+.contentScreen {
+  height: 99%;
+
+  padding-top: 1%;
+  padding-left: 1%;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+} .contentScreen:not(#cs_About) {
   display: none;
+} .contentScreen h1 {
+  display: block;
+  margin: 0 0;
+  font-weight: bold;
+} .contentScreen hr {
+  margin-left: -0.5%;
+  width: 100%;
+} .contentScreen::-webkit-scrollbar {
+  width: 12px;
+} .contentScreen::-webkit-scrollbar-track {
+  background-color: #212836;
+} .contentScreen::-webkit-scrollbar-thumb {
+  background-color: var(--decoration);
+  border-radius: 20px;
+  border: 3px solid #212836;
 }
