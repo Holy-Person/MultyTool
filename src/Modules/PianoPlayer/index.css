@@ -20,20 +20,14 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-
+} html, body {
   height: 100%;
-}
-html {
-  height: 100%;
-}
-hr {
+} hr {
 border-top: 2px solid var(--decoration);
-}
-a {
+} a {
   text-decoration: none;
   color: var(--decoration);
-}
-kbd {
+} kbd {
   background-color: var(--highlightSec);
 }
 
@@ -57,7 +51,7 @@ kbd {
   border-bottom: 3px solid var(--decoration);
 }
 
-.topBarButton {
+.topBar .button {
   font-weight: bold;
   font-size: 24px;
   height: 50px;
@@ -68,8 +62,7 @@ kbd {
   transition: 0.5s ease;
 
   float: left;
-}
-.topBarButton:hover {
+} .topBar .button:hover {
   transform: translate(-1px, -1px);
   text-shadow: 2px 2px rgba(150,150,150,1);
   background-color: rgba(30,30,30,0.05);
@@ -79,26 +72,21 @@ kbd {
   float: left;
   flex: 1 1 59%;
   height: 50px;
-}
-.expBarContainer:hover { /*All Temporary until exp gets added*/
+} .expBarContainer:hover { /*All Temporary until exp gets added*/
   background-color: rgba(30,30,30,0.05);
   cursor: not-allowed;
-}
-.expBarData {
+} .expBarData {
   margin-left: 9%;
   font-size: 18px;
   font-weight: bold;
   width: 81%;
   height: 24px;
-}
-.expBarDataInner {
+} .expBarDataInner {
   float: left;
   width: 33%;
-}
-.expBarDataInner:nth-child(2) {
+} .expBarDataInner:nth-child(2) {
   text-align: center;
-}
-.expBarDataInner:nth-child(3) {
+} .expBarDataInner:nth-child(3) {
   text-align: right;
 }
 .expBarOuter {
@@ -108,8 +96,7 @@ kbd {
   width: 80%;
   border-radius: 10px;
   padding: 3px 0.5% 3px 0.5%;
-}
-.expBarInner {
+} .expBarInner {
   height: 10px;
   background-color: rgba(100,170,100,1);
   width: 0%;
@@ -163,15 +150,13 @@ kbd {
 
   box-shadow: 6px 6px 6px rgba(30,30,30,0.8);
   background-color: rgba(224,224,244,0.8);
-}
-#keyLoggerHeader {
+} #keyLoggerHeader {
   font-weight: bold;
   font-size: 18px;
   flex: 0 1 25px;
   line-height: 25px;
   background-color: var(--header);
-}
-#keyLoggerCore {
+} #keyLoggerCore {
   padding: 7px;
   padding-left: 15px;
   overflow-x: hidden;
@@ -182,14 +167,11 @@ kbd {
   scroll-behavior: smooth;
   user-select: text;
   box-shadow: inset 5px 0px 0px var(--header);
-}
-#keyLoggerCore::-webkit-scrollbar {
+} #keyLoggerCore::-webkit-scrollbar {
   width: 12px;
-}
-#keyLoggerCore::-webkit-scrollbar-track {
+} #keyLoggerCore::-webkit-scrollbar-track {
   background: var(--highlightPri);
-}
-#keyLoggerCore::-webkit-scrollbar-thumb {
+} #keyLoggerCore::-webkit-scrollbar-thumb {
   background-color: var(--text);
   border-radius: 20px;
   border: 3px solid var(--highlightPri);
