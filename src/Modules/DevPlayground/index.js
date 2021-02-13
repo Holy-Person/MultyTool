@@ -20,18 +20,21 @@ function test() {
 
 /*START LOAD*/
 function loadButtons() {
-	var screens = document.querySelectorAll('.contentScreen');
+	var screens = document.querySelectorAll('.contentItem');
 	console.log(screens);
 	screens.forEach(function (screen) {
 		var screenID = screen.id;
 		screenID = screenID
 			.split('cs_').join('')
+			.split('ch_').join('')
 		  .split('-').join(' ');
 
 		var sb_content = new SB_Content(screenID);
 		if (screen.classList.contains('contentScreen') ) {
 			screen.innerHTML = `<h1>${screenID}</h1><hr>` + screen.innerHTML;
 			document.getElementById('sidebarList').innerHTML += sb_content.button;
+		} else if (screen.classList.contains('contentHeader') ) {
+			document.getElementById('sidebarList').innerHTML += sb_content.header;
 		}
 	});
 }
@@ -40,7 +43,7 @@ const SB_Content = function (title) {
 	this.header =
   `<div class="header">`+
 		`${title}`+
-  `</div>`;
+  `</div><hr>`;
   this.button =
   `<div class="button" onclick="switchCotentScreen()">`+
 		`${title}`+

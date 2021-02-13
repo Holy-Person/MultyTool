@@ -26,7 +26,7 @@ body {
 } html {
   height: 100%;
 } hr {
-border-top: 2px solid var(--decoration);
+  border-top: 2px solid var(--decoration);
 } a {
   color: var(--decoration);
 }
@@ -95,6 +95,7 @@ pre em {
 }
 /*END CODE BLOCKS*/
 
+/*START SIDEBAR*/
 .sidebar {
   flex: 0 1 20%;
 
@@ -111,18 +112,36 @@ pre em {
   display: none;
 }
 
-.sidebar .header {
-  padding-left: 8%;
+.sidebar hr {
+  width: 90%;
+}
+
+.sidebar .title {
+  text-align: center;
 
   height: 40px;
   line-height: 40px;
 
+  margin-bottom: -5px;
+
   overflow: hidden;
 
   font-weight: bold;
-  font-size: 18px;
-}
-.sidebar .button {
+  font-size: 20px;
+} .sidebar .header {
+  padding-left: 8%;
+
+  height: 20px;
+  line-height: 20px;
+
+  margin-top: 10px;
+  margin-bottom: -5px;
+
+  overflow: hidden;
+
+  font-weight: bold;
+  font-size: 16px;
+} .sidebar .button {
   padding-left: 10%;
 
   height: 40px;
@@ -131,14 +150,17 @@ pre em {
   overflow: hidden;
 
   cursor: pointer;
+  transition: 0.2s ease;
 } .sidebar .button:hover {
-  background-color: var(--menu);
-}
-.sidebar .footerSpacer {
-  flex: 1 0 40px;
+  box-shadow: inset 4px 0px 0px var(--decoration);
+} .sidebar .button:active, .sidebar .button:focus {
+  /*Nothing here yet*/
 }
 
-.sidebar .footer {
+
+.sidebar .footerSpacer {
+  flex: 1 0 40px;
+} .sidebar .footer {
   position: fixed;
   bottom: 0;
 
@@ -153,7 +175,9 @@ pre em {
 
   cursor: pointer;
 }
+/*END SIDEBAR*/
 
+/*START CONTENT*/
 .contentContainer {
   height: 100%;
 
@@ -167,7 +191,7 @@ pre em {
 
   overflow-x: hidden;
   overflow-y: auto;
-} .contentScreen:not(#cs_About) {
+} .contentItem:not(#cs_About) {
   display: none;
 } .contentScreen h1 {
   display: block;
@@ -185,3 +209,4 @@ pre em {
   border-radius: 20px;
   border: 3px solid #212836;
 }
+/*END CONTENT*/
