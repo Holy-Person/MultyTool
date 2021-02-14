@@ -11,10 +11,10 @@
 body {
   background-color: var(--background);
   color: var(--text);
-  
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   user-select: none;
-  
+
   padding: 15px;
   margin: 0;
   overflow: hidden;
@@ -114,7 +114,7 @@ border-top: 2px solid var(--decoration);
   border-radius: 15px;
   padding: 10px;
   font-size: 18px;
-  
+
 }
 .opCoContent + .opCoContent {
   margin-top: 1%;
@@ -132,3 +132,19 @@ border-top: 2px solid var(--decoration);
   color: #FF4444;
   text-shadow: 1px 1px #000000;
 }
+
+/*START MEDIA MOTION*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*END MEDIA MOTION*/

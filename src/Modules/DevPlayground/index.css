@@ -21,10 +21,14 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-
+} body, html {
+  width: 100%;
   height: 100%;
-} html {
-  height: 100%;
+} html:focus-within {
+  scroll-behavior: smooth;
+} img, picture {
+  max-width: 100%;
+  display: block;
 } hr {
   border-top: 2px solid var(--decoration);
 } a {
@@ -70,6 +74,16 @@ pre {
   background-color: var(--decoration);
   border-radius: 20px;
   border: 3px solid #212836;
+}
+pre::selection,
+em::selection,
+mark::selection,
+small::selection,
+s::selection,
+i::selection,
+b::selection,
+u::selection {
+  background-color: RGBA(168, 181, 209, 0.2);
 }
 pre em {
   color: #6EAA7F;
@@ -210,3 +224,19 @@ pre em {
   border: 3px solid #212836;
 }
 /*END CONTENT*/
+
+/*START MEDIA MOTION*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*END MEDIA MOTION*/
