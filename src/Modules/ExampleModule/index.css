@@ -1,5 +1,5 @@
-/*Default Colors*/
-:root {
+/*START OF PRE-DEFINED CODE*/
+:root { /*Default Colors*/
   --background: rgba(224,224,244,1.0);
   --text: rgba(18,18,18,1.0);
   --menu: rgba(192,192,212,1.0);
@@ -13,20 +13,49 @@
 body {
   background-color: var(--background);
   color: var(--text);
-  
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /*Default fonts*/
   user-select: none; /*Stops the user from highlighting text*/
-  
+
   padding: 0; /*Removes default padding*/
   margin: 0; /*Removes Default margin*/
   overflow: hidden; /*In case you want users to be able to scroll on this page, remove this line*/
+} body, html { /*Set Width And Height So % Can Be Used In Children*/
+  width: 100%;
+  height: 100%;
+} html:focus-within { /*Set smooth scroll behavior*/
+  scroll-behavior: smooth;
 }
+img, picture { /*Improve Image Handling*/
+  max-width: 100%;
+  display: block;
+}
+a { /*Set Default Color Of Links*/
+  color: var(--decoration);
+} a:not([class]) { /*Give Default Style To Unclassed Links*/
+  text-decoration-skip-ink: auto;
+}
+/*END OF PRE-DEFINED CODE*/
+
 
 .PlaceholderContainer {
   margin-top: 70px;
   margin-left: 70px;
 }
 
-a {
-  color: var(--decoration);
+
+/*START OF PRE-DEFINED CODE*/
+@media (prefers-reduced-motion: reduce) { /*Disable Animations With OS Setting*/
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
+/*END OF PRE-DEFINED CODE*/
