@@ -1,6 +1,25 @@
 {Regular Update}Creator and Account Update(0.6.0)
-*free|
-^free|
+*Full rework of ModuleBuilder|
+^Changed layout to be more user friendly and modern|
+^Added new codeblocks to preview and copy code from|
+*ExampleModule improvements|
+^New default css styles|
+^Now includes reduced motion support by default|
+*Added global functions|
+^Added full screen toggle function|
+^Added ability to fetch username|
+*PianoPlayer improvements|
+^Added volume slider|
+^Changed default volume|
+^Added layout selection for different keyboard layouts|
+^Added clear button to keylogger|
+^Improved minimizing the keylogger|
+^Slight changes to default introduction text|
+*Added DevPlayground|
+^Really just random developer tests and notes|
+*Added support for reduced motion settings|
+^Removed all animations and makes results instant|
+^This is a setting defined by your OS|
 °
 
 {Regular Update}Designer Update(0.5.0)
