@@ -29,7 +29,7 @@ module.exports = {
 		// TODO: list all attributes needed
 	},
 	toggleFullScreen: function() {
-		alert('username here');
+		alert('toggled fullscreen');
 		// TODO: actually make the function
 	},
 	getUserName: function() {
