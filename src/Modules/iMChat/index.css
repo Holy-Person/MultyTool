@@ -1,0 +1,237 @@
+/*START MAIN*/
+:root {
+  --text: rgba(255, 255, 253, 1);
+  --textShadow: rgba(255, 255, 253, 0.1);
+  --highlight: rgba(129, 202, 209, 1);
+  --highlightShadow: rgba(129, 202, 209, 0.1);
+  --menu: rgba(163, 255, 255, 0.2);
+  --menuHighlight: rgba(223, 255, 255, 0.4);
+}
+
+@font-face {
+	font-family: SourceSansPro;
+	src: url('./../../Data/Fonts/SourceSansPro-Regular.ttf');
+}
+@font-face {
+	font-family: Electrolize;
+	src: url('./../../Data/Fonts/Electrolize-Regular.ttf');
+}
+
+/*Default Style*/
+body {
+  background-color: #152e42;
+  color: var(--text);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
+
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+} body, html {
+  width: 100%;
+  height: 100%;
+} html:focus-within {
+  scroll-behavior: smooth;
+} img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+.flexScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.backgroundVideo {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  z-index: -50;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+.backgroundVideo video {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+/*END MAIN*/
+
+.testBox {
+  flex: 0 1 80%;
+  width: 100%;
+}
+
+.titleMessage {
+  width: 70%;
+  height: 65px;
+
+  background-color: var(--menu);
+  border-top: var(--highlight) solid 2px;
+
+  cursor: pointer;
+} .titleMessage:active, .titleMessage:focus {
+  background-color: var(--menuHighlight);
+} .titleMessage + .titleMessage {
+  margin-top: 10px;
+} .titleMessage .content {
+  font-size: 24px;
+  text-shadow: 0px 5px var(--textShadow);
+  font-family: SourceSansPro;
+} .titleMessage .like {
+  color: var(--highlight);
+  text-shadow: 0px 5px var(--highlightShadow);
+  font-size: 20px;
+  font-family: Electrolize;
+}
+
+/*.view {
+  margin: 12px;
+  padding: 12px;
+  display: flex;
+  border-radius: 5px;
+  background: #ffffff08;
+  .avatar {
+    min-width: 108px;
+    max-width: 108px;
+    user-select: none;
+    text-align: center;
+    img {
+      width: 64px;
+    }
+    .name {
+      word-break: break-all;
+    }
+  }
+  .content {
+    white-space: pre-line;
+    padding: 0 16px;
+    .title {
+      margin-bottom: 1em;
+      font-size: 1.2em;
+      color: #00b0ff;
+    }
+    .image {
+      margin-top: 20px;
+      img {
+        width: 12em;
+        max-width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}*/
+
+/*}
+.item {
+  margin: 12px;
+  padding: 12px;
+  display: flex;
+  user-select: none;
+  border-radius: 5px;
+  background: #ffffff08;
+  .avatar {
+    min-width: 108px;
+    max-width: 108px;
+    text-align: center;
+    img {
+      width: 64px;
+    }
+    .name {
+      word-break: break-all;
+    }
+  }
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .title {
+      min-height: 58px;
+      word-break: break-word;
+    }
+    .info {
+      display: flex;
+      justify-content: flex-end;
+      .likes {
+        min-width: 72px;
+      }
+      .replies {
+        min-width: 36px;
+      }
+      .likes, .replies {
+        padding: 10px;
+        font-size: 1.1em;
+        img {
+          height: 0.8em;
+        }
+      }
+    }
+  }
+}*/
+
+/*.reply {
+  display: flex;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #ffffff08;
+  .avatar {
+    min-width: 108px;
+    max-width: 108px;
+    user-select: none;
+    text-align: center;
+    img {
+      width: 64px;
+    }
+    .name {
+      word-break: break-all;
+    }
+  }
+  .content {
+    padding: 0 12px;
+    white-space: pre-line;
+  }
+}*/
+
+.testSpacer {
+  flex: 1 0 40px;
+}
+
+footer {
+  text-align: center;
+  flex: 0 1 60px;
+  border-top: var(--highlight) solid 3px;
+  width: 100%;
+  background-color: var(--menu);
+}
+
+/*START MEDIA MOTION*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*END MEDIA MOTION*/
