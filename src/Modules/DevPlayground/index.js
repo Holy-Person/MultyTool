@@ -21,7 +21,6 @@ function test() {
 /*START LOAD*/
 function loadButtons() {
 	var screens = document.querySelectorAll('.contentItem');
-	console.log(screens);
 	screens.forEach(function (screen) {
 		var screenID = screen.id;
 		screenID = screenID
@@ -29,25 +28,24 @@ function loadButtons() {
 			.split('ch_').join('')
 		  .split('-').join(' ');
 
-		var sb_content = new SB_Content(screenID);
 		if (screen.classList.contains('contentScreen') ) {
 			screen.innerHTML = `<h1>${screenID}</h1><hr>` + screen.innerHTML;
-			document.getElementById('sidebarList').innerHTML += sb_content.button;
+			document.getElementById('sidebarList').innerHTML += SB_Content.button(screenID);
 		} else if (screen.classList.contains('contentHeader') ) {
-			document.getElementById('sidebarList').innerHTML += sb_content.header;
+			document.getElementById('sidebarList').innerHTML += SB_Content.header(screenID);
 		}
 	});
 }
 
-const SB_Content = function (title) {
-	this.header =
-  `<div class="header">`+
-		`${title}`+
-  `</div><hr>`;
-  this.button =
-  `<div class="button" onclick="switchCotentScreen()">`+
-		`${title}`+
-  `</div>`;
+var SB_Content = {
+	headerTop: `<div class="header">`,
+  buttonTop: `<div class="button" onclick="switchCotentScreen()">`,
+	button: function(title) {
+    return this.buttonTop + `${title}</div>`;
+  },
+	header: function(title) {
+    return this.headerTop + `${title}</div><hr>`;
+  }
 }
 /*END LOAD*/
 
