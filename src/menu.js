@@ -1,7 +1,7 @@
 /*START MAIN*/
 const Mousetrap = require('mousetrap');
-const { ipcRenderer } = require('electron');
 const Fs = require('fs');
+const MultyTool = require(__dirname+'/globalFunction.js');
 var moduleObjects = [];
 var moduleNum = [0, 0, 0, 0, 0, 0];
 
@@ -20,8 +20,6 @@ Mousetrap.bind('esc', () => {
 		}
 	}*/ //This is for a future feature that lists all functions a dev can call
 });
-
-
 
 function quitApp(type) {
 	if(type == 'toggle') {
@@ -202,8 +200,8 @@ function toggleCategoryVisibility() {
 
 function openModule() {
 	var targetChildren = event.target.children;
-	var destination = targetChildren[0].innerHTML.split(' ').join('');
-	ipcRenderer.send('changePage', `${destination}`);
+	var moduleName = targetChildren[0].innerHTML.split(' ').join('');
+	MultyTool.goToModule(moduleName);
 }
 
 function openModuleFolder() {

@@ -39,5 +39,20 @@ module.exports = {
 	getUserPronoun: function(/*Selection here*/) {
 		alert('selected pronoun here');
 		// TODO: actually make the function
+	},
+	goToModule: function(moduleName) {
+		if (moduleName.toLowerCase() === "menu") {
+			ipcRenderer.send('changePage', `${__dirname}/menu.html`);
+		} else {
+			var filePath = `${__dirname}/Modules/${moduleName}/index.html`;
+
+			Fs.access(filePath, Fs.F_OK, (err) => {
+		  	if (err) {
+		    	console.error(`${err}`);
+		    	return;
+		  	}
+				ipcRenderer.send('changePage', filePath);
+			});
+		}
 	}
 }

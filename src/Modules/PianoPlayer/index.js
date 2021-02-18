@@ -4,7 +4,7 @@
 
 /*START Default Vars*/
 const Mousetrap = require('mousetrap');
-const { ipcRenderer } = require('electron');
+const MultyTool = require(__dirname+'/../../globalFunction.js');
 const Fs = require('fs');
 const Tone = require('tone');
 const whiteNotesQWERTY = [
@@ -49,7 +49,7 @@ var userExp = 0;
 
 /*START Keyboard Controls*/
 Mousetrap.bind('esc', () => {
-	goBack();
+	MultyTool.goToModule('menu');
 });
 Mousetrap.bind('tab', () => {
 	toggleSheetSelector();

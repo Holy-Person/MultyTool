@@ -9,13 +9,13 @@
 </head>
 
 <body>
-  <div class="returnButton" onclick="goBack()">
+  <div class="returnButton" onclick="MultyTool.goToModule('menu')">
     🡰 Return
   </div>
   <div class="mainTitle">
     ModuleBuilder
   </div>
-  
+
   <div class="optionCard" onclick="selectOption('0')">
     <div class="opCaTitle">Getting Started</div><hr>
     <div class="opCaDesc">
@@ -26,7 +26,7 @@
       • Basic Learning Ressources<hr>
     </div>
   </div>
-  
+
   <div class="optionCard" onclick="selectOption('1')">
     <div class="opCaTitle">ToolByte Tools</div><hr>
     <div class="opCaDesc">
@@ -36,7 +36,7 @@
       More to come after Menu Update.
     </div>
   </div>
-  
+
   <div class="optionCard" onclick="selectOption('2')">
     <div class="opCaTitle">Node Modules</div><hr>
     <div class="opCaDesc">
@@ -47,54 +47,54 @@
       <span class="red">This section is not usable yet.</span>
     </div>
   </div>
-  
+
   <!--Main Pages-->
-  
+
   <!--Getting Started-->
   <div class="optionContainer">
     <div class="opCoContent opCoTitle">
       1: Getting Started
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Introduction</div>
       Welcome to the tutorial, here we're going to start off with the first steps toward your own projects.<br>
       To create modules you should know the programming languages that are being mentioned. If you're having problems you can look them up at the bottom of this page or by clicking the language names.
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Creating your first Module</div>
       Everything has to start somewhere and this is where our first module is going to be born.
       <br>
       Your first step should be to obtain a usable module with a template. Open the "Modules" folder, copy the "ExampleModule" and give it the name you want to give your module.
       <br>
-      You should now have a folder with 4 files in it, the 
-      <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">HTML</a> is your module's main content, the 
-      <a href="https://www.w3schools.com/css/default.asp" target="_blank" rel="noopener">CSS</a> is for styling and the 
+      You should now have a folder with 4 files in it, the
+      <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">HTML</a> is your module's main content, the
+      <a href="https://www.w3schools.com/css/default.asp" target="_blank" rel="noopener">CSS</a> is for styling and the
       <a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noopener">JS</a> is for interactions.
       <br><br>
       Now that you have your module folder we can start with setting your module up. Right now you're probably unable to open your module from the menu, thats ok. Open your module folder and head into the file named "moduleInfo.json", then change the module's name to the folders name. Save the edits, refresh the main menu with <kbd>CTRL</kbd>+<kbd>R</kbd> or <kbd>F5</kbd> and you should now be able to open your module by clicking on it.
       <br>
       If you want to learn more about editing the moduleInfo I suggest you head over to the ToolByte specific help section.
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Editing the Module's Content</div>
-      Now that we have our first module created we can begin with actually putting our own contents into it. There are 3 different things that work together to form a module, 
-      <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">HTML</a>, 
-      <a href="https://www.w3schools.com/css/default.asp" target="_blank" rel="noopener">CSS</a> and 
+      Now that we have our first module created we can begin with actually putting our own contents into it. There are 3 different things that work together to form a module,
+      <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener">HTML</a>,
+      <a href="https://www.w3schools.com/css/default.asp" target="_blank" rel="noopener">CSS</a> and
       <a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noopener">JavaScript</a>.
       <br>
       You can skip these parts if you know how to code already.<!--, if not feel free to just copy-paste the code snippets and experiment.-->
       <br>
-      For starters let's change the HTML a bit, this is the main visible content of your module, head over to your "index.html" and 
+      For starters let's change the HTML a bit, this is the main visible content of your module, head over to your "index.html" and
       look for the "<a href="https://www.w3schools.com/tags/tag_body.asp">body</a>" tag, this is where all the visible stuff is.
       <br>
       There should be some comments on the right side of your code, they should explain a few more things on what to do.
       <br>
       <span class="red">Due to this just being a test so far from here on your on your own.</span>
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Basic Learning Ressources</div>
       <a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a> - HTML, CSS, JS
@@ -102,19 +102,19 @@
     <br>
     <br>
   </div>
-  
-  
+
+
   <!--ToolByte Tools-->
   <div class="optionContainer">
     <div class="opCoContent opCoTitle">
       2: ToolByte Tools
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Introduction</div>
       Here you can learn all about extras and useful additions that are specific to ToolByte, this list will continue to grow more and more over time, so remember to check every now and then.
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Editing the moduleInfo</div>
       Every module contains a file named "moduleInfo.json", it contains small pieces of info that change the way your module appears.
@@ -141,7 +141,7 @@
       <br>
       &nbsp;&nbsp;• Contact - Some way to contact you, we suggest a Discord tag [Name#0001] or E-Mail. (Optional)
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Module Categories</div>
       You can categorize your module on the main menu via the type property in the moduleInfo file.<br>
@@ -151,7 +151,7 @@
       &nbsp;&nbsp;• Workshops - "workshop"<br>
       &nbsp;&nbsp;• Other - "other"
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Global Functions</div>
       This feature is still unfinished and is going to be added in the next update.
@@ -159,14 +159,14 @@
     <br>
     <br>
   </div>
-  
-  
+
+
   <!--Node Modules-->
   <div class="optionContainer">
     <div class="opCoContent opCoTitle">
       3: Node Modules
     </div>
-    
+
     <div class="opCoContent">
       <div class="opCoHeader">Placeholder</div>
       There's nothing here yet, please wait for more content in a future update.

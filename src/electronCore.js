@@ -70,17 +70,9 @@ app.on('ready', () => {
 
 //Transportation between windows
 ipcMain.on('changePage', (event, destination) => {
-  if(destination != "menu") {
-    mainWindow.loadURL(format({
-      pathname: path.join(__dirname, `/Modules/${destination}/index.html`),
-      protocol: 'file',
-      slashes: true
-    }))
-  } else {
-    mainWindow.loadURL(format({
-      pathname: path.join(__dirname, 'menu.html'),
-      protocol: 'file',
-      slashes: true
-    }))
-  }
+  mainWindow.loadURL(format({
+    pathname: destination,
+    protocol: 'file',
+    slashes: true
+  }));
 });
