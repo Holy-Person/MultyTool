@@ -55,3 +55,7 @@ function switchCotentScreen() {
 	document.getElementById(`cs_${targetScreen}`).style.display = "block";
 }
 /*END CS LOGIC*/
+
+function test() {
+	MultyTool.toggleFullScreen();
+}

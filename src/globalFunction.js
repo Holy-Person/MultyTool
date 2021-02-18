@@ -1,5 +1,6 @@
 const Fs = require('fs');
-const { ipcRenderer } = require('electron');
+const { remote, ipcRenderer } = require('electron');
+//const { BrowserWindow } = require('@electron/remote') //For electron 12 and later, remote module gets deprecated and needs to be replaced with this.
 
 module.exports = {
 	loadUserTheme: function() {
@@ -29,8 +30,12 @@ module.exports = {
 		// TODO: list all attributes needed
 	},
 	toggleFullScreen: function() {
-		alert('toggled fullscreen');
-		// TODO: actually make the function
+		var window = remote.getCurrentWindow();
+		if (window.isFullScreen() ) {
+			window.setFullScreen(false);
+		} else {
+			window.setFullScreen(true);
+		}
 	},
 	getUserName: function() {
 		alert('username here');

@@ -17,8 +17,8 @@ function createMainWindow() {
     center: true,
     webPreferences: {
         nodeIntegration: true,
-        devTools: true
-        //enableRemoteModule: false //Should be deprecated by now
+        devTools: true,
+        enableRemoteModule: true //Deprecates in Electron 14
     },
     icon: __dirname + '/AppData/Icons/NaN.ico'
   });
