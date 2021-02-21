@@ -16,6 +16,7 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 /*START LOAD*/
 function startUp() {
 	loadButtons();
+	loadNodes();
 }
 
 function loadButtons() {
@@ -51,6 +52,9 @@ var SB_Content = {
 /*START CS LOGIC*/
 var activeButtonNode;
 var activeScreenNode;
+function loadNodes() {
+	activeScreenNode = document.getElementById('cs_About');
+}
 // TODO: make onload function that inits activescreennode
 function switchCotentScreen() {
 	if(activeButtonNode) { activeButtonNode.classList.remove('buttonActive'); }
