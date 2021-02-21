@@ -201,7 +201,7 @@ function toggleCategoryVisibility() {
 function openModule() {
 	var targetChildren = event.target.children;
 	var moduleName = targetChildren[0].innerHTML.split(' ').join('');
-	MultyTool.goToModule(moduleName);
+	MultyTool.app.goToModule(moduleName);
 }
 
 function openModuleFolder() {

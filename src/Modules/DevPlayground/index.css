@@ -168,6 +168,9 @@ code *::selection {
   transition: 0.2s ease;
 } .sidebar .button:hover {
   box-shadow: inset 4px 0px 0px var(--decoration);
+}.sidebar .buttonActive {
+  box-shadow: inset 6px 0px 0px var(--decoration);
+  /* TODO: add arrow pointing towards the right here */
 } .sidebar .button:active, .sidebar .button:focus {
   /*Nothing here yet*/
 }

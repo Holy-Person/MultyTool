@@ -2,7 +2,7 @@ const Mousetrap = require('mousetrap');										//Mousetrap is a node module us
 const MultyTool = require(__dirname+'/../../globalFunction.js'); //Default MultyTool functions to use in your module
 
 Mousetrap.bind('esc', () => {															//Default function to return the user to the menu by pressing [ESC]
-	MultyTool.goToModule('menu');
+	MultyTool.app.goToModule('menu');
 });
 Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {			//Default function to reload the page with keybinds
 	window.location.reload();

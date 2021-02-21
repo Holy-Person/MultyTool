@@ -4,7 +4,7 @@ const { ipcRenderer } = require('electron');
 const MultyTool = require(__dirname+'/../../globalFunction.js');
 
 Mousetrap.bind('esc', () => {
-	MultyTool.goToModule('menu');
+	MultyTool.app.goToModule('menu');
 });
 Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 	window.location.reload();
@@ -14,6 +14,10 @@ Mousetrap.bind(['command+r', 'ctrl+r', 'f5'], () => {
 
 
 /*START LOAD*/
+function startUp() {
+	loadButtons();
+}
+
 function loadButtons() {
 	var screens = document.querySelectorAll('.contentItem');
 	screens.forEach(function (screen) {
@@ -45,17 +49,22 @@ var SB_Content = {
 /*END LOAD*/
 
 /*START CS LOGIC*/
+var activeButtonNode;
+var activeScreenNode;
+// TODO: make onload function that inits activescreennode
 function switchCotentScreen() {
-	var targetScreen = event.target.innerHTML.split(' ').join('-');
+	if(activeButtonNode) { activeButtonNode.classList.remove('buttonActive'); }
+	activeButtonNode = event.target;
+	activeButtonNode.classList.add('buttonActive');
 
-	var x = document.getElementsByClassName("contentScreen");
-	for (var i = 0; i < x.length; i++) {
-		x[i].style.display = `none`;
-	}
-	document.getElementById(`cs_${targetScreen}`).style.display = "block";
+	var targetScreen = activeButtonNode.innerHTML.split(' ').join('-');
+
+	if(activeScreenNode) { activeScreenNode.style.display = `none`; }
+	activeScreenNode = document.getElementById(`cs_${targetScreen}`);
+	activeScreenNode.style.display = "block";
 }
 /*END CS LOGIC*/
 
 function test() {
-	MultyTool.toggleFullScreen();
+	MultyTool.app.sendNotification('Hello');
 }

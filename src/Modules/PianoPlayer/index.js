@@ -49,7 +49,7 @@ var userExp = 0;
 
 /*START Keyboard Controls*/
 Mousetrap.bind('esc', () => {
-	MultyTool.goToModule('menu');
+	MultyTool.app.goToModule('menu');
 });
 Mousetrap.bind('tab', () => {
 	toggleSheetSelector();
@@ -63,9 +63,6 @@ Mousetrap.bind('left', () => {
 Mousetrap.bind('right', () => {
 	moveSheetSelector('right');
 });
-function goBack() {
-	ipcRenderer.send('changePage', 'menu');
-}
 
 window.addEventListener("keydown", keyPress);
 function keyPress(keyObject) {
