@@ -66,5 +66,5 @@ function switchCotentScreen() {
 /*END CS LOGIC*/
 
 function test() {
-	MultyTool.app.sendNotification('Hello');
+	MultyTool.app.sendNotification('info', 'Hello');
 }

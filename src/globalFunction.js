@@ -2,19 +2,22 @@ const Fs = require('fs');
 const { remote, ipcRenderer } = require('electron');
 //const { BrowserWindow } = require('@electron/remote') //For electron 12 and later, remote module gets deprecated and needs to be replaced with this.
 
-function sendNotification(content) {
+async function sendNotification(type, content) {
 	var div = document.createElement("div");
 	div.style.position = "absolute";
-	div.style.width = "100px";
-	div.style.height = "100px";
-	div.style.background = "red";
+	div.style.minWidth = "35%";
+	div.style.maxWidth = "55%";
+	div.style.minHeight = "100px";
+	div.style.background = "rgba(50,50,50,0.5)";
 	div.style.color = "white";
 	div.style.top = "10px";
 	div.style.right = "15px";
 	div.innerHTML = content;
 
+	const delay = ms => new Promise(res => setTimeout(res, ms));
 	document.body.appendChild(div);
-	console.log(div);
+	await delay(2000);
+	div.remove();
 	//Modular notification system
 	// TODO: find way to make it not require html and css, or just not html.
 	// TODO: actually make the function
