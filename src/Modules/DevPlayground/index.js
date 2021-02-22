@@ -69,6 +69,11 @@ function switchCotentScreen() {
 }
 /*END CS LOGIC*/
 
-function test() {
-	MultyTool.app.sendNotification('info', 'Hello');
+/*START TEST BUTTONS*/
+function notificationTest() {
+	MultyTool.app.sendNotification('info', 'Hello<br><br><br><br><br><br>TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT<br><br><br><br><br><br><b<br>Bottom Text');
 }
+function fullScreenTest() {
+	MultyTool.app.toggleFullScreen();
+}
+/*END TEST BUTTONS*/

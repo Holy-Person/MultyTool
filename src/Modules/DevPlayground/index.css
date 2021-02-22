@@ -104,6 +104,25 @@ code *::selection {
 }
 /*END CODE BLOCKS*/
 
+/*START TEST BUTTONS*/
+.contentScreen input[type=button] {
+  display: inline-block;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  width: 16%;
+  height: 70px;
+
+  font-size: 1rem;
+
+  background-color: #212836;
+  color: rgba(235,235,235,1);
+
+  border: none;
+}
+/*END TEST BUTTONS*/
+
 /*START SIDEBAR*/
 .sidebar {
   flex: 0 1 20%;
