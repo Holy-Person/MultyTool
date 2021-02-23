@@ -70,8 +70,8 @@ function switchCotentScreen() {
 /*END CS LOGIC*/
 
 /*START TEST BUTTONS*/
-function notificationTest() {
-	MultyTool.app.sendNotification('info', 'Hello<br><br><br><br><br><br>TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT<br><br><br><br><br><br><b<br>Bottom Text');
+function notificationTest(type) {
+	MultyTool.app.sendNotification(type, 'Hello<br><br><br><br><br><br>TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT<br><br><br><br><br><br><b<br>Bottom Text');
 }
 function fullScreenTest() {
 	MultyTool.app.toggleFullScreen();

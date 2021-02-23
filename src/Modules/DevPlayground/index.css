@@ -108,11 +108,12 @@ code *::selection {
 .contentScreen input[type=button] {
   display: inline-block;
 
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 
-  width: 16%;
-  height: 70px;
+  width: 20%;
+  height: 50px;
 
   font-size: 1rem;
 

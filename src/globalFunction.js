@@ -2,9 +2,10 @@ const Fs = require('fs');
 const { remote, ipcRenderer } = require('electron');
 //const { BrowserWindow } = require('@electron/remote') //For electron 12 and later, remote module gets deprecated and needs to be replaced with this.
 
-async function sendNotification(type, content) {
+async function sendNotification(type, content, timer = 5000) {
 	var notifBox = document.createElement("div");
 	notifBox.style.position = "absolute";
+	notifBox.style.zIndex = "1000";
 	notifBox.style.boxSizing = "border-box";
 	notifBox.style.whiteSpace = "nowrap";
 	notifBox.style.padding = "1%";
@@ -13,19 +14,27 @@ async function sendNotification(type, content) {
 	notifBox.style.top = "1.5%";
 	notifBox.style.right = "1.5%";
 	notifBox.style.minHeight = "100px";
-	notifBox.style.minWidth = "35%";
-	notifBox.style.maxWidth = "55%";
+	notifBox.style.minWidth = "30%";
+	notifBox.style.maxWidth = "45%";
 	notifBox.style.background = "rgba(50,50,50,0.5)";
 	notifBox.style.borderRadius = "5px";
 	notifBox.style.border = "1px solid rgb(50,50,50)";
 	notifBox.style.borderLeft = "6px solid rgb(50,50,50)";
 	notifBox.style.color = "white";
 	notifBox.style.userSelect = "text";
-	notifBox.innerHTML = content;
+	if (type === 'info') {
+		notifBox.innerHTML = '<h2 style="margin">&#8505; Info</h2><hr>' + content;
+	} else if (type === 'warning') {
+		notifBox.innerHTML = '<h2 style="margin">&#9888; Warning</h2><hr>' + content;
+	} else if (type === 'error') {
+		notifBox.innerHTML = '<h2 style="margin">&#128721; Error</h2><hr>' + content;
+	} else {
+		notifBox.innerHTML = content;
+	}
 
 	const delay = ms => new Promise(res => setTimeout(res, ms));
 	document.body.appendChild(notifBox);
-	await delay(5000);
+	await delay(timer);
 	notifBox.remove();
 	//Modular notification system
 }

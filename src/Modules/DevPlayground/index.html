@@ -49,9 +49,19 @@
       </div>
       <div class="contentItem contentHeader" id="ch_Functions"></div>
       <div class="contentItem contentScreen" id="cs_Global-Function-Tests">
-        These buttons are used to test different global MultyTool functions.<br>
-        <input type="button" onclick="notificationTest()" value="Info Notification"/>
+        Buttons here are used to test different global MultyTool functions, they can be used in any module and are easy to customize.<br>
+        These buttons test different notification-based functions.<br>
+        <input type="button" onclick="notificationTest('info')" value="Info Notification"/>
+        <input type="button" onclick="notificationTest('warning')" value="Info Notification"/>
+        <input type="button" onclick="notificationTest('error')" value="Info Notification"/>
+        <input type="button" onclick="notificationTest('???')" value="??? Notification"/>
+        <br>
+        These buttons are used to interact with the window itself, like switching to fullscreen mode.<br>
         <input type="button" onclick="fullScreenTest()" value="Toggle FullScreen"/>
+        <br>
+        These buttons interact with the content of the window, like changing themes.<br>
+        <input type="button" onclick="forceThemeTest()" value="Force Theme"/>
+        <input type="button" onclick="userThemeTest()" value="User Theme"/>
       </div>
       <div class="contentItem contentScreen" id="cs_Userdata">
         I'm looking for [name](user), I need to give [pronoun2](them) [pronoun1changed](their) umbrella.<br>
