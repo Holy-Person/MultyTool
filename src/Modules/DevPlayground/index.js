@@ -71,9 +71,17 @@ function switchCotentScreen() {
 
 /*START TEST BUTTONS*/
 function notificationTest(type) {
-	MultyTool.app.sendNotification(type, 'Hello<br><br><br><br><br><br>TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT<br><br><br><br><br><br><b<br>Bottom Text');
+	MultyTool.app.sendToast(type, 'Hello<br><br><br><br><br><br>TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT<br><br><br><br><br><br><b<br>Bottom Text');
 }
+
 function fullScreenTest() {
 	MultyTool.app.toggleFullScreen();
+}
+
+function forceThemeTest() {
+	MultyTool.app.forceTheme('orange-blue');
+}
+function userThemeTest() {
+	MultyTool.app.loadUserTheme();
 }
 /*END TEST BUTTONS*/
