@@ -1,13 +1,13 @@
 /*START MAIN*/
 :root {
-  --backgroundMain: #16BFFD;
-  --backgroundExtra: #CB3066;
+  --backgroundMain: rgba(21, 190, 252, 1);
+  --backgroundExtra: rgba(203, 48, 102, 1);
   --text: rgba(18,18,18,1.0);
   --menu: rgba(192,192,212,0.3);
   --highlightPri: rgba(180,180,200,1.0);
   --highlightSec: rgba(208,208,228,1.0);
-  --header: rgba(115,138,219,1.0);
-  --decoration: rgba(85,108,189,1.0);
+  --header: rgba(203, 48, 102, 1);
+  --decoration: rgba(173, 18, 72, 1);
 }
 
 /*Default Style*/
@@ -33,7 +33,9 @@ body {
   max-width: 100%;
   display: block;
 } hr {
-  border-top: 2px solid var(--decoration);
+  height: 2px;
+  border-width: 0;
+  background-color: var(--decoration);
 } a {
   color: var(--decoration);
 }
