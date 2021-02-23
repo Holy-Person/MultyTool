@@ -1,7 +1,7 @@
 /*START MAIN*/
 :root {
-  --backgroundMain: rgba(224,224,244,1.0);
-  --backgroundExtra: rgba(115,138,219,1.0);
+  --backgroundMain: #16BFFD;
+  --backgroundExtra: #CB3066;
   --text: rgba(18,18,18,1.0);
   --menu: rgba(192,192,212,0.3);
   --highlightPri: rgba(180,180,200,1.0);
@@ -27,6 +27,8 @@ body {
   height: 100%;
 } html:focus-within {
   scroll-behavior: smooth;
+} html *:focus {
+  outline:none;
 } img, picture {
   max-width: 100%;
   display: block;
@@ -57,6 +59,7 @@ code {
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 1%;
+  margin-right: 0px;
 
   width: 68%;
   padding: 1%;
