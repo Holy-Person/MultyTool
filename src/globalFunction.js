@@ -20,20 +20,29 @@ async function sendToast(type, content, timer = 5000) {
 	toast.style.minHeight = "100px";
 	toast.style.minWidth = "30%";
 	toast.style.maxWidth = "45%";
-	toast.style.background = "rgba(50,50,50,0.5)";
 	toast.style.borderRadius = "5px";
-	toast.style.border = "1px solid rgb(50,50,50)";
-	toast.style.borderLeft = "6px solid rgb(50,50,50)";
 	toast.style.color = "white";
 	toast.style.userSelect = "text";
 	if (type === 'info') {
 		toast.innerHTML = '<h2 style="margin: 0">&#8505; Info</h2><hr>' + content;
+		toast.style.background = "rgba(50,50,50,0.5)";
+		toast.style.border = "1px solid rgb(50,50,50)";
+		toast.style.borderLeft = "6px solid rgb(50,50,50)";
 	} else if (type === 'warning') {
 		toast.innerHTML = '<h2 style="margin: 0">&#9888; Warning</h2><hr>' + content;
+		toast.style.background = "rgba(140, 105, 0, 0.5)";
+		toast.style.border = "1px solid rgba(210, 175, 20, 1)";
+		toast.style.borderLeft = "6px solid rgba(210, 175, 20, 1)";
 	} else if (type === 'error') {
 		toast.innerHTML = '<h2 style="margin: 0">&#128721; Error</h2><hr>' + content;
+		toast.style.background = "rgba(140, 20, 20, 0.5)";
+		toast.style.border = "1px solid rgba(108, 8, 8, 1)";
+		toast.style.borderLeft = "6px solid rgba(108, 8, 8, 1)";
 	} else {
 		toast.innerHTML = content;
+		toast.style.background = "rgba(50, 50, 50, 0.5)";
+		toast.style.border = "1px solid rgb(50, 50, 50)";
+		toast.style.borderLeft = "6px solid rgb(50, 50, 50)";
 	}
 
 	const delay = ms => new Promise(res => setTimeout(res, ms));
