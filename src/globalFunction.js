@@ -2,11 +2,13 @@ const Fs = require('fs');
 const { remote, ipcRenderer } = require('electron');
 //const { BrowserWindow } = require('@electron/remote') //For electron 12 and later, remote module gets deprecated and needs to be replaced with this.
 var toast;
+var toastsActive = 0;
 async function sendToast(type, content, timer = 5000) {
 	if (toast) {
 		toast.remove();
 		toast = undefined;
 	}
+	toastsActive += 1;
 	toast = document.createElement("div");
 	toast.style.position = "absolute";
 	toast.style.zIndex = "1000";
@@ -45,10 +47,13 @@ async function sendToast(type, content, timer = 5000) {
 		toast.style.borderLeft = "6px solid rgb(50, 50, 50)";
 	}
 
-	const delay = ms => new Promise(res => setTimeout(res, ms));
 	document.body.appendChild(toast);
+	var delay = ms => new Promise(res => setTimeout(res, ms));
 	await delay(timer);
-	toast.remove();
+	if (toastsActive <= 1) {
+		toast.remove();
+	}
+	toastsActive -= 1;
 }
 async function sendSnackBar() {
 	alert(`Could not execute MultyTool function "${arguments.callee.name}".\nThis function is unfinished.`);
