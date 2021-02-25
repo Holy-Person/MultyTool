@@ -1,19 +1,20 @@
 /*START MAIN*/
 :root {
-  --backgroundMain: rgba(21, 190, 252, 1);
-  --backgroundExtra: rgba(203, 48, 102, 1);
+  --backgroundPrimary: rgba(84, 51, 255, 1);
+  --backgroundSecondary: rgba(32, 189, 255, 1);
+  --backgroundTertiary: rgba(165, 254, 203, 1);
   --text: rgba(18,18,18,1.0);
   --menu: rgba(192,192,212,0.3);
   --highlightPri: rgba(180,180,200,1.0);
   --highlightSec: rgba(208,208,228,1.0);
-  --header: rgba(203, 48, 102, 1);
-  --decoration: rgba(173, 18, 72, 1);
+  --header: rgba(84, 51, 255, 1);
+  --decoration: rgba(64, 31, 235, 1);
 }
 
 /*Default Style*/
 body {
   background-color: var(--backgroundMain);
-  background-image: linear-gradient(to bottom right, var(--backgroundMain), var(--backgroundExtra));
+  background-image: linear-gradient(to bottom right, var(--backgroundPrimary), var(--backgroundSecondary), var(--backgroundTertiary));
   color: var(--text);
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -126,6 +127,7 @@ code *::selection {
   color: rgba(235,235,235,1);
 
   border: none;
+  cursor: pointer;
 }
 /*END TEST BUTTONS*/
 
@@ -194,10 +196,10 @@ code *::selection {
 } .sidebar .button:hover {
   box-shadow: inset 4px 0px 0px var(--decoration);
 }.sidebar .buttonActive {
+  cursor: default;
+
   box-shadow: inset 6px 0px 0px var(--decoration);
   /* TODO: add arrow pointing towards the right here */
-} .sidebar .button:active, .sidebar .button:focus {
-  /*Nothing here yet*/
 }
 
 
