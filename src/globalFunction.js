@@ -4,6 +4,7 @@ const { remote, ipcRenderer } = require('electron');
 var toast;
 var toastsActive = 0;
 async function sendToast(type, content, timer = 5000) {
+	type.toLowerCase();
 	if (toast) {
 		toast.remove();
 		toast = undefined;
