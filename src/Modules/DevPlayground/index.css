@@ -3,18 +3,15 @@
   --backgroundPrimary: rgba(84, 51, 255, 1);
   --backgroundSecondary: rgba(32, 189, 255, 1);
   --backgroundTertiary: rgba(165, 254, 203, 1);
-  --text: rgba(18,18,18,1.0);
-  --menu: rgba(192,192,212,0.3);
-  --highlightPri: rgba(180,180,200,1.0);
-  --highlightSec: rgba(208,208,228,1.0);
-  --header: rgba(84, 51, 255, 1);
+  --text: rgba(18, 18, 18, 1.0);
+  --menu: rgba(165, 254, 203, 0.3);
   --decoration: rgba(64, 31, 235, 1);
 }
 
 /*Default Style*/
 body {
-  background-color: var(--backgroundMain);
-  background-image: linear-gradient(to bottom right, var(--backgroundPrimary), var(--backgroundSecondary), var(--backgroundTertiary));
+  background-color: var(--backgroundPrimary);
+  background-image: linear-gradient(to bottom right, var(--backgroundPrimary) 0%, var(--backgroundSecondary) 35%, var(--backgroundTertiary) 100%);
   color: var(--text);
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -55,16 +52,17 @@ code {
   display: block;
 
   font-family: Consolas, "courier new";
-  background-color: #212836;
-  color: rgba(235,235,235,1);
+  background-color: #212836F0;
+  color: #C1CEEA;
   user-select: text;
 
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 1%;
-  margin-right: 0px;
 
-  width: 68%;
+  box-sizing: border-box;
+  width: 70%;
+  max-width: 70%;
   padding: 1%;
   line-height: 1.6;
 
@@ -72,8 +70,9 @@ code {
   overflow-x: auto;
 
   border: 1px solid #222222;
-  border-left: 4px solid var(--header);
+  border-left: 4px solid var(--backgroundPrimary);
   border-radius: 5px;
+  backdrop-filter: blur(4px);
 } code::-webkit-scrollbar {
   height: 12px;
 } code::-webkit-scrollbar-track {
@@ -103,7 +102,7 @@ code *::selection {
   text-decoration: none; /*Disable default*/
 } code mark {
   color: #8B4B65;
-  background-color: inherit; /*Disable default*/
+  background-color: transparent; /*Disable default*/
 } code small {
   color: #C8E69E;
   font-size: inherit; /*Disable default*/
@@ -124,9 +123,10 @@ code *::selection {
   font-size: 1rem;
 
   background-color: #212836;
-  color: rgba(235,235,235,1);
+  color: #EBEBEB;
 
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 /*END TEST BUTTONS*/
@@ -146,6 +146,15 @@ code *::selection {
   background-color: var(--menu);
 } .sidebar::-webkit-scrollBar {
   display: none;
+} .sidebar::before {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  backdrop-filter: blur(4px);
 }
 
 .sidebar hr {
@@ -216,7 +225,7 @@ code *::selection {
   text-align: center;
   font-weight: bold;
   font-size: 21px;
-  background-color: var(--header);
+  background-color: var(--backgroundPrimary);
 
   cursor: pointer;
 }
@@ -227,12 +236,13 @@ code *::selection {
   height: 100%;
 
   flex: 0 1 80%;
+  max-width: 80%;
 }
 .contentScreen {
-  height: 99%;
+  height: 100%;
+  box-sizing: border-box;
 
-  padding-top: 1%;
-  padding-left: 1%;
+  padding: 1%;
 
   overflow-x: hidden;
   overflow-y: auto;

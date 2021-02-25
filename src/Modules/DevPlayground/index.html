@@ -20,9 +20,28 @@
 
     <div class="contentContainer">
       <div class="contentItem contentScreen" id="cs_About">
-        About Text<br>
-        Welcome to the Dev-Playground, you can find snippets and code examples here.<br>
-        In general this place is for tests of new code and settings without breaking other modules.
+        Greetings.<br>
+        Welcome to the Developer Playground, a module made to test things like snippets of code, settings, designs or other temporary tests.<br>
+        <br>
+        Interested in the colors being used here?<br>
+        This module is currently using new test colors that are intended to be used later on in themes, a feature planned to release in v0.7.0-beta.<br>
+        If you want to use themes in your own modules there will be an easy way to implement them via MultyTool's globalFunction module, so don't worry about it too much for now.<br>
+        If you want the colors for this theme look no further!
+        <code>
+          <i>--backgroundPrimary</i>: <span style="background:rgba(84, 51, 255, 1);color:#EFEFEF">rgba(84, 51, 255, 1)</span>;<br>
+          <i>--backgroundSecondary</i>: <span style="background:rgb(32, 189, 255);color:#000000">rgba(32, 189, 255, 1)</span>;<br>
+          <i>--backgroundTertiary</i>: <span style="background:rgb(165, 254, 203);color:#000000">rgba(165, 254, 203, 1)</span>;<br>
+          <i>--text</i>: <span style="background:rgb(18, 18, 18);color:#EFEFEF">rgba(18, 18, 18, 1.0)</span>;<br>
+          <i>--menu</i>: <span style="background:rgb(165, 254, 203);color:#000000">rgba(165, 254, 203, 0.3)</span>;<br>
+          <i>--decoration</i>: <span style="background:rgb(64, 31, 235);color:#EFEFEF">rgba(64, 31, 235, 1)</span>;
+        </code>
+        And here are the settings for the background gradient, as well as a fallback and text color.
+        <code>
+          background-color: <span style="background:rgba(84, 51, 255, 1);color:#EFEFEF">var(--backgroundPrimary)</span>;<br>
+          background-image: linear-gradient(to <u>bottom right</u>, <span style="background:rgba(84, 51, 255, 1);color:#EFEFEF">var(--backgroundPrimary)</span> <u>0%</u>, <span style="background:rgb(32, 189, 255);color:#000000">rgba(32, 189, 255, 1)</span> <u>35%</u>, <span style="background:rgb(165, 254, 203);color:#000000">rgba(165, 254, 203, 1)</span> <u>100%</u>);<br>
+          color: <span style="background:rgb(18, 18, 18);color:#EFEFEF">var(--text)</span>;
+        </code>
+        Warning: These colors and/or names are not final and can/will most likely change in the next update!
       </div>
       <div class="contentItem contentScreen" id="cs_Code-Snippets">
         This is a test-page for code snippets, a new feature introduced in version 0.6.0-beta for the "ModuleBuilder" module.
@@ -82,4 +101,4 @@
   </div>
 </body>
 
-</html>code
+</html>
