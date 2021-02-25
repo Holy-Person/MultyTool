@@ -3,8 +3,8 @@ const { remote, ipcRenderer } = require('electron');
 //const { BrowserWindow } = require('@electron/remote') //For electron 12 and later, remote module gets deprecated and needs to be replaced with this.
 var toast;
 var toastsActive = 0;
-async function sendToast(type, content, timer = 5000) {
-	type.toLowerCase();
+async function sendToast(type, content, timer = 3500) {
+	type = type.toLowerCase();
 	if (toast) {
 		toast.remove();
 		toast = undefined;
@@ -18,6 +18,7 @@ async function sendToast(type, content, timer = 5000) {
 	toast.style.padding = "1%";
 	toast.style.overflow = "hidden";
 	toast.style.textOverflow = "ellipsis";
+	toast.style.backdropFilter = "blur(4px)";
 	toast.style.top = "1.5%";
 	toast.style.right = "1.5%";
 	toast.style.minHeight = "100px";
@@ -27,17 +28,17 @@ async function sendToast(type, content, timer = 5000) {
 	toast.style.color = "white";
 	toast.style.userSelect = "text";
 	if (type === 'info') {
-		toast.innerHTML = '<h2 style="margin: 0">&#8505; Info</h2><hr>' + content;
-		toast.style.background = "rgba(50,50,50,0.5)";
-		toast.style.border = "1px solid rgb(50,50,50)";
-		toast.style.borderLeft = "6px solid rgb(50,50,50)";
+		toast.innerHTML = '<h2 style="margin: 0">&#8505; Info</h2><hr style="height: 2px; border-width: 0; background-color: rgba(41, 20, 210, 1)">' + content;
+		toast.style.background = "rgba(41, 20, 210, 0.5)";
+		toast.style.border = "1px solid rgb(41, 20, 210)";
+		toast.style.borderLeft = "6px solid rgb(41, 20, 210)";
 	} else if (type === 'warning') {
-		toast.innerHTML = '<h2 style="margin: 0">&#9888; Warning</h2><hr>' + content;
+		toast.innerHTML = '<h2 style="margin: 0">&#9888; Warning</h2><hr style="height: 2px; border-width: 0; background-color: rgba(210, 175, 20, 1)">' + content;
 		toast.style.background = "rgba(140, 105, 0, 0.5)";
 		toast.style.border = "1px solid rgba(210, 175, 20, 1)";
 		toast.style.borderLeft = "6px solid rgba(210, 175, 20, 1)";
 	} else if (type === 'error') {
-		toast.innerHTML = '<h2 style="margin: 0">&#128721; Error</h2><hr>' + content;
+		toast.innerHTML = '<h2 style="margin: 0">&#128721; Error</h2><hr style="height: 2px; border-width: 0; background-color: rgba(108, 8, 8, 1)">' + content;
 		toast.style.background = "rgba(140, 20, 20, 0.5)";
 		toast.style.border = "1px solid rgba(108, 8, 8, 1)";
 		toast.style.borderLeft = "6px solid rgba(108, 8, 8, 1)";
