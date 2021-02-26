@@ -3,12 +3,54 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Module Builder</title>
+  <title>DevPlayground</title>
   <link rel="stylesheet" href="index.css">
   <script src="index.js"></script>
 </head>
 
-<body>
+<body onload="startUp()">
+  <div class="mainFlexScreen">
+    <div class="sidebar">
+      <div id="sidebarList">
+        <div class="title">Dev Playground</div><hr>
+      </div>
+      <div class="footerSpacer"></div>
+      <div class="footer" onclick="MultyTool.app.goToModule('menu')">🡰 Return</div>
+    </div>
+
+    <div class="contentContainer">
+      <div class="contentItem contentScreen" id="cs_About">
+        Hello.<br>
+        <script>document.write(process.versions.electron)</script><br>
+        <script>document.write(process.versions.chrome)</script><br>
+        <script>document.write(process.versions.node)</script><br>
+        <script>document.write(require(__dirname+'/../../../package.json').version)</script>
+      </div>
+      <div class="contentItem contentHeader" id="ch_MultyTool-Specific"></div>
+      <div class="contentItem contentScreen" id="cs_Global-Functions">
+        <input type="button" onclick="notificationTest('Info')" value="Info Notification"/>
+        Yeeto
+        <code>
+          i am code &lt;<i>div</i>&gt;test&lt;/<i>div</i>&gt;<br>
+          more code in code<br>
+          <em>//em text</em><br>
+          <mark>mark text</mark><br>
+          <small>Small text</small><br>
+          <s>s text</s><br>
+          <i>i text</i><br>
+          <b>b text</b><br>
+          <u>u text</u>
+        </code>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+
+<!--
   //Make user aware of node.js version and stuff
   <div class="returnButton" onclick="MultyTool.goToModule('menu')">
     🡰 Return
@@ -48,10 +90,6 @@
       <span class="red">This section is not usable yet.</span>
     </div>
   </div>
-
-  <!--Main Pages-->
-
-  <!--Getting Started-->
   <div class="optionContainer">
     <div class="opCoContent opCoTitle">
       1: Getting Started
@@ -86,7 +124,7 @@
       <a href="https://www.w3schools.com/css/default.asp" target="_blank" rel="noopener">CSS</a> and
       <a href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noopener">JavaScript</a>.
       <br>
-      You can skip these parts if you know how to code already.<!--, if not feel free to just copy-paste the code snippets and experiment.-->
+      You can skip these parts if you know how to code already.
       <br>
       For starters let's change the HTML a bit, this is the main visible content of your module, head over to your "index.html" and
       look for the "<a href="https://www.w3schools.com/tags/tag_body.asp">body</a>" tag, this is where all the visible stuff is.
@@ -103,9 +141,6 @@
     <br>
     <br>
   </div>
-
-
-  <!--ToolByte Tools-->
   <div class="optionContainer">
     <div class="opCoContent opCoTitle">
       2: ToolByte Tools
@@ -160,21 +195,7 @@
     <br>
     <br>
   </div>
-
-
-  <!--Node Modules-->
   <div class="optionContainer">
     <div class="opCoContent opCoTitle">
       3: Node Modules
-    </div>
-
-    <div class="opCoContent">
-      <div class="opCoHeader">Placeholder</div>
-      There's nothing here yet, please wait for more content in a future update.
-    </div>
-    <br>
-    <br>
-  </div>
-</body>
-
-</html>
+    </div>-->

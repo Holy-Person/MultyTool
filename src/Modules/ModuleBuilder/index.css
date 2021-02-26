@@ -1,137 +1,269 @@
+/*START MAIN*/
 :root {
-  --background: rgba(224,224,244,1.0);
-  --text: rgba(18,18,18,1.0);
-  --menu: rgba(192,192,212,1.0);
-  --highlightPri: rgba(180,180,200,1.0);
-  --highlightSec: rgba(208,208,228,1.0);
-  --header: rgba(115,138,219,1.0);
-  --decoration: rgba(85,108,189,1.0);
+  --backgroundPrimary: rgba(224, 224, 244, 1.0);
+  --backgroundSecondary: rgba(32, 189, 255, 1);
+  --backgroundTertiary: rgba(115, 138, 219, 1.0);
+  --text: rgba(18, 18, 18, 1.0);
+  --menu: rgba(192, 192, 212, 0.3);
+  --decoration: rgba(85, 108, 189, 1.0);
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--backgroundPrimary);
+  background-image: linear-gradient(to bottom right, var(--backgroundPrimary) 0%, var(--backgroundSecondary) 35%, var(--backgroundTertiary) 100%);
   color: var(--text);
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   user-select: none;
 
-  padding: 15px;
+  padding: 0;
   margin: 0;
   overflow: hidden;
+} body, html {
+  width: 100%;
   height: 100%;
-}
-html {
-  height: 100%;
-}
-a {
+} html:focus-within {
+  scroll-behavior: smooth;
+} html *:focus {
+  outline:none;
+} img, picture {
+  max-width: 100%;
+  display: block;
+} hr {
+  height: 2px;
+  border-width: 0;
+  background-color: var(--decoration);
+} a {
   color: var(--decoration);
 }
-hr {
-border-top: 2px solid var(--decoration);
-}
 
-.returnButton {
-  font-weight: bold;
-  font-size: 24px;
-  position: fixed;
-  height: 45px;
-  top: 20px;
-  width: 31%;
-  background-color: var(--menu);
-  border-radius: 15px;
-  text-align: center;
-  line-height: 45px;
+.mainFlexScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/*END MAIN*/
+
+/*START CODE BLOCKS*/
+code {
+  display: block;
+
+  font-family: Consolas, "courier new";
+  background-color: #212836F0;
+  color: #C1CEEA;
+  user-select: text;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1%;
+
+  box-sizing: border-box;
+  width: 70%;
+  max-width: 70%;
+  padding: 1%;
+  line-height: 1.6;
+
+  white-space: nowrap;
+  overflow-x: auto;
+
+  border: 1px solid #222222;
+  border-left: 4px solid var(--backgroundPrimary);
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
+} code::-webkit-scrollbar {
+  height: 12px;
+} code::-webkit-scrollbar-track {
+  background-color: #212836;
+} code::-webkit-scrollbar-thumb {
+  background-color: var(--decoration);
+  border-radius: 20px;
+  border: 3px solid #212836;
+}
+code::selection,
+code *::selection {
+  background-color: RGBA(168, 181, 209, 0.2);
+} code em {
+  color: #6EAA7F;
+  font-style: normal; /*Disable default*/
+} code s {
+  color: #9EC8E6;
+  text-decoration: none; /*Disable default*/
+} code i {
+  color: #c98b7e;
+  font-style: normal; /*Disable default*/
+} code b {
+  color: #7B6D9C;
+  font-weight: normal; /*Disable default*/
+} code u {
+  color: #E6BC9E;
+  text-decoration: none; /*Disable default*/
+} code mark {
+  color: #8B4B65;
+  background-color: transparent; /*Disable default*/
+} code small {
+  color: #C8E69E;
+  font-size: inherit; /*Disable default*/
+}
+/*END CODE BLOCKS*/
+
+/*START TEST BUTTONS*/
+.contentScreen input[type=button] {
+  display: inline-block;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+
+  width: 20%;
+  height: 50px;
+
+  font-size: 1rem;
+
+  background-color: #212836;
+  color: #EBEBEB;
+
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.5s ease;
 }
-.returnButton:hover {
-  transform: translate(-1px, -3px);
-  box-shadow: 4px 12px 16px 0 rgba(0,0,0,1);
-}
-.mainTitle {
-  font-size: 45px;
-  font-weight: bold;
-  text-align: center;
-  height: 10%;
-  line-height: 100%;
-  background-color: var(--background);
-}
+/*END TEST BUTTONS*/
 
-.optionCard {
-  height: 85%;
-  width: 32%;
-  cursor: pointer;
-  background-color: var(--menu);
-  float: left;
-  border-radius: 15px;
-  transition: 0.5s ease;
-}
-.optionCard + .optionCard {
-  margin-left: 2%;
-}
-.optionCard:hover {
-  transform: translate(-2px, -6px);
-  box-shadow: 4px 12px 16px 0 rgba(0,0,0,1);
-}
-.opCaTitle {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-.opCaDesc {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 7px;
-  font-size: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+/*START SIDEBAR*/
+.sidebar {
+  flex: 0 1 20%;
 
+  display: flex;
+  flex-direction: column;
 
-
-.optionContainer {
-  display: none;
-  overflow-y: scroll;
   overflow-x: hidden;
-  height: 87%;
-}
-.optionContainer::-webkit-scrollbar {
-  display: none;
-}
-.opCoTitle {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.opCoContent {
-  width: 98%;
-  margin: 0 auto;
+  overflow-y: auto;
+
+  box-shadow: inset -2px 0px 0px var(--decoration);
+
   background-color: var(--menu);
-  border-radius: 15px;
-  padding: 10px;
-  font-size: 18px;
+} .sidebar::-webkit-scrollBar {
+  display: none;
+} .sidebar::before {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+}
 
+.sidebar hr {
+  width: 90%;
 }
-.opCoContent + .opCoContent {
-  margin-top: 1%;
-}
-.opCoHeader {
-  font-size: 24px;
+
+.sidebar .title {
+  text-align: center;
+
+  height: 40px;
+  line-height: 40px;
+
+  margin-bottom: -5px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
   font-weight: bold;
-  text-decoration: underline;
-  padding-bottom: 9px;
+  font-size: 20px;
+} .sidebar .header {
+  padding-left: 8%;
+
+  height: 20px;
+  line-height: 20px;
+
+  margin-top: 10px;
+  margin-bottom: -5px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  font-weight: bold;
+  font-size: 16px;
+} .sidebar .button {
+  padding-left: 10%;
+
+  height: 40px;
+  line-height: 40px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+} .sidebar .button:hover {
+  box-shadow: inset 4px 0px 0px var(--decoration);
+}.sidebar .buttonActive {
+  cursor: default;
+
+  box-shadow: inset 6px 0px 0px var(--decoration);
+  /* TODO: add arrow pointing towards the right here */
 }
 
 
+.sidebar .footerSpacer {
+  flex: 1 0 40px;
+} .sidebar .footer {
+  position: fixed;
+  bottom: 0;
 
-.red {
-  color: #FF4444;
-  text-shadow: 1px 1px #000000;
+  width: 20%;
+  height: 40px;
+  line-height: 40px;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  background-color: var(--backgroundPrimary);
+
+  cursor: pointer;
 }
+/*END SIDEBAR*/
+
+/*START CONTENT*/
+.contentContainer {
+  height: 100%;
+
+  flex: 0 1 80%;
+  max-width: 80%;
+}
+.contentScreen {
+  height: 100%;
+  box-sizing: border-box;
+
+  padding: 1%;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+} .contentItem:not(#cs_About) {
+  display: none;
+} .contentScreen h1 {
+  display: block;
+  margin: 0 0;
+  font-weight: bold;
+} .contentScreen hr {
+  margin-left: -0.5%;
+  width: 100%;
+} .contentScreen::-webkit-scrollbar {
+  width: 12px;
+} .contentScreen::-webkit-scrollbar-track {
+  background-color: #212836;
+} .contentScreen::-webkit-scrollbar-thumb {
+  background-color: var(--decoration);
+  border-radius: 20px;
+  border: 3px solid #212836;
+}
+/*END CONTENT*/
 
 /*START MEDIA MOTION*/
 @media (prefers-reduced-motion: reduce) {
