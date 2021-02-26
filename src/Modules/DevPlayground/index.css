@@ -8,7 +8,6 @@
   --decoration: rgba(64, 31, 235, 1);
 }
 
-/*Default Style*/
 body {
   background-color: var(--backgroundPrimary);
   background-image: linear-gradient(to bottom right, var(--backgroundPrimary) 0%, var(--backgroundSecondary) 35%, var(--backgroundTertiary) 100%);

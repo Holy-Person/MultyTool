@@ -1,6 +1,6 @@
 {
   "name": "MultyTool",
-  "version": "0.6.0",
+  "version": "0.6.0-beta",
   "description": "MultyTool Description",
   "main": "src/electronCore.js",
   "scripts": {
