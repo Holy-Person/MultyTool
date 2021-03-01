@@ -19,6 +19,7 @@ async function sendToast(type, content, timer = 3500) {
 	toast.style.overflow = "hidden";
 	toast.style.textOverflow = "ellipsis";
 	toast.style.backdropFilter = "blur(4px)";
+	toast.style.boxShadow = "6px 6px 6px #000000CC";
 	toast.style.top = "1.5%";
 	toast.style.right = "1.5%";
 	toast.style.minHeight = "100px";
@@ -92,6 +93,10 @@ function toggleFullScreen() {
 	const window = remote.getCurrentWindow();
 	( window.isFullScreen() ) ? window.setFullScreen(false) : window.setFullScreen(true);
 }
+function toggleAlwaysOnTop() {
+	const window = remote.getCurrentWindow();
+	( window.isAlwaysOnTop() ) ? window.setAlwaysOnTop(false) : window.setAlwaysOnTop(true);
+}
 function loadUserTheme() {
 	Fs.readFile((`${__dirname}/Data/appSettings.json`), 'utf8', (err, jsonString) => {
 		var settingsObject = JSON.parse(jsonString);
@@ -124,6 +129,7 @@ module.exports.account = {
 module.exports.app = {
   goToModule,
 	toggleFullScreen,
+	toggleAlwaysOnTop,
 	sendToast,
 	sendSnackBar,
 	//sendDesktopNotification,
