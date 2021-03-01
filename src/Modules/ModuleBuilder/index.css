@@ -130,6 +130,19 @@ code *::selection {
 }
 /*END TEST BUTTONS*/
 
+/*START */
+.divided {
+  display: flex;
+  align-items: center;
+}
+
+.divided .divider {
+  flex-grow: 1;
+  border-bottom: 1px dashed var(--text);
+  margin: 5px;
+}
+/*END */
+
 /*START SIDEBAR*/
 .sidebar {
   flex: 0 1 20%;
@@ -224,7 +237,7 @@ code *::selection {
   text-align: center;
   font-weight: bold;
   font-size: 21px;
-  background-color: var(--backgroundPrimary);
+  background-color: var(--decoration);
 
   cursor: pointer;
 }

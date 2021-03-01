@@ -21,15 +21,37 @@
     <div class="contentContainer">
       <div class="contentItem contentScreen" id="cs_About">
         Hello.<br>
-        <script>document.write(process.versions.electron)</script><br>
-        <script>document.write(process.versions.chrome)</script><br>
-        <script>document.write(process.versions.node)</script><br>
-        <script>document.write(require(__dirname+'/../../../package.json').version)</script>
+        <div class="yes">
+          <span class="divided">
+            Electron Version
+            <span class="divider"></span>
+            <script>document.write(process.versions.electron)</script>
+          </span>
+          <span class="divided">
+            Chromium Version
+            <span class="divider"></span>
+            <script>document.write(process.versions.chrome)</script>
+          </span>
+          <span class="divided">
+            Node Version
+            <span class="divider"></span>
+            <script>document.write(process.versions.node)</script>
+          </span>
+          <span class="divided">
+            MultyTool Version
+            <span class="divider"></span>
+            <script>document.write(require(__dirname+'/../../../package.json').version)</script>
+          </span>
+        </div>
       </div>
       <div class="contentItem contentHeader" id="ch_MultyTool-Specific"></div>
       <div class="contentItem contentScreen" id="cs_Global-Functions">
+        <code>
+          <mark>const</mark> <small>MultyTool</small> = require(<i>__dirname</i>+<em>'/../../globalFunction.js'</em>);
+        </code>
+      </div>
+      <div class="contentItem contentScreen" id="cs_Test-Stuff">
         <input type="button" onclick="notificationTest('Info')" value="Info Notification"/>
-        Yeeto
         <code>
           i am code &lt;<i>div</i>&gt;test&lt;/<i>div</i>&gt;<br>
           more code in code<br>
@@ -40,6 +62,30 @@
           <i>i text</i><br>
           <b>b text</b><br>
           <u>u text</u>
+        </code>
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z" fill="#121212"></path></svg>
+      </div>
+      <div class="contentItem contentHeader" id="ch_Node-Modules"></div>
+      <div class="contentItem contentScreen" id="cs_MouseTrap">
+        (INFO) Mousetrap is pre-installed with MultyTool, all you need to use it is the code below to include it.<br>
+        <a href="https://www.npmjs.com/package/mousetrap">Mousetrap on npm</a><br>
+        include Mousetrap in your module
+        <code>
+          <mark>const</mark> <small>Mousetrap</small> = require(<em>'mousetrap'</em>);
+        </code>
+        Default code to reload the page when F5, ctrl/command+R is pressed. (command is ctrl on mac)
+        <code>
+          <small>Mousetrap</small>.<b>bind</b>([<i>'command+r'</i>, <i>'ctrl+r'</i>, <i>'f5'</i>], () <mark>=&gt;</mark> {<br>
+          &nbsp;&nbsp;<i>window</i>.<i>location</i>.<b>reload</b>();<br>
+          });
+        </code>
+      </div>
+      <div class="contentItem contentScreen" id="cs_Tone">
+        (INFO) Tone is pre-installed with MultyTool, all you need to use it is the code below to include it.<br>
+        <a href="https://www.npmjs.com/package/tone">Tone on npm</a><br>
+        include Tone in your module
+        <code>
+          <mark>const</mark> <small>Tone</small> = require(<em>'tone'</em>);
         </code>
       </div>
     </div>
