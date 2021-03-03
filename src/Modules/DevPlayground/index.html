@@ -73,10 +73,12 @@
         <input type="button" onclick="notificationTest('Info')" value="Info Notification"/>
         <input type="button" onclick="notificationTest('warning')" value="Warn Notification"/>
         <input type="button" onclick="notificationTest('error')" value="Error Notification"/>
+        <input type="button" onclick="notificationTest('confirmation')" value="Confirm Notification"/>
         <input type="button" onclick="notificationTest('???')" value="??? Notification"/>
         <br>
         These buttons are used to interact with the window itself, like switching to fullscreen mode.<br>
         <input type="button" onclick="fullScreenTest()" value="Toggle FullScreen"/>
+        <input type="button" onclick="toggleAlwaysTopTest()" value="Toggle AlwaysTop"/>
         <br>
         These buttons interact with the content of the window, like changing themes.<br>
         <input type="button" onclick="forceThemeTest()" value="Force Theme"/>
@@ -96,6 +98,7 @@
       </div>
       <div class="contentItem contentScreen" id="cs_Test-For-Really-Long-Name">
         Empty test page. This exists for spacing tests.
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z" fill="#121212"></path></svg>
       </div>
     </div>
   </div>

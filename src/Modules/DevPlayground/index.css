@@ -130,6 +130,30 @@ code *::selection {
 }
 /*END TEST BUTTONS*/
 
+/*START DIVIDERS*/
+.dividedField {
+  float: right;
+
+  width: 40%;
+
+  box-sizing: border-box;
+  padding: 1%;
+
+  border: 1px solid #C3C3CF;
+
+  background-color: #C3C3CF44;
+
+  backdrop-filter: blur(4px);
+} .divided {
+  display: flex;
+  align-items: center;
+} .divided .divider {
+  flex-grow: 1;
+  border-bottom: 1px dashed var(--text);
+  margin: 5px;
+}
+/*END DIVIDERS*/
+
 /*START SIDEBAR*/
 .sidebar {
   flex: 0 1 20%;

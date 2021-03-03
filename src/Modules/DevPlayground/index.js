@@ -84,4 +84,7 @@ function forceThemeTest() {
 function userThemeTest() {
 	MultyTool.app.loadUserTheme();
 }
+function toggleAlwaysTopTest() {
+	MultyTool.app.toggleAlwaysOnTop();
+}
 /*END TEST BUTTONS*/
