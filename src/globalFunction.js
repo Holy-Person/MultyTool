@@ -29,10 +29,15 @@ async function sendToast(type, content, timer = 3500) {
 	toast.style.color = "white";
 	toast.style.userSelect = "text";
 	if (type === 'info') {
-		toast.innerHTML = '<h2 style="margin: 0">&#8505; Info</h2><hr style="height: 2px; border-width: 0; background-color: rgba(41, 20, 210, 1)">' + content;
+		toast.innerHTML = '<h2 style="margin: 0">&#8505; Info</h2><hr style="height: 2px; border-width: 0; background-color: rgb(41, 20, 210)">' + content;
 		toast.style.background = "rgba(41, 20, 210, 0.5)";
 		toast.style.border = "1px solid rgb(41, 20, 210)";
 		toast.style.borderLeft = "6px solid rgb(41, 20, 210)";
+	} else if (type === 'confirmation') {
+		toast.innerHTML = '<h2 style="margin: 0"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z" fill="white"></path></svg> Confirmation</h2><hr style="height: 2px; border-width: 0; background-color: rgb(47, 210, 20)">' + content;
+		toast.style.background = "rgba(47, 150, 20, 0.5)";
+		toast.style.border = "1px solid rgb(47, 210, 20)";
+		toast.style.borderLeft = "6px solid rgb(47, 210, 20)";
 	} else if (type === 'warning') {
 		toast.innerHTML = '<h2 style="margin: 0">&#9888; Warning</h2><hr style="height: 2px; border-width: 0; background-color: rgba(210, 175, 20, 1)">' + content;
 		toast.style.background = "rgba(140, 105, 0, 0.5)";
