@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>DevPlayground</title>
+  <title>ModuleBuilder</title>
   <link rel="stylesheet" href="index.css">
   <script src="index.js"></script>
 </head>
@@ -12,7 +12,7 @@
   <div class="mainFlexScreen">
     <div class="sidebar">
       <div id="sidebarList">
-        <div class="title">Dev Playground</div><hr>
+        <div class="title">Module Builder</div><hr>
       </div>
       <div class="footerSpacer"></div>
       <div class="footer" onclick="MultyTool.app.goToModule('menu')">🡰 Return</div>
@@ -43,13 +43,31 @@
             <script>document.write(process.versions.node)</script>
           </span>
         </div>
-        These things you need to pay attention
+        These things you need to pay attention to exist
+      </div>
+      <div class="contentItem contentHeader" id="ch_Module-Creation"></div>
+      <div class="contentItem contentScreen" id="cs_A-Title">
+        copy examplemodule<br>
+        rename in moduleInfo and folder name (might remove this step with more logic stuffs later)<br>
+        select in-app<br>
+        start coding.
       </div>
       <div class="contentItem contentHeader" id="ch_MultyTool-Specific"></div>
       <div class="contentItem contentScreen" id="cs_Global-Functions">
         <code>
           <mark>const</mark> <small>MultyTool</small> = require(<i>__dirname</i>+<em>'/../../globalFunction.js'</em>);
         </code>
+        Notify reader that code below only works with the above loaded.
+        <h2>Toasts</h2><hr>
+        Toasts are a way to notify the user of something happening.
+        <code>
+          <small>MultyTool</small>.<i>app</i>.<b>sendToast</b>(toastType, toastContent, toastTimeout);
+        </code>
+        Toast types are info (blue) confirmation (green) warning (yellow) and error (red), types are not case-sensitive and will result in a gray unmarked toast if the type is unknown, you can use this to make custom toasts.<br>
+        The content of the toast will be displayed within the toast, regular hmtl markup works here, meaning you can use things like br create line breaks.<br>
+        ToastTimeout is an optional value and defines how long the toast should stay on screen for in ms, the default value is 3500, resulting in 3.5 seconds of display-time. This default value may change.
+        <h2>header</h2><hr>
+        text
       </div>
       <div class="contentItem contentScreen" id="cs_Test-Stuff">
         <input type="button" onclick="notificationTest('Info')" value="Info Notification"/>
@@ -66,6 +84,10 @@
         </code>
       </div>
       <div class="contentItem contentHeader" id="ch_Node-Modules"></div>
+      <div class="contentItem contentScreen" id="cs_Electron">
+        MultyTool runs on (a to github) Electron (/a), this means you can utilize Electron-specific functions and tools.<br>
+        Some of the more common functions are taken care of with the global functions multytool provides, they provide easier access and some general improvements.
+      </div>
       <div class="contentItem contentScreen" id="cs_MouseTrap">
         (INFO) Mousetrap is pre-installed with MultyTool, all you need to use it is the code below to include it.<br>
         <a href="https://www.npmjs.com/package/mousetrap">Mousetrap on npm</a><br>
