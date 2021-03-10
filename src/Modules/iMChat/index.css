@@ -4,8 +4,8 @@
   --textShadow: rgba(255, 255, 253, 0.1);
   --highlight: rgba(129, 202, 209, 1);
   --highlightShadow: rgba(129, 202, 209, 0.1);
-  --menu: rgba(163, 255, 255, 0.2);
-  --menuHighlight: rgba(223, 255, 255, 0.4);
+  --menu: rgba(235, 235, 255, 0.15);
+  --menuHighlight: rgba(235, 235, 255, 0.3);
 }
 
 @font-face {
@@ -36,6 +36,8 @@ body {
 } img, picture {
   max-width: 100%;
   display: block;
+} a {
+  color: #FAF2DA;
 }
 
 .flexScreen {
@@ -43,7 +45,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+} .flexScreen:not(#homeView) {
+  display: none;
 }
 
 .backgroundVideo {
@@ -72,33 +75,85 @@ body {
 }
 /*END MAIN*/
 
-.testBox {
-  flex: 0 1 80%;
+
+
+/*START HOME LAYOUT*/
+.topBox {
+  flex: 1 0 10%;
   width: 100%;
 }
+.centerBox {
+  flex: 1 0 90%;
+  height: 90%;
+  width: 100%;
+}
+.scrollBox {
+  box-sizing: border-box;
 
-.titleMessage {
-  width: 70%;
-  height: 65px;
+  height: 100%;
+  margin-left: 8%;
+
+  overflow-y: scroll;
+
+  padding-bottom: 20px;
+
+  -webkit-overflow-scrolling: touch;
+}
+/*END HOME LAYOUT*/
+
+
+
+/*START BASE UI*/
+.topBox input[type="button"] {
+ position: fixed;
+ top: 3%;
+ right: 11%;
+}
+/*END BASE UI*/
+
+/*START MESSAGES*/
+.message {
+  box-sizing: border-box;
+
+  width: 90%;
+  height: 90px;
+  line-height: 90px;
+
+  overflow: hidden;
 
   background-color: var(--menu);
   border-top: var(--highlight) solid 2px;
 
   cursor: pointer;
-} .titleMessage:active, .titleMessage:focus {
+} .message:active, .message:focus {
   background-color: var(--menuHighlight);
-} .titleMessage + .titleMessage {
+} .message + .message {
   margin-top: 10px;
-} .titleMessage .content {
-  font-size: 24px;
+}
+.message .header {
+  box-sizing: border-box;
+
+  width: 85%;
+
+  padding-left: 20px;
+
+  line-height: 1.2;
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 26px;
   text-shadow: 0px 5px var(--textShadow);
   font-family: SourceSansPro;
-} .titleMessage .like {
+} .message .likes {
   color: var(--highlight);
   text-shadow: 0px 5px var(--highlightShadow);
-  font-size: 20px;
+  font-size: 22px;
   font-family: Electrolize;
+  float: right;
+  width: 9%;
+  padding-right: 10px;
 }
+/*END MESSAGES*/
 
 /*.view {
   margin: 12px;
